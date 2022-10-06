@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Modal windows</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="card">
+            <div class="card-header">
+              Simple
+            </div>
+            <div class="card-body">
+              <button class="btn btn-dark" data-toggle="modal" data-target="#modal-1">Open modal</button>
+
+              <!-- Modals -->
+              <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Modal window text content
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end Modals -->
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Size
+            </div>
+            <div class="card-body">
+              <div class="elements-list">
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-2">Small</button>
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-3">Default</button>
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-4">Large</button>
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-5">Extra large</button>
+              </div>
+
+              <!-- Modals -->
+              <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur fugiat inventore minima necessitatibus nisi quod recusandae sapiente sed, similique?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modal-3" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur fugiat inventore minima necessitatibus nisi quod recusandae sapiente sed, similique?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur fugiat inventore minima necessitatibus nisi quod recusandae sapiente sed, similique?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur fugiat inventore minima necessitatibus nisi quod recusandae sapiente sed, similique?
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end Modals -->
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Vertically align
+            </div>
+            <div class="card-body">
+              <div class="elements-list">
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-6">Vertical top</button>
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-7">Vertical center</button>
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-8">Vertical bottom</button>
+              </div>
+
+              <!-- Modals -->
+              <div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Modal window text content
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Modal window text content
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modal-8" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-bottom">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Modal window text content
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end Modals -->
+            </div>
+          </div>
+
+          <div class="card mb-0">
+            <div class="card-header">
+              Components
+            </div>
+            <div class="card-body">
+              <div class="elements-list">
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-9">With title</button>
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-10">With footer</button>
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-11">With close</button>
+                <button class="btn btn-dark" data-toggle="modal" data-target="#modal-12">With scroll</button>
+              </div>
+
+              <!-- Modals -->
+              <div class="modal fade" id="modal-9" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                    </div>
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At esse, libero maxime officia sapiente veniam.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modal-10" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At esse, libero maxime officia sapiente veniam.
+                    </div>
+                    <div class="modal-footer">
+                      <div class="actions">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modal-11" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <i class="icofont-close-line"></i>
+                    </button>
+
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                    </div>
+                    <div class="modal-body">
+                      Modal window text content
+                    </div>
+                    <div class="modal-footer">
+                      <div class="actions">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modal-12" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <i class="icofont-close-line"></i>
+                    </button>
+
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                    </div>
+                    <div class="modal-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis ea error exercitationem
+                        officiis pariatur ratione ullam! Asperiores nisi quos repudiandae?</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur magnam tempore vel!
+                        Deserunt dolor ea, eaque expedita in ipsam itaque modi molestias necessitatibus neque nesciunt
+                        non placeat quis rem rerum saepe vero. Doloremque earum obcaecati quis sed soluta, vero
+                        voluptas.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, architecto aspernatur autem
+                        consectetur culpa cum cumque deserunt dolore eius eveniet excepturi expedita fugit id in
+                        incidunt ipsa ipsam labore minus molestiae neque nisi nobis non perferendis porro possimus quis
+                        quisquam quos ratione, sapiente tempore ullam vel vitae voluptatibus? Aliquam aut dolorum earum
+                        fuga laudantium, minus, mollitia possimus provident quis velit vitae voluptatibus! Asperiores at
+                        consequuntur, exercitationem expedita illo ipsum magnam mollitia, necessitatibus, nemo non nulla
+                        quibusdam quo repudiandae sapiente similique tempore totam! Aliquam commodi cumque, ducimus, est
+                        ipsam perferendis quam quidem quo quod sint suscipit totam voluptates voluptatibus.
+                        Exercitationem, neque.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio doloremque,
+                        enim ex facere incidunt maiores minima nostrum odit pariatur quaerat quisquam sint suscipit,
+                        vero voluptate! Cupiditate dicta doloremque doloribus, ducimus eligendi error exercitationem
+                        impedit ipsa iusto labore natus non odit omnis repudiandae, tempore veritatis voluptas.
+                        Cupiditate eligendi eum excepturi itaque, laudantium magni minus molestiae mollitia possimus,
+                        quam quo rerum similique, totam voluptatem voluptates. Adipisci dicta expedita facilis fugiat,
+                        ipsam nam nulla pariatur perspiciatis, possimus quos, tempora voluptas voluptatibus! Accusantium
+                        architecto cupiditate dignissimos facere maxime repellat rerum totam ullam voluptate. Aliquam
+                        consectetur reiciendis reprehenderit sit veritatis. Dignissimos excepturi, fugit nostrum quaerat
+                        reiciendis saepe voluptatem. Ad animi asperiores blanditiis dolores eaque enim eveniet fugiat
+                        hic illum libero maxime minima minus odio odit officia, officiis praesentium quibusdam quisquam
+                        rem saepe sapiente sequi suscipit? Alias at dignissimos distinctio doloribus expedita, facilis
+                        iure labore, nesciunt nobis numquam odit optio pariatur provident quaerat, quibusdam sint soluta
+                        tempora tenetur. Aperiam assumenda aut, blanditiis consequatur culpa dolore eligendi eos esse
+                        est fuga harum in ipsum laborum maiores nam nihil nulla perspiciatis quasi quisquam repellat sit
+                        soluta sunt suscipit totam voluptatem? Accusantium asperiores blanditiis debitis deleniti dolor
+                        dolore eius ut voluptas. Aliquam amet excepturi illo magnam officia quod!</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam incidunt praesentium
+                        sed? Ad aliquid beatae, corporis culpa cumque deleniti deserunt dignissimos distinctio dolorem
+                        dolores ducimus eum fugiat incidunt, inventore ipsam iste labore magni necessitatibus neque
+                        nesciunt omnis optio repudiandae sapiente similique ullam veritatis voluptas voluptatum. Facilis
+                        ipsa laborum praesentium.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="actions">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end Modals -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Modal windows", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

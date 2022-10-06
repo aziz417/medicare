@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Bootstrap tables</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="card">
+            <div class="card-header">
+              Simple
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">E-mail</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ronald Hilbert</td>
+                    <td>developer</td>
+                    <td>robhil@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Angela Simpson</td>
+                    <td>digital artist</td>
+                    <td>digital artist</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Richard Franson</td>
+                    <td>art director</td>
+                    <td>richard@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>David Robertson</td>
+                    <td>developer</td>
+                    <td>david@company.com</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Invert
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-dark">
+                  <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">E-mail</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ronald Hilbert</td>
+                    <td>developer</td>
+                    <td>robhil@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Angela Simpson</td>
+                    <td>digital artist</td>
+                    <td>digital artist</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Richard Franson</td>
+                    <td>art director</td>
+                    <td>richard@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>David Robertson</td>
+                    <td>developer</td>
+                    <td>david@company.com</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Head options
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">E-mail</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ronald Hilbert</td>
+                    <td>developer</td>
+                    <td>robhil@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Angela Simpson</td>
+                    <td>digital artist</td>
+                    <td>digital artist</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Richard Franson</td>
+                    <td>art director</td>
+                    <td>richard@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>David Robertson</td>
+                    <td>developer</td>
+                    <td>david@company.com</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Striped rows
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">E-mail</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ronald Hilbert</td>
+                    <td>developer</td>
+                    <td>robhil@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Angela Simpson</td>
+                    <td>digital artist</td>
+                    <td>digital artist</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Richard Franson</td>
+                    <td>art director</td>
+                    <td>richard@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>David Robertson</td>
+                    <td>developer</td>
+                    <td>david@company.com</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Bordered table
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">E-mail</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ronald Hilbert</td>
+                    <td>developer</td>
+                    <td>robhil@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Angela Simpson</td>
+                    <td>digital artist</td>
+                    <td>digital artist</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Richard Franson</td>
+                    <td>art director</td>
+                    <td>richard@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>David Robertson</td>
+                    <td>developer</td>
+                    <td>david@company.com</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Borderless table
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-borderless">
+                  <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">E-mail</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ronald Hilbert</td>
+                    <td>developer</td>
+                    <td>robhil@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Angela Simpson</td>
+                    <td>digital artist</td>
+                    <td>digital artist</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Richard Franson</td>
+                    <td>art director</td>
+                    <td>richard@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>David Robertson</td>
+                    <td>developer</td>
+                    <td>david@company.com</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Hoverable rows
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">E-mail</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ronald Hilbert</td>
+                    <td>developer</td>
+                    <td>robhil@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Angela Simpson</td>
+                    <td>digital artist</td>
+                    <td>digital artist</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Richard Franson</td>
+                    <td>art director</td>
+                    <td>richard@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>David Robertson</td>
+                    <td>developer</td>
+                    <td>david@company.com</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Small table
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-sm">
+                  <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">E-mail</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ronald Hilbert</td>
+                    <td>developer</td>
+                    <td>robhil@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Angela Simpson</td>
+                    <td>digital artist</td>
+                    <td>digital artist</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Richard Franson</td>
+                    <td>art director</td>
+                    <td>richard@company.com</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>David Robertson</td>
+                    <td>developer</td>
+                    <td>david@company.com</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-0">
+            <div class="card-header">
+              Contextual classes
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th scope="col">Class</th>
+                    <th scope="col">Col 2</th>
+                    <th scope="col">Col 3</th>
+                    <th scope="col">Col 4</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="table-active">
+                    <td>table-active</td>
+                    <td>Col 2</td>
+                    <td>Col 3</td>
+                    <td>Col 4</td>
+                  </tr>
+                  <tr class="table-primary">
+                    <td>table-primary</td>
+                    <td>Col 2</td>
+                    <td>Col 3</td>
+                    <td>Col 4</td>
+                  </tr>
+                  <tr class="table-secondary">
+                    <td>table-secondary</td>
+                    <td>Col 2</td>
+                    <td>Col 3</td>
+                    <td>Col 4</td>
+                  </tr>
+                  <tr class="table-success">
+                    <td>table-success</td>
+                    <td>Col 2</td>
+                    <td>Col 3</td>
+                    <td>Col 4</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <td>table-danger</td>
+                    <td>Col 2</td>
+                    <td>Col 3</td>
+                    <td>Col 4</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <td>table-warning</td>
+                    <td>Col 2</td>
+                    <td>Col 3</td>
+                    <td>Col 4</td>
+                  </tr>
+                  <tr class="table-info">
+                    <td>table-info</td>
+                    <td>Col 2</td>
+                    <td>Col 3</td>
+                    <td>Col 4</td>
+                  </tr>
+                  <tr class="table-light">
+                    <td>table-light</td>
+                    <td>Col 2</td>
+                    <td>Col 3</td>
+                    <td>Col 4</td>
+                  </tr>
+                  <tr class="table-dark">
+                    <td>table-dark</td>
+                    <td>Col 2</td>
+                    <td>Col 3</td>
+                    <td>Col 4</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Tables", "link": "#" },
+        { "title": "Bootstrap tables", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

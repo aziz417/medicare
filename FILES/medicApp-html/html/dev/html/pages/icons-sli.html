@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Simple line icons</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="icons-list">
+            <div class="icon sli-user"></div>
+            <div class="icon sli-people"></div>
+            <div class="icon sli-user-female"></div>
+            <div class="icon sli-user-follow"></div>
+            <div class="icon sli-user-following"></div>
+            <div class="icon sli-user-unfollow"></div>
+            <div class="icon sli-login"></div>
+            <div class="icon sli-logout"></div>
+            <div class="icon sli-emotsmile"></div>
+            <div class="icon sli-phone"></div>
+            <div class="icon sli-call-end"></div>
+            <div class="icon sli-call-in"></div>
+            <div class="icon sli-call-out"></div>
+            <div class="icon sli-map"></div>
+            <div class="icon sli-location-pin"></div>
+            <div class="icon sli-direction"></div>
+            <div class="icon sli-directions"></div>
+            <div class="icon sli-compass"></div>
+            <div class="icon sli-layers"></div>
+            <div class="icon sli-menu"></div>
+            <div class="icon sli-list"></div>
+            <div class="icon sli-options-vertical"></div>
+            <div class="icon sli-options"></div>
+            <div class="icon sli-arrow-down"></div>
+            <div class="icon sli-arrow-left"></div>
+            <div class="icon sli-arrow-right"></div>
+            <div class="icon sli-arrow-up"></div>
+            <div class="icon sli-arrow-up-circle"></div>
+            <div class="icon sli-arrow-left-circle"></div>
+            <div class="icon sli-arrow-right-circle"></div>
+            <div class="icon sli-arrow-down-circle"></div>
+            <div class="icon sli-check"></div>
+            <div class="icon sli-clock"></div>
+            <div class="icon sli-plus"></div>
+            <div class="icon sli-minus"></div>
+            <div class="icon sli-close"></div>
+            <div class="icon sli-event"></div>
+            <div class="icon sli-exclamation"></div>
+            <div class="icon sli-organization"></div>
+            <div class="icon sli-trophy"></div>
+            <div class="icon sli-screen-smartphone"></div>
+            <div class="icon sli-screen-desktop"></div>
+            <div class="icon sli-plane"></div>
+            <div class="icon sli-notebook"></div>
+            <div class="icon sli-mustache"></div>
+            <div class="icon sli-mouse"></div>
+            <div class="icon sli-magnet"></div>
+            <div class="icon sli-energy"></div>
+            <div class="icon sli-disc"></div>
+            <div class="icon sli-cursor"></div>
+            <div class="icon sli-cursor-move"></div>
+            <div class="icon sli-crop"></div>
+            <div class="icon sli-chemistry"></div>
+            <div class="icon sli-speedometer"></div>
+            <div class="icon sli-shield"></div>
+            <div class="icon sli-screen-tablet"></div>
+            <div class="icon sli-magic-wand"></div>
+            <div class="icon sli-hourglass"></div>
+            <div class="icon sli-graduation"></div>
+            <div class="icon sli-ghost"></div>
+            <div class="icon sli-game-controller"></div>
+            <div class="icon sli-fire"></div>
+            <div class="icon sli-eyeglass"></div>
+            <div class="icon sli-envelope-open"></div>
+            <div class="icon sli-envelope-letter"></div>
+            <div class="icon sli-bell"></div>
+            <div class="icon sli-badge"></div>
+            <div class="icon sli-anchor"></div>
+            <div class="icon sli-wallet"></div>
+            <div class="icon sli-vector"></div>
+            <div class="icon sli-speech"></div>
+            <div class="icon sli-puzzle"></div>
+            <div class="icon sli-printer"></div>
+            <div class="icon sli-present"></div>
+            <div class="icon sli-playlist"></div>
+            <div class="icon sli-pin"></div>
+            <div class="icon sli-picture"></div>
+            <div class="icon sli-handbag"></div>
+            <div class="icon sli-globe-alt"></div>
+            <div class="icon sli-globe"></div>
+            <div class="icon sli-folder-alt"></div>
+            <div class="icon sli-folder"></div>
+            <div class="icon sli-film"></div>
+            <div class="icon sli-feed"></div>
+            <div class="icon sli-drop"></div>
+            <div class="icon sli-drawer"></div>
+            <div class="icon sli-docs"></div>
+            <div class="icon sli-doc"></div>
+            <div class="icon sli-diamond"></div>
+            <div class="icon sli-cup"></div>
+            <div class="icon sli-calculator"></div>
+            <div class="icon sli-bubbles"></div>
+            <div class="icon sli-briefcase"></div>
+            <div class="icon sli-book-open"></div>
+            <div class="icon sli-basket-loaded"></div>
+            <div class="icon sli-basket"></div>
+            <div class="icon sli-bag"></div>
+            <div class="icon sli-action-undo"></div>
+            <div class="icon sli-action-redo"></div>
+            <div class="icon sli-wrench"></div>
+            <div class="icon sli-umbrella"></div>
+            <div class="icon sli-trash"></div>
+            <div class="icon sli-tag"></div>
+            <div class="icon sli-support"></div>
+            <div class="icon sli-frame"></div>
+            <div class="icon sli-size-fullscreen"></div>
+            <div class="icon sli-size-actual"></div>
+            <div class="icon sli-shuffle"></div>
+            <div class="icon sli-share-alt"></div>
+            <div class="icon sli-share"></div>
+            <div class="icon sli-rocket"></div>
+            <div class="icon sli-question"></div>
+            <div class="icon sli-pie-chart"></div>
+            <div class="icon sli-pencil"></div>
+            <div class="icon sli-note"></div>
+            <div class="icon sli-loop"></div>
+            <div class="icon sli-home"></div>
+            <div class="icon sli-grid"></div>
+            <div class="icon sli-graph"></div>
+            <div class="icon sli-microphone"></div>
+            <div class="icon sli-music-tone-alt"></div>
+            <div class="icon sli-music-tone"></div>
+            <div class="icon sli-earphones-alt"></div>
+            <div class="icon sli-earphones"></div>
+            <div class="icon sli-equalizer"></div>
+            <div class="icon sli-like"></div>
+            <div class="icon sli-dislike"></div>
+            <div class="icon sli-control-start"></div>
+            <div class="icon sli-control-rewind"></div>
+            <div class="icon sli-control-play"></div>
+            <div class="icon sli-control-pause"></div>
+            <div class="icon sli-control-forward"></div>
+            <div class="icon sli-control-end"></div>
+            <div class="icon sli-volume-1"></div>
+            <div class="icon sli-volume-2"></div>
+            <div class="icon sli-volume-off"></div>
+            <div class="icon sli-calendar"></div>
+            <div class="icon sli-bulb"></div>
+            <div class="icon sli-chart"></div>
+            <div class="icon sli-ban"></div>
+            <div class="icon sli-bubble"></div>
+            <div class="icon sli-camrecorder"></div>
+            <div class="icon sli-camera"></div>
+            <div class="icon sli-cloud-download"></div>
+            <div class="icon sli-cloud-upload"></div>
+            <div class="icon sli-envelope"></div>
+            <div class="icon sli-eye"></div>
+            <div class="icon sli-flag"></div>
+            <div class="icon sli-heart"></div>
+            <div class="icon sli-info"></div>
+            <div class="icon sli-key"></div>
+            <div class="icon sli-link"></div>
+            <div class="icon sli-lock"></div>
+            <div class="icon sli-lock-open"></div>
+            <div class="icon sli-magnifier"></div>
+            <div class="icon sli-magnifier-add"></div>
+            <div class="icon sli-magnifier-remove"></div>
+            <div class="icon sli-paper-clip"></div>
+            <div class="icon sli-paper-plane"></div>
+            <div class="icon sli-power"></div>
+            <div class="icon sli-refresh"></div>
+            <div class="icon sli-reload"></div>
+            <div class="icon sli-settings"></div>
+            <div class="icon sli-star"></div>
+            <div class="icon sli-symbol-female"></div>
+            <div class="icon sli-symbol-male"></div>
+            <div class="icon sli-target"></div>
+            <div class="icon sli-credit-card"></div>
+            <div class="icon sli-paypal"></div>
+            <div class="icon sli-social-tumblr"></div>
+            <div class="icon sli-social-twitter"></div>
+            <div class="icon sli-social-facebook"></div>
+            <div class="icon sli-social-instagram"></div>
+            <div class="icon sli-social-linkedin"></div>
+            <div class="icon sli-social-pinterest"></div>
+            <div class="icon sli-social-github"></div>
+            <div class="icon sli-social-google"></div>
+            <div class="icon sli-social-reddit"></div>
+            <div class="icon sli-social-skype"></div>
+            <div class="icon sli-social-dribbble"></div>
+            <div class="icon sli-social-behance"></div>
+            <div class="icon sli-social-foursqare"></div>
+            <div class="icon sli-social-soundcloud"></div>
+            <div class="icon sli-social-spotify"></div>
+            <div class="icon sli-social-stumbleupon"></div>
+            <div class="icon sli-social-youtube"></div>
+            <div class="icon sli-social-dropbox"></div>
+            <div class="icon sli-social-vkontakte"></div>
+            <div class="icon sli-social-steam"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Icons", "link": "#" },
+        { "title": "Simple line icons", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

@@ -1,0 +1,2823 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MedicApp - Medical & Hospital HTML5/Bootstrap admin template</title>
+  <meta name="keywords" content="MedicApp">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../assets/img/favicon.ico">
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/icofont.min.css">
+  <link rel="stylesheet" href="../assets/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../assets/css/jquery.typeahead.css">
+  <link rel="stylesheet" href="../assets/css/datatables.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="../assets/css/Chart.min.css">
+  <link rel="stylesheet" href="../assets/css/morris.css">
+  <link rel="stylesheet" href="../assets/css/leaflet.css">
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+
+<body class="horizontal-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    <div id="navbar1" class="app-navbar horizontal">
+      <div class="navbar-wrap">
+        
+          <button class="no-style navbar-toggle navbar-open d-lg-none">
+            <span></span><span></span><span></span>
+          </button>
+
+        
+          <div class="app-logo">
+            <div class="logo-wrap">
+              <img src="../assets/img/logo.svg" alt="" width="147" height="33" class="logo-img">
+            </div>
+          </div>
+
+        
+          <form class="app-search d-none d-md-block">
+            <div class="form-group typeahead__container with-suffix-icon mb-0">
+              <div class="typeahead__field">
+                <div class="typeahead__query">
+                  <input
+                    class="form-control autocomplete-control topbar-search"
+                    type="search"
+                    placeholder="Type page's title"
+                    autocomplete="off"
+                    data-source="../assets/data/search-menu.json"
+                  >
+                  <div class="suffix-icon icofont-search"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        
+          <div class="app-actions">
+            <div class="dropdown item">
+              <button
+                class="no-style dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-offset="0, 12"
+              >
+                <span class="icon icofont-notification"></span>
+                <span class="badge badge-danger badge-sm">5</span>
+              </button>
+
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-w-280">
+                <div class="menu-header">
+                  <h4 class="h5 menu-title mt-0 mb-0">Notifications</h4>
+
+                  <a href="#" class="text-danger">Clear All</a>
+                </div>
+
+                <ul class="list">
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-heart"></span>
+
+                      <div class="content">
+                        <span class="desc">Sara Crouch liked your photo</span>
+                        <span class="date">17 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-users-alt-6"></span>
+
+                      <div class="content">
+                        <span class="desc">New user registered</span>
+                        <span class="date">23 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-share"></span>
+
+                      <div class="content">
+                        <span class="desc">Amanda Lie shared your post</span>
+                        <span class="date">25 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-users-alt-6"></span>
+
+                      <div class="content">
+                        <span class="desc">New user registered</span>
+                        <span class="date">32 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-ui-message"></span>
+
+                      <div class="content">
+                        <span class="desc">You have a new message</span>
+                        <span class="date">58 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="menu-footer">
+                  <button class="btn btn-primary btn-block">
+                    View all notifications
+                    <span class="btn-icon ml-2 icofont-tasks-alt"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown item">
+              <button
+                class="no-style dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-offset="0, 10"
+              >
+                <span class="d-flex align-items-center">
+                  <img src="../assets/content/user-400-1.jpg" alt="" width="40" height="40" class="rounded-500 mr-1">
+                  <i class="icofont-simple-down"></i>
+                </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-w-180">
+                <ul class="list">
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-ui-home"></span>
+                      Edit account
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-ui-user"></span>
+                      User profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-ui-calendar"></span>
+                      Calendar
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-ui-settings"></span>
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-logout"></span>
+                      Log Out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        
+
+        
+        <div class="navbar-skeleton horizontal">
+          <div class="left-part d-flex align-items-center">
+            <span class="navbar-button bg animated-bg d-lg-none"></span>
+            <span class="sk-logo bg animated-bg d-none d-lg-block"></span>
+            <span class="search d-none d-md-block bg animated-bg"></span>
+          </div>
+
+          <div class="right-part d-flex align-items-center">
+            <div class="icon-box">
+              <span class="icon bg animated-bg"></span>
+              <span class="badge"></span>
+            </div>
+            <span class="avatar bg animated-bg"></span>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </div>
+
+    <!-- end Horizontal navbar -->
+
+    <!-- Horizontal navbar 2 -->
+    <div id="navbar2" class="app-navbar horizontal horizontal-vertical">
+      <div class="navbar-wrap">
+        
+          <button class="no-style navbar-toggle navbar-close icofont-close-line d-lg-none"></button>
+
+        
+          <div class="app-logo">
+            <div class="logo-wrap">
+              <img src="../assets/img/logo.svg" alt="" width="147" height="33" class="logo-img">
+            </div>
+          </div>
+
+        
+          <div class="main-menu">
+            <nav class="main-menu-wrap">
+              <ul class="menu-ul">
+                <li class="menu-item active">
+                  <a class="item-link" href="index.html">
+                    <span class="link-text">Dashboard</span>
+                  </a>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Medicine</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="appointments.html">
+                        <span class="link-text">Appointments</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="doctors.html">
+                        <span class="link-text">Doctors</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="departments.html">
+                        <span class="link-text">Departments</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="patients.html">
+                        <span class="link-text">Patients</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="payments.html">
+                        <span class="link-text">Payments</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Components</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="alerts.html"><span class="link-text">Alerts</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="autocompletes.html"><span class="link-text">Autocompletes</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="badges.html"><span class="link-text">Badges</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="buttons.html"><span class="link-text">Buttons</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="cards.html"><span class="link-text">Cards</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="checkboxes.html"><span class="link-text">Checkboxes</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="contacts.html"><span class="link-text">Contacts</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="inputs.html"><span class="link-text">Inputs</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="modal-windows.html"><span class="link-text">Modal windows</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="radio-buttons.html"><span class="link-text">Radio buttons</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="ratings.html"><span class="link-text">Ratings</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="selects.html"><span class="link-text">Selects</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="switchers.html"><span class="link-text">Switchers</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="textareas.html"><span class="link-text">Textareas</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="typography.html"><span class="link-text">Typography</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="v-timelines.html"><span class="link-text">Vertical timeline</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Icons</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="icons-sli.html"><span class="link-text">Simple line icons</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="icons-if.html"><span class="link-text">Icofont icons</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Tables</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="bootstrap-tables.html"><span class="link-text">Bootstrap tables</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="data-tables.html"><span class="link-text">Data tables</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Forms</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="form-elements.html"><span class="link-text">Elements</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="form-layout.html"><span class="link-text">Layout</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="form-validation.html"><span class="link-text">Validation</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Charts</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="charts-chart-js.html"><span class="link-text">Chart.js</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="charts-morris-js.html"><span class="link-text">Morris.js</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="charts-echarts.html"><span class="link-text">Echarts</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Maps</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="google-map.html"><span class="link-text">Google map</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="leaflet-map.html"><span class="link-text">Leaflet map</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="echarts-map.html"><span class="link-text">Echarts map</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Service pages</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="invoices.html"><span class="link-text">Invoices</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="pricing.html"><span class="link-text">Pricing</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="edit-account.html"><span class="link-text">Edit account</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="user-profile.html"><span class="link-text">User profile</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="events-timeline.html"><span class="link-text">Events timeline</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="sign-in.html"><span class="link-text">Sign in</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="sign-up.html"><span class="link-text">Sign up</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="page-404.html"><span class="link-text">404</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="page-500.html"><span class="link-text">500</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+        
+
+        
+
+        
+        <div class="navbar-skeleton vertical">
+          <div class="top-part">
+            <div class="sk-logo bg animated-bg"></div>
+            <div class="sk-menu">
+              <span class="sk-menu-item menu-header bg-1 animated-bg"></span>
+              <span class="sk-menu-item bg animated-bg w-75"></span>
+              <span class="sk-menu-item bg animated-bg w-80"></span>
+              <span class="sk-menu-item bg animated-bg w-50"></span>
+              <span class="sk-menu-item bg animated-bg w-75"></span>
+              <span class="sk-menu-item bg animated-bg w-50"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+            </div>
+            <div class="sk-menu">
+              <span class="sk-menu-item menu-header bg-1 animated-bg"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+            </div>
+            <div class="sk-menu">
+              <span class="sk-menu-item menu-header bg-1 animated-bg"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+              <span class="sk-menu-item bg animated-bg w-50"></span>
+            </div>
+            <div class="sk-button animated-bg w-90"></div>
+          </div>
+
+          <div class="bottom-part">
+            <div class="sk-menu">
+              <span class="sk-menu-item bg-1 animated-bg w-60"></span>
+              <span class="sk-menu-item bg-1 animated-bg w-80"></span>
+            </div>
+          </div>
+
+          <div class="horizontal-menu">
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- endHorizontal navbar 2 -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Icofont icons</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="icons-list">
+            <div class="icon icofont-angry-monster"></div>
+            <div class="icon icofont-bathtub"></div>
+            <div class="icon icofont-bird-wings"></div>
+            <div class="icon icofont-bow"></div>
+            <div class="icon icofont-castle"></div>
+            <div class="icon icofont-circuit"></div>
+            <div class="icon icofont-crown-king"></div>
+            <div class="icon icofont-crown-queen"></div>
+            <div class="icon icofont-dart"></div>
+            <div class="icon icofont-disability-race"></div>
+            <div class="icon icofont-diving-goggle"></div>
+            <div class="icon icofont-eye-open"></div>
+            <div class="icon icofont-flora-flower"></div>
+            <div class="icon icofont-flora"></div>
+            <div class="icon icofont-gift-box"></div>
+            <div class="icon icofont-halloween-pumpkin"></div>
+            <div class="icon icofont-hand-power"></div>
+            <div class="icon icofont-hand-thunder"></div>
+            <div class="icon icofont-king-monster"></div>
+            <div class="icon icofont-love"></div>
+            <div class="icon icofont-magician-hat"></div>
+            <div class="icon icofont-native-american"></div>
+            <div class="icon icofont-owl-look"></div>
+            <div class="icon icofont-phoenix"></div>
+            <div class="icon icofont-robot-face"></div>
+            <div class="icon icofont-sand-clock"></div>
+            <div class="icon icofont-shield-alt"></div>
+            <div class="icon icofont-ship-wheel"></div>
+            <div class="icon icofont-skull-danger"></div>
+            <div class="icon icofont-skull-face"></div>
+            <div class="icon icofont-snowmobile"></div>
+            <div class="icon icofont-space-shuttle"></div>
+            <div class="icon icofont-star-shape"></div>
+            <div class="icon icofont-swirl"></div>
+            <div class="icon icofont-tattoo-wing"></div>
+            <div class="icon icofont-throne"></div>
+            <div class="icon icofont-tree-alt"></div>
+            <div class="icon icofont-triangle"></div>
+            <div class="icon icofont-unity-hand"></div>
+            <div class="icon icofont-weed"></div>
+            <div class="icon icofont-woman-bird"></div>
+            <div class="icon icofont-bat"></div>
+            <div class="icon icofont-bear-face"></div>
+            <div class="icon icofont-bear-tracks"></div>
+            <div class="icon icofont-bear"></div>
+            <div class="icon icofont-bird-alt"></div>
+            <div class="icon icofont-bird-flying"></div>
+            <div class="icon icofont-bird"></div>
+            <div class="icon icofont-birds"></div>
+            <div class="icon icofont-bone"></div>
+            <div class="icon icofont-bull"></div>
+            <div class="icon icofont-butterfly-alt"></div>
+            <div class="icon icofont-butterfly"></div>
+            <div class="icon icofont-camel-alt"></div>
+            <div class="icon icofont-camel-head"></div>
+            <div class="icon icofont-camel"></div>
+            <div class="icon icofont-cat-alt-1"></div>
+            <div class="icon icofont-cat-alt-2"></div>
+            <div class="icon icofont-cat-alt-3"></div>
+            <div class="icon icofont-cat-dog"></div>
+            <div class="icon icofont-cat-face"></div>
+            <div class="icon icofont-cat"></div>
+            <div class="icon icofont-cow-head"></div>
+            <div class="icon icofont-cow"></div>
+            <div class="icon icofont-crab"></div>
+            <div class="icon icofont-crocodile"></div>
+            <div class="icon icofont-deer-head"></div>
+            <div class="icon icofont-dog-alt"></div>
+            <div class="icon icofont-dog-barking"></div>
+            <div class="icon icofont-dog"></div>
+            <div class="icon icofont-dolphin"></div>
+            <div class="icon icofont-duck-tracks"></div>
+            <div class="icon icofont-eagle-head"></div>
+            <div class="icon icofont-eaten-fish"></div>
+            <div class="icon icofont-elephant-alt"></div>
+            <div class="icon icofont-elephant-head-alt"></div>
+            <div class="icon icofont-elephant-head"></div>
+            <div class="icon icofont-elephant"></div>
+            <div class="icon icofont-elk"></div>
+            <div class="icon icofont-fish-1"></div>
+            <div class="icon icofont-fish-2"></div>
+            <div class="icon icofont-fish-3"></div>
+            <div class="icon icofont-fish-4"></div>
+            <div class="icon icofont-fish-5"></div>
+            <div class="icon icofont-fish"></div>
+            <div class="icon icofont-fox-alt"></div>
+            <div class="icon icofont-fox"></div>
+            <div class="icon icofont-frog-tracks"></div>
+            <div class="icon icofont-frog"></div>
+            <div class="icon icofont-froggy"></div>
+            <div class="icon icofont-giraffe-head-1"></div>
+            <div class="icon icofont-giraffe-head-2"></div>
+            <div class="icon icofont-giraffe-head"></div>
+            <div class="icon icofont-giraffe"></div>
+            <div class="icon icofont-goat-head"></div>
+            <div class="icon icofont-gorilla"></div>
+            <div class="icon icofont-hen-tracks"></div>
+            <div class="icon icofont-horse-head-1"></div>
+            <div class="icon icofont-horse-head-2"></div>
+            <div class="icon icofont-horse-head"></div>
+            <div class="icon icofont-horse-tracks"></div>
+            <div class="icon icofont-jellyfish"></div>
+            <div class="icon icofont-kangaroo"></div>
+            <div class="icon icofont-lemur"></div>
+            <div class="icon icofont-lion-head-1"></div>
+            <div class="icon icofont-lion-head-2"></div>
+            <div class="icon icofont-lion-head"></div>
+            <div class="icon icofont-lion"></div>
+            <div class="icon icofont-monkey-2"></div>
+            <div class="icon icofont-monkey-3"></div>
+            <div class="icon icofont-monkey-face"></div>
+            <div class="icon icofont-monkey"></div>
+            <div class="icon icofont-octopus-alt"></div>
+            <div class="icon icofont-octopus"></div>
+            <div class="icon icofont-owl"></div>
+            <div class="icon icofont-panda-face"></div>
+            <div class="icon icofont-panda"></div>
+            <div class="icon icofont-panther"></div>
+            <div class="icon icofont-parrot-lip"></div>
+            <div class="icon icofont-parrot"></div>
+            <div class="icon icofont-paw"></div>
+            <div class="icon icofont-pelican"></div>
+            <div class="icon icofont-penguin"></div>
+            <div class="icon icofont-pig-face"></div>
+            <div class="icon icofont-pig"></div>
+            <div class="icon icofont-pigeon-1"></div>
+            <div class="icon icofont-pigeon-2"></div>
+            <div class="icon icofont-pigeon"></div>
+            <div class="icon icofont-rabbit"></div>
+            <div class="icon icofont-rat"></div>
+            <div class="icon icofont-rhino-head"></div>
+            <div class="icon icofont-rhino"></div>
+            <div class="icon icofont-rooster"></div>
+            <div class="icon icofont-seahorse"></div>
+            <div class="icon icofont-seal"></div>
+            <div class="icon icofont-shrimp-alt"></div>
+            <div class="icon icofont-shrimp"></div>
+            <div class="icon icofont-snail-1"></div>
+            <div class="icon icofont-snail-2"></div>
+            <div class="icon icofont-snail-3"></div>
+            <div class="icon icofont-snail"></div>
+            <div class="icon icofont-snake"></div>
+            <div class="icon icofont-squid"></div>
+            <div class="icon icofont-squirrel"></div>
+            <div class="icon icofont-tiger-face"></div>
+            <div class="icon icofont-tiger"></div>
+            <div class="icon icofont-turtle"></div>
+            <div class="icon icofont-whale"></div>
+            <div class="icon icofont-woodpecker"></div>
+            <div class="icon icofont-zebra"></div>
+            <div class="icon icofont-brand-acer"></div>
+            <div class="icon icofont-brand-adidas"></div>
+            <div class="icon icofont-brand-adobe"></div>
+            <div class="icon icofont-brand-air-new-zealand"></div>
+            <div class="icon icofont-brand-airbnb"></div>
+            <div class="icon icofont-brand-aircell"></div>
+            <div class="icon icofont-brand-airtel"></div>
+            <div class="icon icofont-brand-alcatel"></div>
+            <div class="icon icofont-brand-alibaba"></div>
+            <div class="icon icofont-brand-aliexpress"></div>
+            <div class="icon icofont-brand-alipay"></div>
+            <div class="icon icofont-brand-amazon"></div>
+            <div class="icon icofont-brand-amd"></div>
+            <div class="icon icofont-brand-american-airlines"></div>
+            <div class="icon icofont-brand-android-robot"></div>
+            <div class="icon icofont-brand-android"></div>
+            <div class="icon icofont-brand-aol"></div>
+            <div class="icon icofont-brand-apple"></div>
+            <div class="icon icofont-brand-appstore"></div>
+            <div class="icon icofont-brand-asus"></div>
+            <div class="icon icofont-brand-ati"></div>
+            <div class="icon icofont-brand-att"></div>
+            <div class="icon icofont-brand-audi"></div>
+            <div class="icon icofont-brand-axiata"></div>
+            <div class="icon icofont-brand-bada"></div>
+            <div class="icon icofont-brand-bbc"></div>
+            <div class="icon icofont-brand-bing"></div>
+            <div class="icon icofont-brand-blackberry"></div>
+            <div class="icon icofont-brand-bmw"></div>
+            <div class="icon icofont-brand-box"></div>
+            <div class="icon icofont-brand-burger-king"></div>
+            <div class="icon icofont-brand-business-insider"></div>
+            <div class="icon icofont-brand-buzzfeed"></div>
+            <div class="icon icofont-brand-cannon"></div>
+            <div class="icon icofont-brand-casio"></div>
+            <div class="icon icofont-brand-china-mobile"></div>
+            <div class="icon icofont-brand-china-telecom"></div>
+            <div class="icon icofont-brand-china-unicom"></div>
+            <div class="icon icofont-brand-cisco"></div>
+            <div class="icon icofont-brand-citibank"></div>
+            <div class="icon icofont-brand-cnet"></div>
+            <div class="icon icofont-brand-cnn"></div>
+            <div class="icon icofont-brand-cocal-cola"></div>
+            <div class="icon icofont-brand-compaq"></div>
+            <div class="icon icofont-brand-debian"></div>
+            <div class="icon icofont-brand-delicious"></div>
+            <div class="icon icofont-brand-dell"></div>
+            <div class="icon icofont-brand-designbump"></div>
+            <div class="icon icofont-brand-designfloat"></div>
+            <div class="icon icofont-brand-disney"></div>
+            <div class="icon icofont-brand-dodge"></div>
+            <div class="icon icofont-brand-dove"></div>
+            <div class="icon icofont-brand-drupal"></div>
+            <div class="icon icofont-brand-ebay"></div>
+            <div class="icon icofont-brand-eleven"></div>
+            <div class="icon icofont-brand-emirates"></div>
+            <div class="icon icofont-brand-espn"></div>
+            <div class="icon icofont-brand-etihad-airways"></div>
+            <div class="icon icofont-brand-etisalat"></div>
+            <div class="icon icofont-brand-etsy"></div>
+            <div class="icon icofont-brand-fastrack"></div>
+            <div class="icon icofont-brand-fedex"></div>
+            <div class="icon icofont-brand-ferrari"></div>
+            <div class="icon icofont-brand-fitbit"></div>
+            <div class="icon icofont-brand-flikr"></div>
+            <div class="icon icofont-brand-forbes"></div>
+            <div class="icon icofont-brand-foursquare"></div>
+            <div class="icon icofont-brand-foxconn"></div>
+            <div class="icon icofont-brand-fujitsu"></div>
+            <div class="icon icofont-brand-general-electric"></div>
+            <div class="icon icofont-brand-gillette"></div>
+            <div class="icon icofont-brand-gizmodo"></div>
+            <div class="icon icofont-brand-gnome"></div>
+            <div class="icon icofont-brand-google"></div>
+            <div class="icon icofont-brand-gopro"></div>
+            <div class="icon icofont-brand-gucci"></div>
+            <div class="icon icofont-brand-hallmark"></div>
+            <div class="icon icofont-brand-hi5"></div>
+            <div class="icon icofont-brand-honda"></div>
+            <div class="icon icofont-brand-hp"></div>
+            <div class="icon icofont-brand-hsbc"></div>
+            <div class="icon icofont-brand-htc"></div>
+            <div class="icon icofont-brand-huawei"></div>
+            <div class="icon icofont-brand-hulu"></div>
+            <div class="icon icofont-brand-hyundai"></div>
+            <div class="icon icofont-brand-ibm"></div>
+            <div class="icon icofont-brand-icofont"></div>
+            <div class="icon icofont-brand-icq"></div>
+            <div class="icon icofont-brand-ikea"></div>
+            <div class="icon icofont-brand-imdb"></div>
+            <div class="icon icofont-brand-indiegogo"></div>
+            <div class="icon icofont-brand-intel"></div>
+            <div class="icon icofont-brand-ipair"></div>
+            <div class="icon icofont-brand-jaguar"></div>
+            <div class="icon icofont-brand-java"></div>
+            <div class="icon icofont-brand-joomla"></div>
+            <div class="icon icofont-brand-kickstarter"></div>
+            <div class="icon icofont-brand-kik"></div>
+            <div class="icon icofont-brand-lastfm"></div>
+            <div class="icon icofont-brand-lego"></div>
+            <div class="icon icofont-brand-lenovo"></div>
+            <div class="icon icofont-brand-levis"></div>
+            <div class="icon icofont-brand-lexus"></div>
+            <div class="icon icofont-brand-lg"></div>
+            <div class="icon icofont-brand-life-hacker"></div>
+            <div class="icon icofont-brand-linux-mint"></div>
+            <div class="icon icofont-brand-linux"></div>
+            <div class="icon icofont-brand-lionix"></div>
+            <div class="icon icofont-brand-loreal"></div>
+            <div class="icon icofont-brand-louis-vuitton"></div>
+            <div class="icon icofont-brand-mac-os"></div>
+            <div class="icon icofont-brand-marvel-app"></div>
+            <div class="icon icofont-brand-mashable"></div>
+            <div class="icon icofont-brand-mazda"></div>
+            <div class="icon icofont-brand-mcdonals"></div>
+            <div class="icon icofont-brand-mercedes"></div>
+            <div class="icon icofont-brand-micromax"></div>
+            <div class="icon icofont-brand-microsoft"></div>
+            <div class="icon icofont-brand-mobileme"></div>
+            <div class="icon icofont-brand-mobily"></div>
+            <div class="icon icofont-brand-motorola"></div>
+            <div class="icon icofont-brand-msi"></div>
+            <div class="icon icofont-brand-mts"></div>
+            <div class="icon icofont-brand-myspace"></div>
+            <div class="icon icofont-brand-mytv"></div>
+            <div class="icon icofont-brand-nasa"></div>
+            <div class="icon icofont-brand-natgeo"></div>
+            <div class="icon icofont-brand-nbc"></div>
+            <div class="icon icofont-brand-nescafe"></div>
+            <div class="icon icofont-brand-nestle"></div>
+            <div class="icon icofont-brand-netflix"></div>
+            <div class="icon icofont-brand-nexus"></div>
+            <div class="icon icofont-brand-nike"></div>
+            <div class="icon icofont-brand-nokia"></div>
+            <div class="icon icofont-brand-nvidia"></div>
+            <div class="icon icofont-brand-omega"></div>
+            <div class="icon icofont-brand-opensuse"></div>
+            <div class="icon icofont-brand-oracle"></div>
+            <div class="icon icofont-brand-panasonic"></div>
+            <div class="icon icofont-brand-paypal"></div>
+            <div class="icon icofont-brand-pepsi"></div>
+            <div class="icon icofont-brand-philips"></div>
+            <div class="icon icofont-brand-pizza-hut"></div>
+            <div class="icon icofont-brand-playstation"></div>
+            <div class="icon icofont-brand-puma"></div>
+            <div class="icon icofont-brand-qatar-air"></div>
+            <div class="icon icofont-brand-qvc"></div>
+            <div class="icon icofont-brand-readernaut"></div>
+            <div class="icon icofont-brand-redbull"></div>
+            <div class="icon icofont-brand-reebok"></div>
+            <div class="icon icofont-brand-reuters"></div>
+            <div class="icon icofont-brand-samsung"></div>
+            <div class="icon icofont-brand-sap"></div>
+            <div class="icon icofont-brand-saudia-airlines"></div>
+            <div class="icon icofont-brand-scribd"></div>
+            <div class="icon icofont-brand-shell"></div>
+            <div class="icon icofont-brand-siemens"></div>
+            <div class="icon icofont-brand-sk-telecom"></div>
+            <div class="icon icofont-brand-slideshare"></div>
+            <div class="icon icofont-brand-smashing-magazine"></div>
+            <div class="icon icofont-brand-snapchat"></div>
+            <div class="icon icofont-brand-sony-ericsson"></div>
+            <div class="icon icofont-brand-sony"></div>
+            <div class="icon icofont-brand-soundcloud"></div>
+            <div class="icon icofont-brand-sprint"></div>
+            <div class="icon icofont-brand-squidoo"></div>
+            <div class="icon icofont-brand-starbucks"></div>
+            <div class="icon icofont-brand-stc"></div>
+            <div class="icon icofont-brand-steam"></div>
+            <div class="icon icofont-brand-suzuki"></div>
+            <div class="icon icofont-brand-symbian"></div>
+            <div class="icon icofont-brand-t-mobile"></div>
+            <div class="icon icofont-brand-tango"></div>
+            <div class="icon icofont-brand-target"></div>
+            <div class="icon icofont-brand-tata-indicom"></div>
+            <div class="icon icofont-brand-techcrunch"></div>
+            <div class="icon icofont-brand-telenor"></div>
+            <div class="icon icofont-brand-teliasonera"></div>
+            <div class="icon icofont-brand-tesla"></div>
+            <div class="icon icofont-brand-the-verge"></div>
+            <div class="icon icofont-brand-thenextweb"></div>
+            <div class="icon icofont-brand-toshiba"></div>
+            <div class="icon icofont-brand-toyota"></div>
+            <div class="icon icofont-brand-tribenet"></div>
+            <div class="icon icofont-brand-ubuntu"></div>
+            <div class="icon icofont-brand-unilever"></div>
+            <div class="icon icofont-brand-vaio"></div>
+            <div class="icon icofont-brand-verizon"></div>
+            <div class="icon icofont-brand-viber"></div>
+            <div class="icon icofont-brand-vodafone"></div>
+            <div class="icon icofont-brand-volkswagen"></div>
+            <div class="icon icofont-brand-walmart"></div>
+            <div class="icon icofont-brand-warnerbros"></div>
+            <div class="icon icofont-brand-whatsapp"></div>
+            <div class="icon icofont-brand-wikipedia"></div>
+            <div class="icon icofont-brand-windows"></div>
+            <div class="icon icofont-brand-wire"></div>
+            <div class="icon icofont-brand-wordpress"></div>
+            <div class="icon icofont-brand-xiaomi"></div>
+            <div class="icon icofont-brand-yahoobuzz"></div>
+            <div class="icon icofont-brand-yamaha"></div>
+            <div class="icon icofont-brand-youtube"></div>
+            <div class="icon icofont-brand-zain"></div>
+            <div class="icon icofont-bank-alt"></div>
+            <div class="icon icofont-bank"></div>
+            <div class="icon icofont-barcode"></div>
+            <div class="icon icofont-bill-alt"></div>
+            <div class="icon icofont-billboard"></div>
+            <div class="icon icofont-briefcase-1"></div>
+            <div class="icon icofont-briefcase-2"></div>
+            <div class="icon icofont-businessman"></div>
+            <div class="icon icofont-businesswoman"></div>
+            <div class="icon icofont-chair"></div>
+            <div class="icon icofont-coins"></div>
+            <div class="icon icofont-company"></div>
+            <div class="icon icofont-contact-add"></div>
+            <div class="icon icofont-files-stack"></div>
+            <div class="icon icofont-handshake-deal"></div>
+            <div class="icon icofont-id-card"></div>
+            <div class="icon icofont-meeting-add"></div>
+            <div class="icon icofont-money-bag"></div>
+            <div class="icon icofont-pie-chart"></div>
+            <div class="icon icofont-presentation-alt"></div>
+            <div class="icon icofont-presentation"></div>
+            <div class="icon icofont-stamp"></div>
+            <div class="icon icofont-stock-mobile"></div>
+            <div class="icon icofont-chart-arrows-axis"></div>
+            <div class="icon icofont-chart-bar-graph"></div>
+            <div class="icon icofont-chart-flow-1"></div>
+            <div class="icon icofont-chart-flow-2"></div>
+            <div class="icon icofont-chart-flow"></div>
+            <div class="icon icofont-chart-growth"></div>
+            <div class="icon icofont-chart-histogram-alt"></div>
+            <div class="icon icofont-chart-histogram"></div>
+            <div class="icon icofont-chart-line-alt"></div>
+            <div class="icon icofont-chart-line"></div>
+            <div class="icon icofont-chart-pie-alt"></div>
+            <div class="icon icofont-chart-pie"></div>
+            <div class="icon icofont-chart-radar-graph"></div>
+            <div class="icon icofont-architecture-alt"></div>
+            <div class="icon icofont-architecture"></div>
+            <div class="icon icofont-barricade"></div>
+            <div class="icon icofont-bolt"></div>
+            <div class="icon icofont-bricks"></div>
+            <div class="icon icofont-building-alt"></div>
+            <div class="icon icofont-bull-dozer"></div>
+            <div class="icon icofont-calculations"></div>
+            <div class="icon icofont-cement-mix"></div>
+            <div class="icon icofont-cement-mixer"></div>
+            <div class="icon icofont-concrete-mixer"></div>
+            <div class="icon icofont-danger-zone"></div>
+            <div class="icon icofont-drill"></div>
+            <div class="icon icofont-eco-energy"></div>
+            <div class="icon icofont-eco-environmen"></div>
+            <div class="icon icofont-energy-air"></div>
+            <div class="icon icofont-energy-oil"></div>
+            <div class="icon icofont-energy-savings"></div>
+            <div class="icon icofont-energy-solar"></div>
+            <div class="icon icofont-energy-water"></div>
+            <div class="icon icofont-engineer"></div>
+            <div class="icon icofont-fire-extinguisher-alt"></div>
+            <div class="icon icofont-fire-extinguisher"></div>
+            <div class="icon icofont-fix-tools"></div>
+            <div class="icon icofont-fork-lift"></div>
+            <div class="icon icofont-glue-oil"></div>
+            <div class="icon icofont-hammer-alt"></div>
+            <div class="icon icofont-hammer"></div>
+            <div class="icon icofont-help-robot"></div>
+            <div class="icon icofont-industries-1"></div>
+            <div class="icon icofont-industries-2"></div>
+            <div class="icon icofont-industries-3"></div>
+            <div class="icon icofont-industries-4"></div>
+            <div class="icon icofont-industries-5"></div>
+            <div class="icon icofont-industries"></div>
+            <div class="icon icofont-labour"></div>
+            <div class="icon icofont-mining"></div>
+            <div class="icon icofont-paint-brush"></div>
+            <div class="icon icofont-pollution"></div>
+            <div class="icon icofont-power-zone"></div>
+            <div class="icon icofont-radio-active"></div>
+            <div class="icon icofont-recycle-alt"></div>
+            <div class="icon icofont-recycling-man"></div>
+            <div class="icon icofont-safety-hat-light"></div>
+            <div class="icon icofont-safety-hat"></div>
+            <div class="icon icofont-saw"></div>
+            <div class="icon icofont-screw-driver"></div>
+            <div class="icon icofont-tools-1"></div>
+            <div class="icon icofont-tools-bag"></div>
+            <div class="icon icofont-tow-truck"></div>
+            <div class="icon icofont-trolley"></div>
+            <div class="icon icofont-trowel"></div>
+            <div class="icon icofont-under-construction-alt"></div>
+            <div class="icon icofont-under-construction"></div>
+            <div class="icon icofont-vehicle-cement"></div>
+            <div class="icon icofont-vehicle-crane"></div>
+            <div class="icon icofont-vehicle-delivery-van"></div>
+            <div class="icon icofont-vehicle-dozer"></div>
+            <div class="icon icofont-vehicle-excavator"></div>
+            <div class="icon icofont-vehicle-trucktor"></div>
+            <div class="icon icofont-vehicle-wrecking"></div>
+            <div class="icon icofont-worker"></div>
+            <div class="icon icofont-workers-group"></div>
+            <div class="icon icofont-wrench"></div>
+            <div class="icon icofont-afghani-false"></div>
+            <div class="icon icofont-afghani-minus"></div>
+            <div class="icon icofont-afghani-plus"></div>
+            <div class="icon icofont-afghani-true"></div>
+            <div class="icon icofont-afghani"></div>
+            <div class="icon icofont-baht-false"></div>
+            <div class="icon icofont-baht-minus"></div>
+            <div class="icon icofont-baht-plus"></div>
+            <div class="icon icofont-baht-true"></div>
+            <div class="icon icofont-baht"></div>
+            <div class="icon icofont-bitcoin-false"></div>
+            <div class="icon icofont-bitcoin-minus"></div>
+            <div class="icon icofont-bitcoin-plus"></div>
+            <div class="icon icofont-bitcoin-true"></div>
+            <div class="icon icofont-bitcoin"></div>
+            <div class="icon icofont-dollar-flase"></div>
+            <div class="icon icofont-dollar-minus"></div>
+            <div class="icon icofont-dollar-plus"></div>
+            <div class="icon icofont-dollar-true"></div>
+            <div class="icon icofont-dollar"></div>
+            <div class="icon icofont-dong-false"></div>
+            <div class="icon icofont-dong-minus"></div>
+            <div class="icon icofont-dong-plus"></div>
+            <div class="icon icofont-dong-true"></div>
+            <div class="icon icofont-dong"></div>
+            <div class="icon icofont-euro-false"></div>
+            <div class="icon icofont-euro-minus"></div>
+            <div class="icon icofont-euro-plus"></div>
+            <div class="icon icofont-euro-true"></div>
+            <div class="icon icofont-euro"></div>
+            <div class="icon icofont-frank-false"></div>
+            <div class="icon icofont-frank-minus"></div>
+            <div class="icon icofont-frank-plus"></div>
+            <div class="icon icofont-frank-true"></div>
+            <div class="icon icofont-frank"></div>
+            <div class="icon icofont-hryvnia-false"></div>
+            <div class="icon icofont-hryvnia-minus"></div>
+            <div class="icon icofont-hryvnia-plus"></div>
+            <div class="icon icofont-hryvnia-true"></div>
+            <div class="icon icofont-hryvnia"></div>
+            <div class="icon icofont-lira-false"></div>
+            <div class="icon icofont-lira-minus"></div>
+            <div class="icon icofont-lira-plus"></div>
+            <div class="icon icofont-lira-true"></div>
+            <div class="icon icofont-lira"></div>
+            <div class="icon icofont-peseta-false"></div>
+            <div class="icon icofont-peseta-minus"></div>
+            <div class="icon icofont-peseta-plus"></div>
+            <div class="icon icofont-peseta-true"></div>
+            <div class="icon icofont-peseta"></div>
+            <div class="icon icofont-peso-false"></div>
+            <div class="icon icofont-peso-minus"></div>
+            <div class="icon icofont-peso-plus"></div>
+            <div class="icon icofont-peso-true"></div>
+            <div class="icon icofont-peso"></div>
+            <div class="icon icofont-pound-false"></div>
+            <div class="icon icofont-pound-minus"></div>
+            <div class="icon icofont-pound-plus"></div>
+            <div class="icon icofont-pound-true"></div>
+            <div class="icon icofont-pound"></div>
+            <div class="icon icofont-renminbi-false"></div>
+            <div class="icon icofont-renminbi-minus"></div>
+            <div class="icon icofont-renminbi-plus"></div>
+            <div class="icon icofont-renminbi-true"></div>
+            <div class="icon icofont-renminbi"></div>
+            <div class="icon icofont-riyal-false"></div>
+            <div class="icon icofont-riyal-minus"></div>
+            <div class="icon icofont-riyal-plus"></div>
+            <div class="icon icofont-riyal-true"></div>
+            <div class="icon icofont-riyal"></div>
+            <div class="icon icofont-rouble-false"></div>
+            <div class="icon icofont-rouble-minus"></div>
+            <div class="icon icofont-rouble-plus"></div>
+            <div class="icon icofont-rouble-true"></div>
+            <div class="icon icofont-rouble"></div>
+            <div class="icon icofont-rupee-false"></div>
+            <div class="icon icofont-rupee-minus"></div>
+            <div class="icon icofont-rupee-plus"></div>
+            <div class="icon icofont-rupee-true"></div>
+            <div class="icon icofont-rupee"></div>
+            <div class="icon icofont-taka-false"></div>
+            <div class="icon icofont-taka-minus"></div>
+            <div class="icon icofont-taka-plus"></div>
+            <div class="icon icofont-taka-true"></div>
+            <div class="icon icofont-taka"></div>
+            <div class="icon icofont-turkish-lira-false"></div>
+            <div class="icon icofont-turkish-lira-minus"></div>
+            <div class="icon icofont-turkish-lira-plus"></div>
+            <div class="icon icofont-turkish-lira-true"></div>
+            <div class="icon icofont-turkish-lira"></div>
+            <div class="icon icofont-won-false"></div>
+            <div class="icon icofont-won-minus"></div>
+            <div class="icon icofont-won-plus"></div>
+            <div class="icon icofont-won-true"></div>
+            <div class="icon icofont-won"></div>
+            <div class="icon icofont-yen-false"></div>
+            <div class="icon icofont-yen-minus"></div>
+            <div class="icon icofont-yen-plus"></div>
+            <div class="icon icofont-yen-true"></div>
+            <div class="icon icofont-yen"></div>
+            <div class="icon icofont-android-nexus"></div>
+            <div class="icon icofont-android-tablet"></div>
+            <div class="icon icofont-apple-watch"></div>
+            <div class="icon icofont-drawing-tablet"></div>
+            <div class="icon icofont-earphone"></div>
+            <div class="icon icofont-flash-drive"></div>
+            <div class="icon icofont-game-console"></div>
+            <div class="icon icofont-game-controller"></div>
+            <div class="icon icofont-game-pad"></div>
+            <div class="icon icofont-game"></div>
+            <div class="icon icofont-headphone-alt-1"></div>
+            <div class="icon icofont-headphone-alt-2"></div>
+            <div class="icon icofont-headphone-alt-3"></div>
+            <div class="icon icofont-headphone-alt"></div>
+            <div class="icon icofont-headphone"></div>
+            <div class="icon icofont-htc-one"></div>
+            <div class="icon icofont-imac"></div>
+            <div class="icon icofont-ipad"></div>
+            <div class="icon icofont-iphone"></div>
+            <div class="icon icofont-ipod-nano"></div>
+            <div class="icon icofont-ipod-touch"></div>
+            <div class="icon icofont-keyboard-alt"></div>
+            <div class="icon icofont-keyboard-wireless"></div>
+            <div class="icon icofont-keyboard"></div>
+            <div class="icon icofont-laptop-alt"></div>
+            <div class="icon icofont-laptop"></div>
+            <div class="icon icofont-macbook"></div>
+            <div class="icon icofont-magic-mouse"></div>
+            <div class="icon icofont-micro-chip"></div>
+            <div class="icon icofont-microphone-alt"></div>
+            <div class="icon icofont-microphone"></div>
+            <div class="icon icofont-monitor"></div>
+            <div class="icon icofont-mouse"></div>
+            <div class="icon icofont-mp3-player"></div>
+            <div class="icon icofont-nintendo"></div>
+            <div class="icon icofont-playstation-alt"></div>
+            <div class="icon icofont-psvita"></div>
+            <div class="icon icofont-radio-mic"></div>
+            <div class="icon icofont-radio"></div>
+            <div class="icon icofont-refrigerator"></div>
+            <div class="icon icofont-samsung-galaxy"></div>
+            <div class="icon icofont-surface-tablet"></div>
+            <div class="icon icofont-ui-head-phone"></div>
+            <div class="icon icofont-ui-keyboard"></div>
+            <div class="icon icofont-washing-machine"></div>
+            <div class="icon icofont-wifi-router"></div>
+            <div class="icon icofont-wii-u"></div>
+            <div class="icon icofont-windows-lumia"></div>
+            <div class="icon icofont-wireless-mouse"></div>
+            <div class="icon icofont-xbox-360"></div>
+            <div class="icon icofont-arrow-down"></div>
+            <div class="icon icofont-arrow-left"></div>
+            <div class="icon icofont-arrow-right"></div>
+            <div class="icon icofont-arrow-up"></div>
+            <div class="icon icofont-block-down"></div>
+            <div class="icon icofont-block-left"></div>
+            <div class="icon icofont-block-right"></div>
+            <div class="icon icofont-block-up"></div>
+            <div class="icon icofont-bubble-down"></div>
+            <div class="icon icofont-bubble-left"></div>
+            <div class="icon icofont-bubble-right"></div>
+            <div class="icon icofont-bubble-up"></div>
+            <div class="icon icofont-caret-down"></div>
+            <div class="icon icofont-caret-left"></div>
+            <div class="icon icofont-caret-right"></div>
+            <div class="icon icofont-caret-up"></div>
+            <div class="icon icofont-circled-down"></div>
+            <div class="icon icofont-circled-left"></div>
+            <div class="icon icofont-circled-right"></div>
+            <div class="icon icofont-circled-up"></div>
+            <div class="icon icofont-collapse"></div>
+            <div class="icon icofont-cursor-drag"></div>
+            <div class="icon icofont-curved-double-left"></div>
+            <div class="icon icofont-curved-double-right"></div>
+            <div class="icon icofont-curved-down"></div>
+            <div class="icon icofont-curved-left"></div>
+            <div class="icon icofont-curved-right"></div>
+            <div class="icon icofont-curved-up"></div>
+            <div class="icon icofont-dotted-down"></div>
+            <div class="icon icofont-dotted-left"></div>
+            <div class="icon icofont-dotted-right"></div>
+            <div class="icon icofont-dotted-up"></div>
+            <div class="icon icofont-double-left"></div>
+            <div class="icon icofont-double-right"></div>
+            <div class="icon icofont-expand-alt"></div>
+            <div class="icon icofont-hand-down"></div>
+            <div class="icon icofont-hand-drag"></div>
+            <div class="icon icofont-hand-drag1"></div>
+            <div class="icon icofont-hand-drag2"></div>
+            <div class="icon icofont-hand-drawn-alt-down"></div>
+            <div class="icon icofont-hand-drawn-alt-left"></div>
+            <div class="icon icofont-hand-drawn-alt-right"></div>
+            <div class="icon icofont-hand-drawn-alt-up"></div>
+            <div class="icon icofont-hand-drawn-down"></div>
+            <div class="icon icofont-hand-drawn-left"></div>
+            <div class="icon icofont-hand-drawn-right"></div>
+            <div class="icon icofont-hand-drawn-up"></div>
+            <div class="icon icofont-hand-grippers"></div>
+            <div class="icon icofont-hand-left"></div>
+            <div class="icon icofont-hand-right"></div>
+            <div class="icon icofont-hand-up"></div>
+            <div class="icon icofont-line-block-down"></div>
+            <div class="icon icofont-line-block-left"></div>
+            <div class="icon icofont-line-block-right"></div>
+            <div class="icon icofont-line-block-up"></div>
+            <div class="icon icofont-long-arrow-down"></div>
+            <div class="icon icofont-long-arrow-left"></div>
+            <div class="icon icofont-long-arrow-right"></div>
+            <div class="icon icofont-long-arrow-up"></div>
+            <div class="icon icofont-rounded-collapse"></div>
+            <div class="icon icofont-rounded-double-left"></div>
+            <div class="icon icofont-rounded-double-right"></div>
+            <div class="icon icofont-rounded-down"></div>
+            <div class="icon icofont-rounded-expand"></div>
+            <div class="icon icofont-rounded-left-down"></div>
+            <div class="icon icofont-rounded-left-up"></div>
+            <div class="icon icofont-rounded-left"></div>
+            <div class="icon icofont-rounded-right-down"></div>
+            <div class="icon icofont-rounded-right-up"></div>
+            <div class="icon icofont-rounded-right"></div>
+            <div class="icon icofont-rounded-up"></div>
+            <div class="icon icofont-scroll-bubble-down"></div>
+            <div class="icon icofont-scroll-bubble-left"></div>
+            <div class="icon icofont-scroll-bubble-right"></div>
+            <div class="icon icofont-scroll-bubble-up"></div>
+            <div class="icon icofont-scroll-double-down"></div>
+            <div class="icon icofont-scroll-double-left"></div>
+            <div class="icon icofont-scroll-double-right"></div>
+            <div class="icon icofont-scroll-double-up"></div>
+            <div class="icon icofont-scroll-down"></div>
+            <div class="icon icofont-scroll-left"></div>
+            <div class="icon icofont-scroll-long-down"></div>
+            <div class="icon icofont-scroll-long-left"></div>
+            <div class="icon icofont-scroll-long-right"></div>
+            <div class="icon icofont-scroll-long-up"></div>
+            <div class="icon icofont-scroll-right"></div>
+            <div class="icon icofont-scroll-up"></div>
+            <div class="icon icofont-simple-down"></div>
+            <div class="icon icofont-simple-left-down"></div>
+            <div class="icon icofont-simple-left-up"></div>
+            <div class="icon icofont-simple-left"></div>
+            <div class="icon icofont-simple-right-down"></div>
+            <div class="icon icofont-simple-right-up"></div>
+            <div class="icon icofont-simple-right"></div>
+            <div class="icon icofont-simple-up"></div>
+            <div class="icon icofont-square-down"></div>
+            <div class="icon icofont-square-left"></div>
+            <div class="icon icofont-square-right"></div>
+            <div class="icon icofont-square-up"></div>
+            <div class="icon icofont-stylish-down"></div>
+            <div class="icon icofont-stylish-left"></div>
+            <div class="icon icofont-stylish-right"></div>
+            <div class="icon icofont-stylish-up"></div>
+            <div class="icon icofont-swoosh-down"></div>
+            <div class="icon icofont-swoosh-left"></div>
+            <div class="icon icofont-swoosh-right"></div>
+            <div class="icon icofont-swoosh-up"></div>
+            <div class="icon icofont-thin-double-left"></div>
+            <div class="icon icofont-thin-double-right"></div>
+            <div class="icon icofont-thin-down"></div>
+            <div class="icon icofont-thin-left"></div>
+            <div class="icon icofont-thin-right"></div>
+            <div class="icon icofont-thin-up"></div>
+            <div class="icon icofont-abc"></div>
+            <div class="icon icofont-atom"></div>
+            <div class="icon icofont-award"></div>
+            <div class="icon icofont-bell-alt"></div>
+            <div class="icon icofont-black-board"></div>
+            <div class="icon icofont-book-alt"></div>
+            <div class="icon icofont-book"></div>
+            <div class="icon icofont-brainstorming"></div>
+            <div class="icon icofont-certificate-alt-1"></div>
+            <div class="icon icofont-certificate-alt-2"></div>
+            <div class="icon icofont-certificate"></div>
+            <div class="icon icofont-education"></div>
+            <div class="icon icofont-electron"></div>
+            <div class="icon icofont-fountain-pen"></div>
+            <div class="icon icofont-globe-alt"></div>
+            <div class="icon icofont-graduate-alt"></div>
+            <div class="icon icofont-graduate"></div>
+            <div class="icon icofont-group-students"></div>
+            <div class="icon icofont-hat-alt"></div>
+            <div class="icon icofont-hat"></div>
+            <div class="icon icofont-instrument"></div>
+            <div class="icon icofont-lamp-light"></div>
+            <div class="icon icofont-medal"></div>
+            <div class="icon icofont-microscope-alt"></div>
+            <div class="icon icofont-microscope"></div>
+            <div class="icon icofont-paper"></div>
+            <div class="icon icofont-pen-alt-4"></div>
+            <div class="icon icofont-pen-nib"></div>
+            <div class="icon icofont-pencil-alt-5"></div>
+            <div class="icon icofont-quill-pen"></div>
+            <div class="icon icofont-read-book-alt"></div>
+            <div class="icon icofont-read-book"></div>
+            <div class="icon icofont-school-bag"></div>
+            <div class="icon icofont-school-bus"></div>
+            <div class="icon icofont-student-alt"></div>
+            <div class="icon icofont-student"></div>
+            <div class="icon icofont-teacher"></div>
+            <div class="icon icofont-test-bulb"></div>
+            <div class="icon icofont-test-tube-alt"></div>
+            <div class="icon icofont-university"></div>
+            <div class="icon icofont-angry"></div>
+            <div class="icon icofont-astonished"></div>
+            <div class="icon icofont-confounded"></div>
+            <div class="icon icofont-confused"></div>
+            <div class="icon icofont-crying"></div>
+            <div class="icon icofont-dizzy"></div>
+            <div class="icon icofont-expressionless"></div>
+            <div class="icon icofont-heart-eyes"></div>
+            <div class="icon icofont-laughing"></div>
+            <div class="icon icofont-nerd-smile"></div>
+            <div class="icon icofont-open-mouth"></div>
+            <div class="icon icofont-rage"></div>
+            <div class="icon icofont-rolling-eyes"></div>
+            <div class="icon icofont-sad"></div>
+            <div class="icon icofont-simple-smile"></div>
+            <div class="icon icofont-slightly-smile"></div>
+            <div class="icon icofont-smirk"></div>
+            <div class="icon icofont-stuck-out-tongue"></div>
+            <div class="icon icofont-wink-smile"></div>
+            <div class="icon icofont-worried"></div>
+            <div class="icon icofont-file-alt"></div>
+            <div class="icon icofont-file-audio"></div>
+            <div class="icon icofont-file-avi-mp4"></div>
+            <div class="icon icofont-file-bmp"></div>
+            <div class="icon icofont-file-code"></div>
+            <div class="icon icofont-file-css"></div>
+            <div class="icon icofont-file-document"></div>
+            <div class="icon icofont-file-eps"></div>
+            <div class="icon icofont-file-excel"></div>
+            <div class="icon icofont-file-exe"></div>
+            <div class="icon icofont-file-file"></div>
+            <div class="icon icofont-file-flv"></div>
+            <div class="icon icofont-file-gif"></div>
+            <div class="icon icofont-file-html5"></div>
+            <div class="icon icofont-file-image"></div>
+            <div class="icon icofont-file-iso"></div>
+            <div class="icon icofont-file-java"></div>
+            <div class="icon icofont-file-javascript"></div>
+            <div class="icon icofont-file-jpg"></div>
+            <div class="icon icofont-file-midi"></div>
+            <div class="icon icofont-file-mov"></div>
+            <div class="icon icofont-file-mp3"></div>
+            <div class="icon icofont-file-pdf"></div>
+            <div class="icon icofont-file-php"></div>
+            <div class="icon icofont-file-png"></div>
+            <div class="icon icofont-file-powerpoint"></div>
+            <div class="icon icofont-file-presentation"></div>
+            <div class="icon icofont-file-psb"></div>
+            <div class="icon icofont-file-psd"></div>
+            <div class="icon icofont-file-python"></div>
+            <div class="icon icofont-file-ruby"></div>
+            <div class="icon icofont-file-spreadsheet"></div>
+            <div class="icon icofont-file-sql"></div>
+            <div class="icon icofont-file-svg"></div>
+            <div class="icon icofont-file-text"></div>
+            <div class="icon icofont-file-tiff"></div>
+            <div class="icon icofont-file-video"></div>
+            <div class="icon icofont-file-wave"></div>
+            <div class="icon icofont-file-wmv"></div>
+            <div class="icon icofont-file-word"></div>
+            <div class="icon icofont-file-zip"></div>
+            <div class="icon icofont-cycling-alt"></div>
+            <div class="icon icofont-cycling"></div>
+            <div class="icon icofont-dumbbell"></div>
+            <div class="icon icofont-dumbbells"></div>
+            <div class="icon icofont-gym-alt-1"></div>
+            <div class="icon icofont-gym-alt-2"></div>
+            <div class="icon icofont-gym-alt-3"></div>
+            <div class="icon icofont-gym"></div>
+            <div class="icon icofont-muscle-weight"></div>
+            <div class="icon icofont-muscle"></div>
+            <div class="icon icofont-apple"></div>
+            <div class="icon icofont-arabian-coffee"></div>
+            <div class="icon icofont-artichoke"></div>
+            <div class="icon icofont-asparagus"></div>
+            <div class="icon icofont-avocado"></div>
+            <div class="icon icofont-baby-food"></div>
+            <div class="icon icofont-banana"></div>
+            <div class="icon icofont-bbq"></div>
+            <div class="icon icofont-beans"></div>
+            <div class="icon icofont-beer"></div>
+            <div class="icon icofont-bell-pepper-capsicum"></div>
+            <div class="icon icofont-birthday-cake"></div>
+            <div class="icon icofont-bread"></div>
+            <div class="icon icofont-broccoli"></div>
+            <div class="icon icofont-burger"></div>
+            <div class="icon icofont-cabbage"></div>
+            <div class="icon icofont-carrot"></div>
+            <div class="icon icofont-cauli-flower"></div>
+            <div class="icon icofont-cheese"></div>
+            <div class="icon icofont-chef"></div>
+            <div class="icon icofont-cherry"></div>
+            <div class="icon icofont-chicken-fry"></div>
+            <div class="icon icofont-chicken"></div>
+            <div class="icon icofont-cocktail"></div>
+            <div class="icon icofont-coconut-water"></div>
+            <div class="icon icofont-coconut"></div>
+            <div class="icon icofont-coffee-alt"></div>
+            <div class="icon icofont-coffee-cup"></div>
+            <div class="icon icofont-coffee-mug"></div>
+            <div class="icon icofont-coffee-pot"></div>
+            <div class="icon icofont-cola"></div>
+            <div class="icon icofont-corn"></div>
+            <div class="icon icofont-croissant"></div>
+            <div class="icon icofont-crop-plant"></div>
+            <div class="icon icofont-cucumber"></div>
+            <div class="icon icofont-culinary"></div>
+            <div class="icon icofont-cup-cake"></div>
+            <div class="icon icofont-dining-table"></div>
+            <div class="icon icofont-donut"></div>
+            <div class="icon icofont-egg-plant"></div>
+            <div class="icon icofont-egg-poached"></div>
+            <div class="icon icofont-farmer-alt"></div>
+            <div class="icon icofont-farmer"></div>
+            <div class="icon icofont-fast-food"></div>
+            <div class="icon icofont-food-basket"></div>
+            <div class="icon icofont-food-cart"></div>
+            <div class="icon icofont-fork-and-knife"></div>
+            <div class="icon icofont-french-fries"></div>
+            <div class="icon icofont-fruits"></div>
+            <div class="icon icofont-grapes"></div>
+            <div class="icon icofont-honey"></div>
+            <div class="icon icofont-hot-dog"></div>
+            <div class="icon icofont-ice-cream-alt"></div>
+            <div class="icon icofont-ice-cream"></div>
+            <div class="icon icofont-juice"></div>
+            <div class="icon icofont-ketchup"></div>
+            <div class="icon icofont-kiwi"></div>
+            <div class="icon icofont-layered-cake"></div>
+            <div class="icon icofont-lemon-alt"></div>
+            <div class="icon icofont-lemon"></div>
+            <div class="icon icofont-lobster"></div>
+            <div class="icon icofont-mango"></div>
+            <div class="icon icofont-milk"></div>
+            <div class="icon icofont-mushroom"></div>
+            <div class="icon icofont-noodles"></div>
+            <div class="icon icofont-onion"></div>
+            <div class="icon icofont-orange"></div>
+            <div class="icon icofont-pear"></div>
+            <div class="icon icofont-peas"></div>
+            <div class="icon icofont-pepper"></div>
+            <div class="icon icofont-pie-alt"></div>
+            <div class="icon icofont-pie"></div>
+            <div class="icon icofont-pineapple"></div>
+            <div class="icon icofont-pizza-slice"></div>
+            <div class="icon icofont-pizza"></div>
+            <div class="icon icofont-plant"></div>
+            <div class="icon icofont-popcorn"></div>
+            <div class="icon icofont-potato"></div>
+            <div class="icon icofont-pumpkin"></div>
+            <div class="icon icofont-raddish"></div>
+            <div class="icon icofont-restaurant-menu"></div>
+            <div class="icon icofont-restaurant"></div>
+            <div class="icon icofont-salt-and-pepper"></div>
+            <div class="icon icofont-sandwich"></div>
+            <div class="icon icofont-sausage"></div>
+            <div class="icon icofont-soft-drinks"></div>
+            <div class="icon icofont-soup-bowl"></div>
+            <div class="icon icofont-spoon-and-fork"></div>
+            <div class="icon icofont-steak"></div>
+            <div class="icon icofont-strawberry"></div>
+            <div class="icon icofont-sub-sandwich"></div>
+            <div class="icon icofont-sushi"></div>
+            <div class="icon icofont-taco"></div>
+            <div class="icon icofont-tea-pot"></div>
+            <div class="icon icofont-tea"></div>
+            <div class="icon icofont-tomato"></div>
+            <div class="icon icofont-watermelon"></div>
+            <div class="icon icofont-wheat"></div>
+            <div class="icon icofont-baby-backpack"></div>
+            <div class="icon icofont-baby-cloth"></div>
+            <div class="icon icofont-baby-milk-bottle"></div>
+            <div class="icon icofont-baby-trolley"></div>
+            <div class="icon icofont-baby"></div>
+            <div class="icon icofont-candy"></div>
+            <div class="icon icofont-holding-hands"></div>
+            <div class="icon icofont-infant-nipple"></div>
+            <div class="icon icofont-kids-scooter"></div>
+            <div class="icon icofont-safety-pin"></div>
+            <div class="icon icofont-teddy-bear"></div>
+            <div class="icon icofont-toy-ball"></div>
+            <div class="icon icofont-toy-cat"></div>
+            <div class="icon icofont-toy-duck"></div>
+            <div class="icon icofont-toy-elephant"></div>
+            <div class="icon icofont-toy-hand"></div>
+            <div class="icon icofont-toy-horse"></div>
+            <div class="icon icofont-toy-lattu"></div>
+            <div class="icon icofont-toy-train"></div>
+            <div class="icon icofont-burglar"></div>
+            <div class="icon icofont-cannon-firing"></div>
+            <div class="icon icofont-cc-camera"></div>
+            <div class="icon icofont-cop-badge"></div>
+            <div class="icon icofont-cop"></div>
+            <div class="icon icofont-court-hammer"></div>
+            <div class="icon icofont-court"></div>
+            <div class="icon icofont-finger-print"></div>
+            <div class="icon icofont-gavel"></div>
+            <div class="icon icofont-handcuff-alt"></div>
+            <div class="icon icofont-handcuff"></div>
+            <div class="icon icofont-investigation"></div>
+            <div class="icon icofont-investigator"></div>
+            <div class="icon icofont-jail"></div>
+            <div class="icon icofont-judge"></div>
+            <div class="icon icofont-law-alt-1"></div>
+            <div class="icon icofont-law-alt-2"></div>
+            <div class="icon icofont-law-alt-3"></div>
+            <div class="icon icofont-law-book"></div>
+            <div class="icon icofont-law-document"></div>
+            <div class="icon icofont-law-order"></div>
+            <div class="icon icofont-law-protect"></div>
+            <div class="icon icofont-law-scales"></div>
+            <div class="icon icofont-law"></div>
+            <div class="icon icofont-lawyer-alt-1"></div>
+            <div class="icon icofont-lawyer-alt-2"></div>
+            <div class="icon icofont-lawyer"></div>
+            <div class="icon icofont-legal"></div>
+            <div class="icon icofont-pistol"></div>
+            <div class="icon icofont-police-badge"></div>
+            <div class="icon icofont-police-cap"></div>
+            <div class="icon icofont-police-car-alt-1"></div>
+            <div class="icon icofont-police-car-alt-2"></div>
+            <div class="icon icofont-police-car"></div>
+            <div class="icon icofont-police-hat"></div>
+            <div class="icon icofont-police-van"></div>
+            <div class="icon icofont-police"></div>
+            <div class="icon icofont-thief-alt"></div>
+            <div class="icon icofont-thief"></div>
+            <div class="icon icofont-abacus-alt"></div>
+            <div class="icon icofont-abacus"></div>
+            <div class="icon icofont-angle-180"></div>
+            <div class="icon icofont-angle-45"></div>
+            <div class="icon icofont-angle-90"></div>
+            <div class="icon icofont-angle"></div>
+            <div class="icon icofont-calculator-alt-1"></div>
+            <div class="icon icofont-calculator-alt-2"></div>
+            <div class="icon icofont-calculator"></div>
+            <div class="icon icofont-circle-ruler-alt"></div>
+            <div class="icon icofont-circle-ruler"></div>
+            <div class="icon icofont-compass-alt-1"></div>
+            <div class="icon icofont-compass-alt-2"></div>
+            <div class="icon icofont-compass-alt-3"></div>
+            <div class="icon icofont-compass-alt-4"></div>
+            <div class="icon icofont-golden-ratio"></div>
+            <div class="icon icofont-marker-alt-1"></div>
+            <div class="icon icofont-marker-alt-2"></div>
+            <div class="icon icofont-marker-alt-3"></div>
+            <div class="icon icofont-marker"></div>
+            <div class="icon icofont-math"></div>
+            <div class="icon icofont-mathematical-alt-1"></div>
+            <div class="icon icofont-mathematical-alt-2"></div>
+            <div class="icon icofont-mathematical"></div>
+            <div class="icon icofont-pen-alt-1"></div>
+            <div class="icon icofont-pen-alt-2"></div>
+            <div class="icon icofont-pen-alt-3"></div>
+            <div class="icon icofont-pen-holder-alt-1"></div>
+            <div class="icon icofont-pen-holder"></div>
+            <div class="icon icofont-pen"></div>
+            <div class="icon icofont-pencil-alt-1"></div>
+            <div class="icon icofont-pencil-alt-2"></div>
+            <div class="icon icofont-pencil-alt-3"></div>
+            <div class="icon icofont-pencil-alt-4"></div>
+            <div class="icon icofont-pencil"></div>
+            <div class="icon icofont-ruler-alt-1"></div>
+            <div class="icon icofont-ruler-alt-2"></div>
+            <div class="icon icofont-ruler-compass-alt"></div>
+            <div class="icon icofont-ruler-compass"></div>
+            <div class="icon icofont-ruler-pencil-alt-1"></div>
+            <div class="icon icofont-ruler-pencil-alt-2"></div>
+            <div class="icon icofont-ruler-pencil"></div>
+            <div class="icon icofont-ruler"></div>
+            <div class="icon icofont-rulers-alt"></div>
+            <div class="icon icofont-rulers"></div>
+            <div class="icon icofont-square-root"></div>
+            <div class="icon icofont-ui-calculator"></div>
+            <div class="icon icofont-aids"></div>
+            <div class="icon icofont-ambulance-crescent"></div>
+            <div class="icon icofont-ambulance-cross"></div>
+            <div class="icon icofont-ambulance"></div>
+            <div class="icon icofont-autism"></div>
+            <div class="icon icofont-bandage"></div>
+            <div class="icon icofont-blind"></div>
+            <div class="icon icofont-blood-drop"></div>
+            <div class="icon icofont-blood-test"></div>
+            <div class="icon icofont-blood"></div>
+            <div class="icon icofont-brain-alt"></div>
+            <div class="icon icofont-brain"></div>
+            <div class="icon icofont-capsule"></div>
+            <div class="icon icofont-crutch"></div>
+            <div class="icon icofont-disabled"></div>
+            <div class="icon icofont-dna-alt-1"></div>
+            <div class="icon icofont-dna-alt-2"></div>
+            <div class="icon icofont-dna"></div>
+            <div class="icon icofont-doctor-alt"></div>
+            <div class="icon icofont-doctor"></div>
+            <div class="icon icofont-drug-pack"></div>
+            <div class="icon icofont-drug"></div>
+            <div class="icon icofont-first-aid-alt"></div>
+            <div class="icon icofont-first-aid"></div>
+            <div class="icon icofont-heart-beat-alt"></div>
+            <div class="icon icofont-heart-beat"></div>
+            <div class="icon icofont-heartbeat"></div>
+            <div class="icon icofont-herbal"></div>
+            <div class="icon icofont-hospital"></div>
+            <div class="icon icofont-icu"></div>
+            <div class="icon icofont-injection-syringe"></div>
+            <div class="icon icofont-laboratory"></div>
+            <div class="icon icofont-medical-sign-alt"></div>
+            <div class="icon icofont-medical-sign"></div>
+            <div class="icon icofont-nurse-alt"></div>
+            <div class="icon icofont-nurse"></div>
+            <div class="icon icofont-nursing-home"></div>
+            <div class="icon icofont-operation-theater"></div>
+            <div class="icon icofont-paralysis-disability"></div>
+            <div class="icon icofont-patient-bed"></div>
+            <div class="icon icofont-patient-file"></div>
+            <div class="icon icofont-pills"></div>
+            <div class="icon icofont-prescription"></div>
+            <div class="icon icofont-pulse"></div>
+            <div class="icon icofont-stethoscope-alt"></div>
+            <div class="icon icofont-stethoscope"></div>
+            <div class="icon icofont-stretcher"></div>
+            <div class="icon icofont-surgeon-alt"></div>
+            <div class="icon icofont-surgeon"></div>
+            <div class="icon icofont-tablets"></div>
+            <div class="icon icofont-test-bottle"></div>
+            <div class="icon icofont-test-tube"></div>
+            <div class="icon icofont-thermometer-alt"></div>
+            <div class="icon icofont-thermometer"></div>
+            <div class="icon icofont-tooth"></div>
+            <div class="icon icofont-xray"></div>
+            <div class="icon icofont-ui-add"></div>
+            <div class="icon icofont-ui-alarm"></div>
+            <div class="icon icofont-ui-battery"></div>
+            <div class="icon icofont-ui-block"></div>
+            <div class="icon icofont-ui-bluetooth"></div>
+            <div class="icon icofont-ui-brightness"></div>
+            <div class="icon icofont-ui-browser"></div>
+            <div class="icon icofont-ui-calendar"></div>
+            <div class="icon icofont-ui-call"></div>
+            <div class="icon icofont-ui-camera"></div>
+            <div class="icon icofont-ui-cart"></div>
+            <div class="icon icofont-ui-cell-phone"></div>
+            <div class="icon icofont-ui-chat"></div>
+            <div class="icon icofont-ui-check"></div>
+            <div class="icon icofont-ui-clip-board"></div>
+            <div class="icon icofont-ui-clip"></div>
+            <div class="icon icofont-ui-clock"></div>
+            <div class="icon icofont-ui-close"></div>
+            <div class="icon icofont-ui-contact-list"></div>
+            <div class="icon icofont-ui-copy"></div>
+            <div class="icon icofont-ui-cut"></div>
+            <div class="icon icofont-ui-delete"></div>
+            <div class="icon icofont-ui-dial-phone"></div>
+            <div class="icon icofont-ui-edit"></div>
+            <div class="icon icofont-ui-email"></div>
+            <div class="icon icofont-ui-file"></div>
+            <div class="icon icofont-ui-fire-wall"></div>
+            <div class="icon icofont-ui-flash-light"></div>
+            <div class="icon icofont-ui-flight"></div>
+            <div class="icon icofont-ui-folder"></div>
+            <div class="icon icofont-ui-game"></div>
+            <div class="icon icofont-ui-handicapped"></div>
+            <div class="icon icofont-ui-home"></div>
+            <div class="icon icofont-ui-image"></div>
+            <div class="icon icofont-ui-laoding"></div>
+            <div class="icon icofont-ui-lock"></div>
+            <div class="icon icofont-ui-love-add"></div>
+            <div class="icon icofont-ui-love-broken"></div>
+            <div class="icon icofont-ui-love-remove"></div>
+            <div class="icon icofont-ui-love"></div>
+            <div class="icon icofont-ui-map"></div>
+            <div class="icon icofont-ui-message"></div>
+            <div class="icon icofont-ui-messaging"></div>
+            <div class="icon icofont-ui-movie"></div>
+            <div class="icon icofont-ui-music-player"></div>
+            <div class="icon icofont-ui-music"></div>
+            <div class="icon icofont-ui-mute"></div>
+            <div class="icon icofont-ui-network"></div>
+            <div class="icon icofont-ui-next"></div>
+            <div class="icon icofont-ui-note"></div>
+            <div class="icon icofont-ui-office"></div>
+            <div class="icon icofont-ui-password"></div>
+            <div class="icon icofont-ui-pause"></div>
+            <div class="icon icofont-ui-play-stop"></div>
+            <div class="icon icofont-ui-play"></div>
+            <div class="icon icofont-ui-pointer"></div>
+            <div class="icon icofont-ui-power"></div>
+            <div class="icon icofont-ui-press"></div>
+            <div class="icon icofont-ui-previous"></div>
+            <div class="icon icofont-ui-rate-add"></div>
+            <div class="icon icofont-ui-rate-blank"></div>
+            <div class="icon icofont-ui-rate-remove"></div>
+            <div class="icon icofont-ui-rating"></div>
+            <div class="icon icofont-ui-record"></div>
+            <div class="icon icofont-ui-remove"></div>
+            <div class="icon icofont-ui-reply"></div>
+            <div class="icon icofont-ui-rotation"></div>
+            <div class="icon icofont-ui-rss"></div>
+            <div class="icon icofont-ui-search"></div>
+            <div class="icon icofont-ui-settings"></div>
+            <div class="icon icofont-ui-social-link"></div>
+            <div class="icon icofont-ui-tag"></div>
+            <div class="icon icofont-ui-text-chat"></div>
+            <div class="icon icofont-ui-text-loading"></div>
+            <div class="icon icofont-ui-theme"></div>
+            <div class="icon icofont-ui-timer"></div>
+            <div class="icon icofont-ui-touch-phone"></div>
+            <div class="icon icofont-ui-travel"></div>
+            <div class="icon icofont-ui-unlock"></div>
+            <div class="icon icofont-ui-user-group"></div>
+            <div class="icon icofont-ui-user"></div>
+            <div class="icon icofont-ui-v-card"></div>
+            <div class="icon icofont-ui-video-chat"></div>
+            <div class="icon icofont-ui-video-message"></div>
+            <div class="icon icofont-ui-video-play"></div>
+            <div class="icon icofont-ui-video"></div>
+            <div class="icon icofont-ui-volume"></div>
+            <div class="icon icofont-ui-weather"></div>
+            <div class="icon icofont-ui-wifi"></div>
+            <div class="icon icofont-ui-zoom-in"></div>
+            <div class="icon icofont-ui-zoom-out"></div>
+            <div class="icon icofont-cassette-player"></div>
+            <div class="icon icofont-cassette"></div>
+            <div class="icon icofont-forward"></div>
+            <div class="icon icofont-guiter"></div>
+            <div class="icon icofont-movie"></div>
+            <div class="icon icofont-multimedia"></div>
+            <div class="icon icofont-music-alt"></div>
+            <div class="icon icofont-music-disk"></div>
+            <div class="icon icofont-music-note"></div>
+            <div class="icon icofont-music-notes"></div>
+            <div class="icon icofont-music"></div>
+            <div class="icon icofont-mute-volume"></div>
+            <div class="icon icofont-pause"></div>
+            <div class="icon icofont-play-alt-1"></div>
+            <div class="icon icofont-play-alt-2"></div>
+            <div class="icon icofont-play-alt-3"></div>
+            <div class="icon icofont-play-pause"></div>
+            <div class="icon icofont-play"></div>
+            <div class="icon icofont-record"></div>
+            <div class="icon icofont-retro-music-disk"></div>
+            <div class="icon icofont-rewind"></div>
+            <div class="icon icofont-song-notes"></div>
+            <div class="icon icofont-sound-wave-alt"></div>
+            <div class="icon icofont-sound-wave"></div>
+            <div class="icon icofont-stop"></div>
+            <div class="icon icofont-video-alt"></div>
+            <div class="icon icofont-video-cam"></div>
+            <div class="icon icofont-video-clapper"></div>
+            <div class="icon icofont-video"></div>
+            <div class="icon icofont-volume-bar"></div>
+            <div class="icon icofont-volume-down"></div>
+            <div class="icon icofont-volume-mute"></div>
+            <div class="icon icofont-volume-off"></div>
+            <div class="icon icofont-volume-up"></div>
+            <div class="icon icofont-youtube-play"></div>
+            <div class="icon icofont-2checkout-alt"></div>
+            <div class="icon icofont-2checkout"></div>
+            <div class="icon icofont-amazon-alt"></div>
+            <div class="icon icofont-amazon"></div>
+            <div class="icon icofont-american-express-alt"></div>
+            <div class="icon icofont-american-express"></div>
+            <div class="icon icofont-apple-pay-alt"></div>
+            <div class="icon icofont-apple-pay"></div>
+            <div class="icon icofont-bank-transfer-alt"></div>
+            <div class="icon icofont-bank-transfer"></div>
+            <div class="icon icofont-braintree-alt"></div>
+            <div class="icon icofont-braintree"></div>
+            <div class="icon icofont-cash-on-delivery-alt"></div>
+            <div class="icon icofont-cash-on-delivery"></div>
+            <div class="icon icofont-diners-club-alt-1"></div>
+            <div class="icon icofont-diners-club-alt-2"></div>
+            <div class="icon icofont-diners-club-alt-3"></div>
+            <div class="icon icofont-diners-club"></div>
+            <div class="icon icofont-discover-alt"></div>
+            <div class="icon icofont-discover"></div>
+            <div class="icon icofont-eway-alt"></div>
+            <div class="icon icofont-eway"></div>
+            <div class="icon icofont-google-wallet-alt-1"></div>
+            <div class="icon icofont-google-wallet-alt-2"></div>
+            <div class="icon icofont-google-wallet-alt-3"></div>
+            <div class="icon icofont-google-wallet"></div>
+            <div class="icon icofont-jcb-alt"></div>
+            <div class="icon icofont-jcb"></div>
+            <div class="icon icofont-maestro-alt"></div>
+            <div class="icon icofont-maestro"></div>
+            <div class="icon icofont-mastercard-alt"></div>
+            <div class="icon icofont-mastercard"></div>
+            <div class="icon icofont-payoneer-alt"></div>
+            <div class="icon icofont-payoneer"></div>
+            <div class="icon icofont-paypal-alt"></div>
+            <div class="icon icofont-paypal"></div>
+            <div class="icon icofont-sage-alt"></div>
+            <div class="icon icofont-sage"></div>
+            <div class="icon icofont-skrill-alt"></div>
+            <div class="icon icofont-skrill"></div>
+            <div class="icon icofont-stripe-alt"></div>
+            <div class="icon icofont-stripe"></div>
+            <div class="icon icofont-visa-alt"></div>
+            <div class="icon icofont-visa-electron"></div>
+            <div class="icon icofont-visa"></div>
+            <div class="icon icofont-western-union-alt"></div>
+            <div class="icon icofont-western-union"></div>
+            <div class="icon icofont-boy"></div>
+            <div class="icon icofont-business-man-alt-1"></div>
+            <div class="icon icofont-business-man-alt-2"></div>
+            <div class="icon icofont-business-man-alt-3"></div>
+            <div class="icon icofont-business-man"></div>
+            <div class="icon icofont-female"></div>
+            <div class="icon icofont-funky-man"></div>
+            <div class="icon icofont-girl-alt"></div>
+            <div class="icon icofont-girl"></div>
+            <div class="icon icofont-group"></div>
+            <div class="icon icofont-hotel-boy-alt"></div>
+            <div class="icon icofont-hotel-boy"></div>
+            <div class="icon icofont-kid"></div>
+            <div class="icon icofont-man-in-glasses"></div>
+            <div class="icon icofont-people"></div>
+            <div class="icon icofont-support"></div>
+            <div class="icon icofont-user-alt-1"></div>
+            <div class="icon icofont-user-alt-2"></div>
+            <div class="icon icofont-user-alt-3"></div>
+            <div class="icon icofont-user-alt-4"></div>
+            <div class="icon icofont-user-alt-5"></div>
+            <div class="icon icofont-user-alt-6"></div>
+            <div class="icon icofont-user-alt-7"></div>
+            <div class="icon icofont-user-female"></div>
+            <div class="icon icofont-user-male"></div>
+            <div class="icon icofont-user-suited"></div>
+            <div class="icon icofont-user"></div>
+            <div class="icon icofont-users-alt-1"></div>
+            <div class="icon icofont-users-alt-2"></div>
+            <div class="icon icofont-users-alt-3"></div>
+            <div class="icon icofont-users-alt-4"></div>
+            <div class="icon icofont-users-alt-5"></div>
+            <div class="icon icofont-users-alt-6"></div>
+            <div class="icon icofont-users-social"></div>
+            <div class="icon icofont-users"></div>
+            <div class="icon icofont-waiter-alt"></div>
+            <div class="icon icofont-waiter"></div>
+            <div class="icon icofont-woman-in-glasses"></div>
+            <div class="icon icofont-search-1"></div>
+            <div class="icon icofont-search-2"></div>
+            <div class="icon icofont-search-document"></div>
+            <div class="icon icofont-search-folder"></div>
+            <div class="icon icofont-search-job"></div>
+            <div class="icon icofont-search-map"></div>
+            <div class="icon icofont-search-property"></div>
+            <div class="icon icofont-search-restaurant"></div>
+            <div class="icon icofont-search-stock"></div>
+            <div class="icon icofont-search-user"></div>
+            <div class="icon icofont-search"></div>
+            <div class="icon icofont-500px"></div>
+            <div class="icon icofont-aim"></div>
+            <div class="icon icofont-badoo"></div>
+            <div class="icon icofont-baidu-tieba"></div>
+            <div class="icon icofont-bbm-messenger"></div>
+            <div class="icon icofont-bebo"></div>
+            <div class="icon icofont-behance"></div>
+            <div class="icon icofont-blogger"></div>
+            <div class="icon icofont-bootstrap"></div>
+            <div class="icon icofont-brightkite"></div>
+            <div class="icon icofont-cloudapp"></div>
+            <div class="icon icofont-concrete5"></div>
+            <div class="icon icofont-delicious"></div>
+            <div class="icon icofont-designbump"></div>
+            <div class="icon icofont-designfloat"></div>
+            <div class="icon icofont-deviantart"></div>
+            <div class="icon icofont-digg"></div>
+            <div class="icon icofont-dotcms"></div>
+            <div class="icon icofont-dribbble"></div>
+            <div class="icon icofont-dribble"></div>
+            <div class="icon icofont-dropbox"></div>
+            <div class="icon icofont-ebuddy"></div>
+            <div class="icon icofont-ello"></div>
+            <div class="icon icofont-ember"></div>
+            <div class="icon icofont-envato"></div>
+            <div class="icon icofont-evernote"></div>
+            <div class="icon icofont-facebook-messenger"></div>
+            <div class="icon icofont-facebook"></div>
+            <div class="icon icofont-feedburner"></div>
+            <div class="icon icofont-flikr"></div>
+            <div class="icon icofont-folkd"></div>
+            <div class="icon icofont-foursquare"></div>
+            <div class="icon icofont-friendfeed"></div>
+            <div class="icon icofont-ghost"></div>
+            <div class="icon icofont-github"></div>
+            <div class="icon icofont-gnome"></div>
+            <div class="icon icofont-google-buzz"></div>
+            <div class="icon icofont-google-hangouts"></div>
+            <div class="icon icofont-google-map"></div>
+            <div class="icon icofont-google-plus"></div>
+            <div class="icon icofont-google-talk"></div>
+            <div class="icon icofont-hype-machine"></div>
+            <div class="icon icofont-instagram"></div>
+            <div class="icon icofont-kakaotalk"></div>
+            <div class="icon icofont-kickstarter"></div>
+            <div class="icon icofont-kik"></div>
+            <div class="icon icofont-kiwibox"></div>
+            <div class="icon icofont-line-messenger"></div>
+            <div class="icon icofont-line"></div>
+            <div class="icon icofont-linkedin"></div>
+            <div class="icon icofont-linux-mint"></div>
+            <div class="icon icofont-live-messenger"></div>
+            <div class="icon icofont-livejournal"></div>
+            <div class="icon icofont-magento"></div>
+            <div class="icon icofont-meetme"></div>
+            <div class="icon icofont-meetup"></div>
+            <div class="icon icofont-mixx"></div>
+            <div class="icon icofont-newsvine"></div>
+            <div class="icon icofont-nimbuss"></div>
+            <div class="icon icofont-odnoklassniki"></div>
+            <div class="icon icofont-opencart"></div>
+            <div class="icon icofont-oscommerce"></div>
+            <div class="icon icofont-pandora"></div>
+            <div class="icon icofont-photobucket"></div>
+            <div class="icon icofont-picasa"></div>
+            <div class="icon icofont-pinterest"></div>
+            <div class="icon icofont-prestashop"></div>
+            <div class="icon icofont-qik"></div>
+            <div class="icon icofont-qq"></div>
+            <div class="icon icofont-readernaut"></div>
+            <div class="icon icofont-reddit"></div>
+            <div class="icon icofont-renren"></div>
+            <div class="icon icofont-rss"></div>
+            <div class="icon icofont-shopify"></div>
+            <div class="icon icofont-silverstripe"></div>
+            <div class="icon icofont-skype"></div>
+            <div class="icon icofont-slack"></div>
+            <div class="icon icofont-slashdot"></div>
+            <div class="icon icofont-slidshare"></div>
+            <div class="icon icofont-smugmug"></div>
+            <div class="icon icofont-snapchat"></div>
+            <div class="icon icofont-soundcloud"></div>
+            <div class="icon icofont-spotify"></div>
+            <div class="icon icofont-stack-exchange"></div>
+            <div class="icon icofont-stack-overflow"></div>
+            <div class="icon icofont-steam"></div>
+            <div class="icon icofont-stumbleupon"></div>
+            <div class="icon icofont-tagged"></div>
+            <div class="icon icofont-technorati"></div>
+            <div class="icon icofont-telegram"></div>
+            <div class="icon icofont-tinder"></div>
+            <div class="icon icofont-trello"></div>
+            <div class="icon icofont-tumblr"></div>
+            <div class="icon icofont-twitch"></div>
+            <div class="icon icofont-twitter"></div>
+            <div class="icon icofont-typo3"></div>
+            <div class="icon icofont-ubercart"></div>
+            <div class="icon icofont-viber"></div>
+            <div class="icon icofont-viddler"></div>
+            <div class="icon icofont-vimeo"></div>
+            <div class="icon icofont-vine"></div>
+            <div class="icon icofont-virb"></div>
+            <div class="icon icofont-virtuemart"></div>
+            <div class="icon icofont-vk"></div>
+            <div class="icon icofont-wechat"></div>
+            <div class="icon icofont-weibo"></div>
+            <div class="icon icofont-whatsapp"></div>
+            <div class="icon icofont-xing"></div>
+            <div class="icon icofont-yahoo"></div>
+            <div class="icon icofont-yelp"></div>
+            <div class="icon icofont-youku"></div>
+            <div class="icon icofont-youtube"></div>
+            <div class="icon icofont-zencart"></div>
+            <div class="icon icofont-badminton-birdie"></div>
+            <div class="icon icofont-baseball"></div>
+            <div class="icon icofont-baseballer"></div>
+            <div class="icon icofont-basketball-hoop"></div>
+            <div class="icon icofont-basketball"></div>
+            <div class="icon icofont-billiard-ball"></div>
+            <div class="icon icofont-boot-alt-1"></div>
+            <div class="icon icofont-boot-alt-2"></div>
+            <div class="icon icofont-boot"></div>
+            <div class="icon icofont-bowling-alt"></div>
+            <div class="icon icofont-bowling"></div>
+            <div class="icon icofont-canoe"></div>
+            <div class="icon icofont-cheer-leader"></div>
+            <div class="icon icofont-climbing"></div>
+            <div class="icon icofont-corner"></div>
+            <div class="icon icofont-field-alt"></div>
+            <div class="icon icofont-field"></div>
+            <div class="icon icofont-football-alt"></div>
+            <div class="icon icofont-football-american"></div>
+            <div class="icon icofont-football"></div>
+            <div class="icon icofont-foul"></div>
+            <div class="icon icofont-goal-keeper"></div>
+            <div class="icon icofont-goal"></div>
+            <div class="icon icofont-golf-alt"></div>
+            <div class="icon icofont-golf-bag"></div>
+            <div class="icon icofont-golf-cart"></div>
+            <div class="icon icofont-golf-field"></div>
+            <div class="icon icofont-golf"></div>
+            <div class="icon icofont-golfer"></div>
+            <div class="icon icofont-helmet"></div>
+            <div class="icon icofont-hockey-alt"></div>
+            <div class="icon icofont-hockey"></div>
+            <div class="icon icofont-ice-skate"></div>
+            <div class="icon icofont-jersey-alt"></div>
+            <div class="icon icofont-jersey"></div>
+            <div class="icon icofont-jumping"></div>
+            <div class="icon icofont-kick"></div>
+            <div class="icon icofont-leg"></div>
+            <div class="icon icofont-match-review"></div>
+            <div class="icon icofont-medal-sport"></div>
+            <div class="icon icofont-offside"></div>
+            <div class="icon icofont-olympic-logo"></div>
+            <div class="icon icofont-olympic"></div>
+            <div class="icon icofont-padding"></div>
+            <div class="icon icofont-penalty-card"></div>
+            <div class="icon icofont-racer"></div>
+            <div class="icon icofont-racing-car"></div>
+            <div class="icon icofont-racing-flag-alt"></div>
+            <div class="icon icofont-racing-flag"></div>
+            <div class="icon icofont-racings-wheel"></div>
+            <div class="icon icofont-referee"></div>
+            <div class="icon icofont-refree-jersey"></div>
+            <div class="icon icofont-result-sport"></div>
+            <div class="icon icofont-rugby-ball"></div>
+            <div class="icon icofont-rugby-player"></div>
+            <div class="icon icofont-rugby"></div>
+            <div class="icon icofont-runner-alt-1"></div>
+            <div class="icon icofont-runner-alt-2"></div>
+            <div class="icon icofont-runner"></div>
+            <div class="icon icofont-score-board"></div>
+            <div class="icon icofont-skiing-man"></div>
+            <div class="icon icofont-skydiving-goggles"></div>
+            <div class="icon icofont-snow-mobile"></div>
+            <div class="icon icofont-steering"></div>
+            <div class="icon icofont-stopwatch"></div>
+            <div class="icon icofont-substitute"></div>
+            <div class="icon icofont-swimmer"></div>
+            <div class="icon icofont-table-tennis"></div>
+            <div class="icon icofont-team-alt"></div>
+            <div class="icon icofont-team"></div>
+            <div class="icon icofont-tennis-player"></div>
+            <div class="icon icofont-tennis"></div>
+            <div class="icon icofont-tracking"></div>
+            <div class="icon icofont-trophy-alt"></div>
+            <div class="icon icofont-trophy"></div>
+            <div class="icon icofont-volleyball-alt"></div>
+            <div class="icon icofont-volleyball-fire"></div>
+            <div class="icon icofont-volleyball"></div>
+            <div class="icon icofont-water-bottle"></div>
+            <div class="icon icofont-whistle-alt"></div>
+            <div class="icon icofont-whistle"></div>
+            <div class="icon icofont-win-trophy"></div>
+            <div class="icon icofont-align-center"></div>
+            <div class="icon icofont-align-left"></div>
+            <div class="icon icofont-align-right"></div>
+            <div class="icon icofont-all-caps"></div>
+            <div class="icon icofont-bold"></div>
+            <div class="icon icofont-brush"></div>
+            <div class="icon icofont-clip-board"></div>
+            <div class="icon icofont-code-alt"></div>
+            <div class="icon icofont-color-bucket"></div>
+            <div class="icon icofont-color-picker"></div>
+            <div class="icon icofont-copy-invert"></div>
+            <div class="icon icofont-copy"></div>
+            <div class="icon icofont-cut"></div>
+            <div class="icon icofont-delete-alt"></div>
+            <div class="icon icofont-edit-alt"></div>
+            <div class="icon icofont-eraser-alt"></div>
+            <div class="icon icofont-font"></div>
+            <div class="icon icofont-heading"></div>
+            <div class="icon icofont-indent"></div>
+            <div class="icon icofont-italic-alt"></div>
+            <div class="icon icofont-italic"></div>
+            <div class="icon icofont-justify-all"></div>
+            <div class="icon icofont-justify-center"></div>
+            <div class="icon icofont-justify-left"></div>
+            <div class="icon icofont-justify-right"></div>
+            <div class="icon icofont-link-broken"></div>
+            <div class="icon icofont-outdent"></div>
+            <div class="icon icofont-paper-clip"></div>
+            <div class="icon icofont-paragraph"></div>
+            <div class="icon icofont-pin"></div>
+            <div class="icon icofont-printer"></div>
+            <div class="icon icofont-redo"></div>
+            <div class="icon icofont-rotation"></div>
+            <div class="icon icofont-save"></div>
+            <div class="icon icofont-small-cap"></div>
+            <div class="icon icofont-strike-through"></div>
+            <div class="icon icofont-sub-listing"></div>
+            <div class="icon icofont-subscript"></div>
+            <div class="icon icofont-superscript"></div>
+            <div class="icon icofont-table"></div>
+            <div class="icon icofont-text-height"></div>
+            <div class="icon icofont-text-width"></div>
+            <div class="icon icofont-trash"></div>
+            <div class="icon icofont-underline"></div>
+            <div class="icon icofont-undo"></div>
+            <div class="icon icofont-air-balloon"></div>
+            <div class="icon icofont-airplane-alt"></div>
+            <div class="icon icofont-airplane"></div>
+            <div class="icon icofont-articulated-truck"></div>
+            <div class="icon icofont-auto-mobile"></div>
+            <div class="icon icofont-auto-rickshaw"></div>
+            <div class="icon icofont-bicycle-alt-1"></div>
+            <div class="icon icofont-bicycle-alt-2"></div>
+            <div class="icon icofont-bicycle"></div>
+            <div class="icon icofont-bus-alt-1"></div>
+            <div class="icon icofont-bus-alt-2"></div>
+            <div class="icon icofont-bus-alt-3"></div>
+            <div class="icon icofont-bus"></div>
+            <div class="icon icofont-cab"></div>
+            <div class="icon icofont-cable-car"></div>
+            <div class="icon icofont-car-alt-1"></div>
+            <div class="icon icofont-car-alt-2"></div>
+            <div class="icon icofont-car-alt-3"></div>
+            <div class="icon icofont-car-alt-4"></div>
+            <div class="icon icofont-car"></div>
+            <div class="icon icofont-delivery-time"></div>
+            <div class="icon icofont-fast-delivery"></div>
+            <div class="icon icofont-fire-truck-alt"></div>
+            <div class="icon icofont-fire-truck"></div>
+            <div class="icon icofont-free-delivery"></div>
+            <div class="icon icofont-helicopter"></div>
+            <div class="icon icofont-motor-bike-alt"></div>
+            <div class="icon icofont-motor-bike"></div>
+            <div class="icon icofont-motor-biker"></div>
+            <div class="icon icofont-oil-truck"></div>
+            <div class="icon icofont-rickshaw"></div>
+            <div class="icon icofont-rocket-alt-1"></div>
+            <div class="icon icofont-rocket-alt-2"></div>
+            <div class="icon icofont-rocket"></div>
+            <div class="icon icofont-sail-boat-alt-1"></div>
+            <div class="icon icofont-sail-boat-alt-2"></div>
+            <div class="icon icofont-sail-boat"></div>
+            <div class="icon icofont-scooter"></div>
+            <div class="icon icofont-sea-plane"></div>
+            <div class="icon icofont-ship-alt"></div>
+            <div class="icon icofont-ship"></div>
+            <div class="icon icofont-speed-boat"></div>
+            <div class="icon icofont-taxi"></div>
+            <div class="icon icofont-tractor"></div>
+            <div class="icon icofont-train-line"></div>
+            <div class="icon icofont-train-steam"></div>
+            <div class="icon icofont-tram"></div>
+            <div class="icon icofont-truck-alt"></div>
+            <div class="icon icofont-truck-loaded"></div>
+            <div class="icon icofont-truck"></div>
+            <div class="icon icofont-van-alt"></div>
+            <div class="icon icofont-van"></div>
+            <div class="icon icofont-yacht"></div>
+            <div class="icon icofont-5-star-hotel"></div>
+            <div class="icon icofont-air-ticket"></div>
+            <div class="icon icofont-beach-bed"></div>
+            <div class="icon icofont-beach"></div>
+            <div class="icon icofont-camping-vest"></div>
+            <div class="icon icofont-direction-sign"></div>
+            <div class="icon icofont-hill-side"></div>
+            <div class="icon icofont-hill"></div>
+            <div class="icon icofont-hotel"></div>
+            <div class="icon icofont-island-alt"></div>
+            <div class="icon icofont-island"></div>
+            <div class="icon icofont-sandals-female"></div>
+            <div class="icon icofont-sandals-male"></div>
+            <div class="icon icofont-travelling"></div>
+            <div class="icon icofont-breakdown"></div>
+            <div class="icon icofont-celsius"></div>
+            <div class="icon icofont-clouds"></div>
+            <div class="icon icofont-cloudy"></div>
+            <div class="icon icofont-dust"></div>
+            <div class="icon icofont-eclipse"></div>
+            <div class="icon icofont-fahrenheit"></div>
+            <div class="icon icofont-forest-fire"></div>
+            <div class="icon icofont-full-night"></div>
+            <div class="icon icofont-full-sunny"></div>
+            <div class="icon icofont-hail-night"></div>
+            <div class="icon icofont-hail-rainy-night"></div>
+            <div class="icon icofont-hail-rainy-sunny"></div>
+            <div class="icon icofont-hail-rainy"></div>
+            <div class="icon icofont-hail-sunny"></div>
+            <div class="icon icofont-hail-thunder-night"></div>
+            <div class="icon icofont-hail-thunder-sunny"></div>
+            <div class="icon icofont-hail-thunder"></div>
+            <div class="icon icofont-hail"></div>
+            <div class="icon icofont-hill-night"></div>
+            <div class="icon icofont-hill-sunny"></div>
+            <div class="icon icofont-hurricane"></div>
+            <div class="icon icofont-meteor"></div>
+            <div class="icon icofont-night"></div>
+            <div class="icon icofont-rainy-night"></div>
+            <div class="icon icofont-rainy-sunny"></div>
+            <div class="icon icofont-rainy-thunder"></div>
+            <div class="icon icofont-rainy"></div>
+            <div class="icon icofont-snow-alt"></div>
+            <div class="icon icofont-snow-flake"></div>
+            <div class="icon icofont-snow-temp"></div>
+            <div class="icon icofont-snow"></div>
+            <div class="icon icofont-snowy-hail"></div>
+            <div class="icon icofont-snowy-night-hail"></div>
+            <div class="icon icofont-snowy-night-rainy"></div>
+            <div class="icon icofont-snowy-night"></div>
+            <div class="icon icofont-snowy-rainy"></div>
+            <div class="icon icofont-snowy-sunny-hail"></div>
+            <div class="icon icofont-snowy-sunny-rainy"></div>
+            <div class="icon icofont-snowy-sunny"></div>
+            <div class="icon icofont-snowy-thunder-night"></div>
+            <div class="icon icofont-snowy-thunder-sunny"></div>
+            <div class="icon icofont-snowy-thunder"></div>
+            <div class="icon icofont-snowy-windy-night"></div>
+            <div class="icon icofont-snowy-windy-sunny"></div>
+            <div class="icon icofont-snowy-windy"></div>
+            <div class="icon icofont-snowy"></div>
+            <div class="icon icofont-sun-alt"></div>
+            <div class="icon icofont-sun-rise"></div>
+            <div class="icon icofont-sun-set"></div>
+            <div class="icon icofont-sun"></div>
+            <div class="icon icofont-sunny-day-temp"></div>
+            <div class="icon icofont-sunny"></div>
+            <div class="icon icofont-thunder-light"></div>
+            <div class="icon icofont-tornado"></div>
+            <div class="icon icofont-umbrella-alt"></div>
+            <div class="icon icofont-umbrella"></div>
+            <div class="icon icofont-volcano"></div>
+            <div class="icon icofont-wave"></div>
+            <div class="icon icofont-wind-scale-0"></div>
+            <div class="icon icofont-wind-scale-1"></div>
+            <div class="icon icofont-wind-scale-10"></div>
+            <div class="icon icofont-wind-scale-11"></div>
+            <div class="icon icofont-wind-scale-12"></div>
+            <div class="icon icofont-wind-scale-2"></div>
+            <div class="icon icofont-wind-scale-3"></div>
+            <div class="icon icofont-wind-scale-4"></div>
+            <div class="icon icofont-wind-scale-5"></div>
+            <div class="icon icofont-wind-scale-6"></div>
+            <div class="icon icofont-wind-scale-7"></div>
+            <div class="icon icofont-wind-scale-8"></div>
+            <div class="icon icofont-wind-scale-9"></div>
+            <div class="icon icofont-wind-waves"></div>
+            <div class="icon icofont-wind"></div>
+            <div class="icon icofont-windy-hail"></div>
+            <div class="icon icofont-windy-night"></div>
+            <div class="icon icofont-windy-raining"></div>
+            <div class="icon icofont-windy-sunny"></div>
+            <div class="icon icofont-windy-thunder-raining"></div>
+            <div class="icon icofont-windy-thunder"></div>
+            <div class="icon icofont-windy"></div>
+            <div class="icon icofont-addons"></div>
+            <div class="icon icofont-address-book"></div>
+            <div class="icon icofont-adjust"></div>
+            <div class="icon icofont-alarm"></div>
+            <div class="icon icofont-anchor"></div>
+            <div class="icon icofont-archive"></div>
+            <div class="icon icofont-at"></div>
+            <div class="icon icofont-attachment"></div>
+            <div class="icon icofont-audio"></div>
+            <div class="icon icofont-automation"></div>
+            <div class="icon icofont-badge"></div>
+            <div class="icon icofont-bag-alt"></div>
+            <div class="icon icofont-bag"></div>
+            <div class="icon icofont-ban"></div>
+            <div class="icon icofont-bar-code"></div>
+            <div class="icon icofont-bars"></div>
+            <div class="icon icofont-basket"></div>
+            <div class="icon icofont-battery-empty"></div>
+            <div class="icon icofont-battery-full"></div>
+            <div class="icon icofont-battery-half"></div>
+            <div class="icon icofont-battery-low"></div>
+            <div class="icon icofont-beaker"></div>
+            <div class="icon icofont-beard"></div>
+            <div class="icon icofont-bed"></div>
+            <div class="icon icofont-bell"></div>
+            <div class="icon icofont-beverage"></div>
+            <div class="icon icofont-bill"></div>
+            <div class="icon icofont-bin"></div>
+            <div class="icon icofont-binary"></div>
+            <div class="icon icofont-binoculars"></div>
+            <div class="icon icofont-bluetooth"></div>
+            <div class="icon icofont-bomb"></div>
+            <div class="icon icofont-book-mark"></div>
+            <div class="icon icofont-box"></div>
+            <div class="icon icofont-briefcase"></div>
+            <div class="icon icofont-broken"></div>
+            <div class="icon icofont-bucket"></div>
+            <div class="icon icofont-bucket1"></div>
+            <div class="icon icofont-bucket2"></div>
+            <div class="icon icofont-bug"></div>
+            <div class="icon icofont-building"></div>
+            <div class="icon icofont-bulb-alt"></div>
+            <div class="icon icofont-bullet"></div>
+            <div class="icon icofont-bullhorn"></div>
+            <div class="icon icofont-bullseye"></div>
+            <div class="icon icofont-calendar"></div>
+            <div class="icon icofont-camera-alt"></div>
+            <div class="icon icofont-camera"></div>
+            <div class="icon icofont-card"></div>
+            <div class="icon icofont-cart-alt"></div>
+            <div class="icon icofont-cart"></div>
+            <div class="icon icofont-cc"></div>
+            <div class="icon icofont-charging"></div>
+            <div class="icon icofont-chat"></div>
+            <div class="icon icofont-check-alt"></div>
+            <div class="icon icofont-check-circled"></div>
+            <div class="icon icofont-check"></div>
+            <div class="icon icofont-checked"></div>
+            <div class="icon icofont-children-care"></div>
+            <div class="icon icofont-clip"></div>
+            <div class="icon icofont-clock-time"></div>
+            <div class="icon icofont-close-circled"></div>
+            <div class="icon icofont-close-line-circled"></div>
+            <div class="icon icofont-close-line-squared-alt"></div>
+            <div class="icon icofont-close-line-squared"></div>
+            <div class="icon icofont-close-line"></div>
+            <div class="icon icofont-close-squared-alt"></div>
+            <div class="icon icofont-close-squared"></div>
+            <div class="icon icofont-close"></div>
+            <div class="icon icofont-cloud-download"></div>
+            <div class="icon icofont-cloud-refresh"></div>
+            <div class="icon icofont-cloud-upload"></div>
+            <div class="icon icofont-cloud"></div>
+            <div class="icon icofont-code-not-allowed"></div>
+            <div class="icon icofont-code"></div>
+            <div class="icon icofont-comment"></div>
+            <div class="icon icofont-compass-alt"></div>
+            <div class="icon icofont-compass"></div>
+            <div class="icon icofont-computer"></div>
+            <div class="icon icofont-connection"></div>
+            <div class="icon icofont-console"></div>
+            <div class="icon icofont-contacts"></div>
+            <div class="icon icofont-contrast"></div>
+            <div class="icon icofont-copyright"></div>
+            <div class="icon icofont-credit-card"></div>
+            <div class="icon icofont-crop"></div>
+            <div class="icon icofont-crown"></div>
+            <div class="icon icofont-cube"></div>
+            <div class="icon icofont-cubes"></div>
+            <div class="icon icofont-dashboard-web"></div>
+            <div class="icon icofont-dashboard"></div>
+            <div class="icon icofont-data"></div>
+            <div class="icon icofont-database-add"></div>
+            <div class="icon icofont-database-locked"></div>
+            <div class="icon icofont-database-remove"></div>
+            <div class="icon icofont-database"></div>
+            <div class="icon icofont-delete"></div>
+            <div class="icon icofont-diamond"></div>
+            <div class="icon icofont-dice-multiple"></div>
+            <div class="icon icofont-dice"></div>
+            <div class="icon icofont-disc"></div>
+            <div class="icon icofont-diskette"></div>
+            <div class="icon icofont-document-folder"></div>
+            <div class="icon icofont-download-alt"></div>
+            <div class="icon icofont-download"></div>
+            <div class="icon icofont-downloaded"></div>
+            <div class="icon icofont-drag"></div>
+            <div class="icon icofont-drag1"></div>
+            <div class="icon icofont-drag2"></div>
+            <div class="icon icofont-drag3"></div>
+            <div class="icon icofont-earth"></div>
+            <div class="icon icofont-ebook"></div>
+            <div class="icon icofont-edit"></div>
+            <div class="icon icofont-eject"></div>
+            <div class="icon icofont-email"></div>
+            <div class="icon icofont-envelope-open"></div>
+            <div class="icon icofont-envelope"></div>
+            <div class="icon icofont-eraser"></div>
+            <div class="icon icofont-error"></div>
+            <div class="icon icofont-excavator"></div>
+            <div class="icon icofont-exchange"></div>
+            <div class="icon icofont-exclamation-circle"></div>
+            <div class="icon icofont-exclamation-square"></div>
+            <div class="icon icofont-exclamation-tringle"></div>
+            <div class="icon icofont-exclamation"></div>
+            <div class="icon icofont-exit"></div>
+            <div class="icon icofont-expand"></div>
+            <div class="icon icofont-external-link"></div>
+            <div class="icon icofont-external"></div>
+            <div class="icon icofont-eye-alt"></div>
+            <div class="icon icofont-eye-blocked"></div>
+            <div class="icon icofont-eye-dropper"></div>
+            <div class="icon icofont-eye"></div>
+            <div class="icon icofont-favourite"></div>
+            <div class="icon icofont-fax"></div>
+            <div class="icon icofont-file-fill"></div>
+            <div class="icon icofont-film"></div>
+            <div class="icon icofont-filter"></div>
+            <div class="icon icofont-fire-alt"></div>
+            <div class="icon icofont-fire-burn"></div>
+            <div class="icon icofont-fire"></div>
+            <div class="icon icofont-flag-alt-1"></div>
+            <div class="icon icofont-flag-alt-2"></div>
+            <div class="icon icofont-flag"></div>
+            <div class="icon icofont-flame-torch"></div>
+            <div class="icon icofont-flash-light"></div>
+            <div class="icon icofont-flash"></div>
+            <div class="icon icofont-flask"></div>
+            <div class="icon icofont-focus"></div>
+            <div class="icon icofont-folder-open"></div>
+            <div class="icon icofont-folder"></div>
+            <div class="icon icofont-foot-print"></div>
+            <div class="icon icofont-garbage"></div>
+            <div class="icon icofont-gear-alt"></div>
+            <div class="icon icofont-gear"></div>
+            <div class="icon icofont-gears"></div>
+            <div class="icon icofont-gift"></div>
+            <div class="icon icofont-glass"></div>
+            <div class="icon icofont-globe"></div>
+            <div class="icon icofont-graffiti"></div>
+            <div class="icon icofont-grocery"></div>
+            <div class="icon icofont-hand"></div>
+            <div class="icon icofont-hanger"></div>
+            <div class="icon icofont-hard-disk"></div>
+            <div class="icon icofont-heart-alt"></div>
+            <div class="icon icofont-heart"></div>
+            <div class="icon icofont-history"></div>
+            <div class="icon icofont-home"></div>
+            <div class="icon icofont-horn"></div>
+            <div class="icon icofont-hour-glass"></div>
+            <div class="icon icofont-id"></div>
+            <div class="icon icofont-image"></div>
+            <div class="icon icofont-inbox"></div>
+            <div class="icon icofont-infinite"></div>
+            <div class="icon icofont-info-circle"></div>
+            <div class="icon icofont-info-square"></div>
+            <div class="icon icofont-info"></div>
+            <div class="icon icofont-institution"></div>
+            <div class="icon icofont-interface"></div>
+            <div class="icon icofont-invisible"></div>
+            <div class="icon icofont-jacket"></div>
+            <div class="icon icofont-jar"></div>
+            <div class="icon icofont-jewlery"></div>
+            <div class="icon icofont-karate"></div>
+            <div class="icon icofont-key-hole"></div>
+            <div class="icon icofont-key"></div>
+            <div class="icon icofont-label"></div>
+            <div class="icon icofont-lamp"></div>
+            <div class="icon icofont-layers"></div>
+            <div class="icon icofont-layout"></div>
+            <div class="icon icofont-leaf"></div>
+            <div class="icon icofont-leaflet"></div>
+            <div class="icon icofont-learn"></div>
+            <div class="icon icofont-lego"></div>
+            <div class="icon icofont-lens"></div>
+            <div class="icon icofont-letter"></div>
+            <div class="icon icofont-letterbox"></div>
+            <div class="icon icofont-library"></div>
+            <div class="icon icofont-license"></div>
+            <div class="icon icofont-life-bouy"></div>
+            <div class="icon icofont-life-buoy"></div>
+            <div class="icon icofont-life-jacket"></div>
+            <div class="icon icofont-life-ring"></div>
+            <div class="icon icofont-light-bulb"></div>
+            <div class="icon icofont-lighter"></div>
+            <div class="icon icofont-lightning-ray"></div>
+            <div class="icon icofont-like"></div>
+            <div class="icon icofont-line-height"></div>
+            <div class="icon icofont-link-alt"></div>
+            <div class="icon icofont-link"></div>
+            <div class="icon icofont-list"></div>
+            <div class="icon icofont-listening"></div>
+            <div class="icon icofont-listine-dots"></div>
+            <div class="icon icofont-listing-box"></div>
+            <div class="icon icofont-listing-number"></div>
+            <div class="icon icofont-live-support"></div>
+            <div class="icon icofont-location-arrow"></div>
+            <div class="icon icofont-location-pin"></div>
+            <div class="icon icofont-lock"></div>
+            <div class="icon icofont-login"></div>
+            <div class="icon icofont-logout"></div>
+            <div class="icon icofont-lollipop"></div>
+            <div class="icon icofont-long-drive"></div>
+            <div class="icon icofont-look"></div>
+            <div class="icon icofont-loop"></div>
+            <div class="icon icofont-luggage"></div>
+            <div class="icon icofont-lunch"></div>
+            <div class="icon icofont-lungs"></div>
+            <div class="icon icofont-magic-alt"></div>
+            <div class="icon icofont-magic"></div>
+            <div class="icon icofont-magnet"></div>
+            <div class="icon icofont-mail-box"></div>
+            <div class="icon icofont-mail"></div>
+            <div class="icon icofont-male"></div>
+            <div class="icon icofont-map-pins"></div>
+            <div class="icon icofont-map"></div>
+            <div class="icon icofont-maximize"></div>
+            <div class="icon icofont-measure"></div>
+            <div class="icon icofont-medicine"></div>
+            <div class="icon icofont-mega-phone"></div>
+            <div class="icon icofont-megaphone-alt"></div>
+            <div class="icon icofont-megaphone"></div>
+            <div class="icon icofont-memorial"></div>
+            <div class="icon icofont-memory-card"></div>
+            <div class="icon icofont-mic-mute"></div>
+            <div class="icon icofont-mic"></div>
+            <div class="icon icofont-military"></div>
+            <div class="icon icofont-mill"></div>
+            <div class="icon icofont-minus-circle"></div>
+            <div class="icon icofont-minus-square"></div>
+            <div class="icon icofont-minus"></div>
+            <div class="icon icofont-mobile-phone"></div>
+            <div class="icon icofont-molecule"></div>
+            <div class="icon icofont-money"></div>
+            <div class="icon icofont-moon"></div>
+            <div class="icon icofont-mop"></div>
+            <div class="icon icofont-muffin"></div>
+            <div class="icon icofont-mustache"></div>
+            <div class="icon icofont-navigation-menu"></div>
+            <div class="icon icofont-navigation"></div>
+            <div class="icon icofont-network-tower"></div>
+            <div class="icon icofont-network"></div>
+            <div class="icon icofont-news"></div>
+            <div class="icon icofont-newspaper"></div>
+            <div class="icon icofont-no-smoking"></div>
+            <div class="icon icofont-not-allowed"></div>
+            <div class="icon icofont-notebook"></div>
+            <div class="icon icofont-notepad"></div>
+            <div class="icon icofont-notification"></div>
+            <div class="icon icofont-numbered"></div>
+            <div class="icon icofont-opposite"></div>
+            <div class="icon icofont-optic"></div>
+            <div class="icon icofont-options"></div>
+            <div class="icon icofont-package"></div>
+            <div class="icon icofont-page"></div>
+            <div class="icon icofont-paint"></div>
+            <div class="icon icofont-paper-plane"></div>
+            <div class="icon icofont-paperclip"></div>
+            <div class="icon icofont-papers"></div>
+            <div class="icon icofont-pay"></div>
+            <div class="icon icofont-penguin-linux"></div>
+            <div class="icon icofont-pestle"></div>
+            <div class="icon icofont-phone-circle"></div>
+            <div class="icon icofont-phone"></div>
+            <div class="icon icofont-picture"></div>
+            <div class="icon icofont-pine"></div>
+            <div class="icon icofont-pixels"></div>
+            <div class="icon icofont-plugin"></div>
+            <div class="icon icofont-plus-circle"></div>
+            <div class="icon icofont-plus-square"></div>
+            <div class="icon icofont-plus"></div>
+            <div class="icon icofont-polygonal"></div>
+            <div class="icon icofont-power"></div>
+            <div class="icon icofont-price"></div>
+            <div class="icon icofont-print"></div>
+            <div class="icon icofont-puzzle"></div>
+            <div class="icon icofont-qr-code"></div>
+            <div class="icon icofont-queen"></div>
+            <div class="icon icofont-question-circle"></div>
+            <div class="icon icofont-question-square"></div>
+            <div class="icon icofont-question"></div>
+            <div class="icon icofont-quote-left"></div>
+            <div class="icon icofont-quote-right"></div>
+            <div class="icon icofont-random"></div>
+            <div class="icon icofont-recycle"></div>
+            <div class="icon icofont-refresh"></div>
+            <div class="icon icofont-repair"></div>
+            <div class="icon icofont-reply-all"></div>
+            <div class="icon icofont-reply"></div>
+            <div class="icon icofont-resize"></div>
+            <div class="icon icofont-responsive"></div>
+            <div class="icon icofont-retweet"></div>
+            <div class="icon icofont-road"></div>
+            <div class="icon icofont-robot"></div>
+            <div class="icon icofont-royal"></div>
+            <div class="icon icofont-rss-feed"></div>
+            <div class="icon icofont-safety"></div>
+            <div class="icon icofont-sale-discount"></div>
+            <div class="icon icofont-satellite"></div>
+            <div class="icon icofont-send-mail"></div>
+            <div class="icon icofont-server"></div>
+            <div class="icon icofont-settings-alt"></div>
+            <div class="icon icofont-settings"></div>
+            <div class="icon icofont-share-alt"></div>
+            <div class="icon icofont-share-boxed"></div>
+            <div class="icon icofont-share"></div>
+            <div class="icon icofont-shield"></div>
+            <div class="icon icofont-shopping-cart"></div>
+            <div class="icon icofont-sign-in"></div>
+            <div class="icon icofont-sign-out"></div>
+            <div class="icon icofont-signal"></div>
+            <div class="icon icofont-site-map"></div>
+            <div class="icon icofont-smart-phone"></div>
+            <div class="icon icofont-soccer"></div>
+            <div class="icon icofont-sort-alt"></div>
+            <div class="icon icofont-sort"></div>
+            <div class="icon icofont-space"></div>
+            <div class="icon icofont-spanner"></div>
+            <div class="icon icofont-speech-comments"></div>
+            <div class="icon icofont-speed-meter"></div>
+            <div class="icon icofont-spinner-alt-1"></div>
+            <div class="icon icofont-spinner-alt-2"></div>
+            <div class="icon icofont-spinner-alt-3"></div>
+            <div class="icon icofont-spinner-alt-4"></div>
+            <div class="icon icofont-spinner-alt-5"></div>
+            <div class="icon icofont-spinner-alt-6"></div>
+            <div class="icon icofont-spinner"></div>
+            <div class="icon icofont-spreadsheet"></div>
+            <div class="icon icofont-square"></div>
+            <div class="icon icofont-ssl-security"></div>
+            <div class="icon icofont-star-alt-1"></div>
+            <div class="icon icofont-star-alt-2"></div>
+            <div class="icon icofont-star"></div>
+            <div class="icon icofont-street-view"></div>
+            <div class="icon icofont-support-faq"></div>
+            <div class="icon icofont-tack-pin"></div>
+            <div class="icon icofont-tag"></div>
+            <div class="icon icofont-tags"></div>
+            <div class="icon icofont-tasks-alt"></div>
+            <div class="icon icofont-tasks"></div>
+            <div class="icon icofont-telephone"></div>
+            <div class="icon icofont-telescope"></div>
+            <div class="icon icofont-terminal"></div>
+            <div class="icon icofont-thumbs-down"></div>
+            <div class="icon icofont-thumbs-up"></div>
+            <div class="icon icofont-tick-boxed"></div>
+            <div class="icon icofont-tick-mark"></div>
+            <div class="icon icofont-ticket"></div>
+            <div class="icon icofont-tie"></div>
+            <div class="icon icofont-toggle-off"></div>
+            <div class="icon icofont-toggle-on"></div>
+            <div class="icon icofont-tools-alt-2"></div>
+            <div class="icon icofont-tools"></div>
+            <div class="icon icofont-touch"></div>
+            <div class="icon icofont-traffic-light"></div>
+            <div class="icon icofont-transparent"></div>
+            <div class="icon icofont-tree"></div>
+            <div class="icon icofont-unique-idea"></div>
+            <div class="icon icofont-unlock"></div>
+            <div class="icon icofont-unlocked"></div>
+            <div class="icon icofont-upload-alt"></div>
+            <div class="icon icofont-upload"></div>
+            <div class="icon icofont-usb-drive"></div>
+            <div class="icon icofont-usb"></div>
+            <div class="icon icofont-vector-path"></div>
+            <div class="icon icofont-verification-check"></div>
+            <div class="icon icofont-wall-clock"></div>
+            <div class="icon icofont-wall"></div>
+            <div class="icon icofont-wallet"></div>
+            <div class="icon icofont-warning-alt"></div>
+            <div class="icon icofont-warning"></div>
+            <div class="icon icofont-water-drop"></div>
+            <div class="icon icofont-web"></div>
+            <div class="icon icofont-wheelchair"></div>
+            <div class="icon icofont-wifi-alt"></div>
+            <div class="icon icofont-wifi"></div>
+            <div class="icon icofont-world"></div>
+            <div class="icon icofont-zigzag"></div>
+            <div class="icon icofont-zipped"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="app-footer">
+      <div class="footer-wrap">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 col-md-6 d-none d-md-block">
+            <ul class="page-breadcrumbs">
+              
+                <li class="item">
+                  <a href=# class="link">UI Kit</a>
+
+                  <i class="separator icofont-thin-right"></i>
+                </li>
+              
+                <li class="item">
+                  <a href=# class="link">Icons</a>
+
+                  <i class="separator icofont-thin-right"></i>
+                </li>
+              
+                <li class="item">
+                  <a href=# class="link">Icofont</a>
+
+                  <i class="separator icofont-thin-right"></i>
+                </li>
+              
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 text-right">
+            <div class="d-flex align-items-center justify-content-center justify-content-md-end">
+              <span>Version 1.0.0</span>
+              <button class="no-style ml-2 settings-btn" data-toggle="modal" data-target="#settings">
+                <span class="icon icofont-ui-settings text-primary"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-skeleton">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 d-none d-md-block">
+              <ul class="page-breadcrumbs">
+                <li class="item bg-1 animated-bg"></li>
+                <li class="item bg animated-bg"></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="info justify-content-center justify-content-md-end">
+                <div class="version bg animated-bg"></div>
+                <div class="settings animated-bg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+<!-- Add patients modals -->
+<div class="modal fade" id="add-patient" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add new patient</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group avatar-box d-flex">
+            <img src="../assets/content/anonymous-400.jpg" width="40" height="40" alt="" class="rounded-500 mr-4">
+
+            <button class="btn btn-outline-primary" type="button">
+              Select image<span class="btn-icon icofont-ui-user ml-2"></span>
+            </button>
+          </div>
+
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Name">
+          </div>
+
+          <div class="form-group">
+            <input class="form-control" type="number" placeholder="Number">
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="form-group">
+                <input class="form-control" type="number" placeholder="Age">
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="form-group">
+                <select class="selectpicker" title="Gender">
+                  <option class="d-none">Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mb-0">
+            <textarea class="form-control" placeholder="Address" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-block">
+        <div class="actions justify-content-between">
+          <button type="button" class="btn btn-error" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-info">Add patient</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Add patients modals -->
+
+<!-- Add patients modals -->
+<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Application's settings</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>Layout</label>
+            <select class="selectpicker" title="Layout" id="layout">
+              <option value="horizontal-layout">Horizontal</option>
+              <option value="vertical-layout">Vertical</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Light/dark topbar</label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="topbar">
+              <label class="custom-control-label" for="topbar"></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Light/dark sidebar</label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="sidebar">
+              <label class="custom-control-label" for="sidebar"></label>
+            </div>
+          </div>
+
+          <div class="form-group mb-0">
+            <label>Boxed/fullwidth mode</label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="boxed" checked>
+              <label class="custom-control-label" for="boxed"></label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-block">
+        <div class="actions justify-content-between">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button id="reset-to-default" type="button" class="btn btn-error">Reset to default</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Add patients modals -->
+
+
+<script src="../assets/js/jquery-3.3.1.min.js"></script>
+<script src="../assets/js/jquery-migrate-1.4.1.min.js"></script>
+<script src="../assets/js/popper.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery.typeahead.min.js"></script>
+<script src="../assets/js/datatables.min.js"></script>
+<script src="../assets/js/bootstrap-select.min.js"></script>
+<script src="../assets/js/jquery.barrating.min.js"></script>
+<script src="../assets/js/Chart.min.js"></script>
+<script src="../assets/js/raphael-min.js"></script>
+<script src="../assets/js/morris.min.js"></script>
+<script src="../assets/js/echarts.min.js"></script>
+<script src="../assets/js/echarts-gl.min.js"></script>
+
+<script src="../assets/js/main.js"></script>
+
+
+</body>
+</html>

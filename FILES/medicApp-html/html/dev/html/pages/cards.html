@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Cards</h1>
+        </header>
+
+        <div class="page-content">
+          <h4 class="mt-0">Simple</h4>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?</p>
+                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, reprehenderit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-0">Style</h4>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card text-white bg-primary">
+                <div class="card-header">
+                  Primary card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card text-white bg-secondary">
+                <div class="card-header">
+                  Secondary card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card bg-success">
+                <div class="card-header">
+                  Success card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card text-white bg-danger">
+                <div class="card-header">
+                  Danger card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card bg-warning">
+                <div class="card-header">
+                  Warning card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card bg-info">
+                <div class="card-header">
+                  Info card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card bg-light">
+                <div class="card-header">
+                  Light card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card text-white bg-dark">
+                <div class="card-header">
+                  Dark card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-0">Outline</h4>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card text-primary border-primary">
+                <div class="card-header">
+                  Primary card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card text-secondary border-secondary">
+                <div class="card-header">
+                  Secondary card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card text-success border-success">
+                <div class="card-header">
+                  Success card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card text-danger border-danger">
+                <div class="card-header">
+                  Danger card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card text-warning border-warning">
+                <div class="card-header">
+                  Warning card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card text-info border-info">
+                <div class="card-header">
+                  Info card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card border-light">
+                <div class="card-header">
+                  Light card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card text-dark border-dark">
+                <div class="card-header">
+                  Dark card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-0">Shape</h4>
+
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <div class="card text-white bg-secondary">
+                <div class="card-header">
+                  Default
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card text-white bg-secondary rounded-0">
+                <div class="card-header">
+                  Square
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card text-white bg-secondary rounded-20">
+                <div class="card-header">
+                  Rounded
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-0">Align</h4>
+
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <div class="card text-white bg-primary">
+                <div class="card-header">
+                  Left
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card text-white bg-primary text-center">
+                <div class="card-header">
+                  Center
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card text-white bg-primary text-right">
+                <div class="card-header">
+                  Right
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-0">Image overlays</h4>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card bg-dark text-white">
+                <img src="../assets/content/bg-card-1.jpg" class="card-img overlay-img" alt="">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card bg-dark text-white">
+                <img src="../assets/content/bg-card-2.jpg" class="card-img overlay-img" alt="">
+                <div class="card-img-overlay">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque mollitia nobis provident quos repellat temporibus! Nemo nulla quis veniam voluptatem!</p>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dicta dolores error facilis illum, iusto similique soluta tempora? Eaque est ipsum obcaecati omnis, similique unde!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-0">Image card</h4>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card mb-md-0">
+                <img src="../assets/content/bg-card-2.jpg" class="card-img-top" alt="">
+                <div class="card-header mt-4">
+                  Card title
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card bg-primary text-white mb-0">
+                <img src="../assets/content/bg-card-1.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title mt-0">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Cards", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

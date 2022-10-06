@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Data tables</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="card">
+            <div class="card-header">
+              Sorting
+            </div>
+            <div class="card-body">
+              <table
+                class="table data-table"
+                data-ajax="../assets/data/table-2.json"
+                data-columns='[
+                  { "data": "name" },
+                  { "data": "position" },
+                  { "data": "office" },
+                  { "data": "age" },
+                  { "data": "start-date" },
+                  { "data": "salary" }
+                ]'
+                data-paging="false"
+                data-info="false"
+                data-searching="false"
+              >
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Date</th>
+                    <th>Salary</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Search
+            </div>
+            <div class="card-body">
+              <table
+                class="table data-table"
+                data-ajax="../assets/data/table-2.json"
+                data-columns='[
+                  { "data": "name" },
+                  { "data": "position" },
+                  { "data": "office" },
+                  { "data": "age" },
+                  { "data": "start-date" },
+                  { "data": "salary" }
+                ]'
+                data-paging="false"
+                data-info="false"
+              >
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Date</th>
+                  <th>Salary</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Pagination
+            </div>
+            <div class="card-body">
+              <table
+                class="table data-table"
+                data-ajax="../assets/data/table.json"
+                data-columns='[
+                  { "data": "name" },
+                  { "data": "position" },
+                  { "data": "office" },
+                  { "data": "age" },
+                  { "data": "start-date" },
+                  { "data": "salary" }
+                ]'
+                data-searching="false"
+              >
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Date</th>
+                  <th>Salary</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="alert alert-secondary mb-0" role="alert">
+            More information can be found in <a href="https://datatables.net" target="_blank">official page</a>.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Tables", "link": "#" },
+        { "title": "Data tables", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="horizontal-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/logo.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Horizontal navbar 2 -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal horizontal-vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu-horizontal.html"
+      ]
+    })
+    <!-- endHorizontal navbar 2 -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Textareas</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Basic
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Placeholder">Value</textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="With placeholder"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Textarea label</label>
+                    <textarea class="form-control" placeholder="With label"></textarea>
+                  </div>
+
+                  <div class="form-group mb-0">
+                    <textarea class="form-control" placeholder="With description"></textarea>
+                    <div class="form-text text-muted">Textarea description</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Height
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Default"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Rows 1" rows="1"></textarea>
+                  </div>
+
+                  <div class="form-group mb-0">
+                    <textarea class="form-control" placeholder="Rows 9" rows="9"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Shape
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <textarea class="form-control rounded-0" placeholder="Square"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Default"></textarea>
+                  </div>
+
+                  <div class="form-group mb-0">
+                    <textarea class="form-control rounded" placeholder="Rounded"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Resize
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Without resize control"></textarea>
+                  </div>
+
+                  <div class="form-group mb-0">
+                    <textarea class="form-control resize" placeholder="With resize control"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="card mb-0">
+                <div class="card-header">
+                  Style
+                </div>
+                <div class="card-body">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <div class="form-group">
+                          <textarea class="form-control bg-primary text-white" placeholder="Placeholder">Value</textarea>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="form-group">
+                          <textarea class="form-control bg-success" placeholder="Placeholder">Value</textarea>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="form-group">
+                          <textarea class="form-control bg-info" placeholder="Placeholder">Value</textarea>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="form-group">
+                          <textarea class="form-control bg-warning" placeholder="Placeholder">Value</textarea>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="form-group mb-md-0">
+                          <textarea class="form-control bg-danger text-white" placeholder="Placeholder">Value</textarea>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="form-group mb-0">
+                          <textarea class="form-control bg-dark text-white" placeholder="Placeholder">Value</textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Textareas", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

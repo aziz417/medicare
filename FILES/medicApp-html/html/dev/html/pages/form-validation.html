@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Form validation</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Basic
+                </div>
+                <div class="card-body">
+                  <form class="needs-validation" novalidate>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="First name" value="Mark" required>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Last name" required>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                      <textarea class="form-control" placeholder="Comment" required></textarea>
+                    </div>
+
+                    <button class="btn btn-primary btn-block" type="submit">Submit form</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  With tooltips
+                </div>
+                <div class="card-body">
+                  <form class="needs-validation" novalidate>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="First name" value="Mark" required>
+                      <div class="valid-tooltip">Looks good!</div>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Last name" required>
+                      <div class="invalid-tooltip">Please provide a valid last name.</div>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Email" required>
+                      <div class="invalid-tooltip">Please provide a valid email.</div>
+                    </div>
+
+                    <div class="form-group">
+                      <textarea class="form-control" placeholder="Comment" required></textarea>
+                      <div class="invalid-tooltip">Please provide a valid comment.</div>
+                    </div>
+
+                    <div class="text-right">
+                      <button class="btn btn-success" type="submit">Submit form</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-0">
+            <div class="card-header">
+              With error messages
+            </div>
+            <div class="card-body">
+              <form class="needs-validation" novalidate>
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="First name" value="Mark" required>
+                      <div class="valid-feedback">Looks good!</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Last name" value="Antone" required>
+                      <div class="valid-feedback">Looks good!</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="User name" required>
+                      <div class="invalid-feedback">Please provide a valid last name.</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Email" required>
+                      <div class="invalid-feedback">Please provide a valid email.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <textarea class="form-control" placeholder="Comment" required></textarea>
+                  <div class="invalid-feedback">Please provide a valid comment.</div>
+                </div>
+
+                <button class="btn btn-dark" type="submit">Submit form</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Forms", "link": "#" },
+        { "title": "Validation", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

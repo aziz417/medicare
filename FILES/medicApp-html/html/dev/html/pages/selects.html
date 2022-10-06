@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Selects</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Single
+                </div>
+                <div class="card-body">
+                  <div class="form-group mb-0">
+                    <select class="selectpicker">
+                      <option class="d-none">-</option>
+                      <option>Mustard</option>
+                      <option>Ketchup</option>
+                      <option>Barbecue</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Multiple
+                </div>
+                <div class="card-body">
+                  <div class="form-group mb-0">
+                    <select class="selectpicker" multiple>
+                      <option>Mustard</option>
+                      <option>Ketchup</option>
+                      <option>Barbecue</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Selected option
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-md-0">
+                    <select class="selectpicker">
+                      <option selected>Mustard</option>
+                      <option>Ketchup</option>
+                      <option>Barbecue</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-0">
+                    <select class="selectpicker" multiple>
+                      <option selected>Mustard</option>
+                      <option selected>Ketchup</option>
+                      <option>Barbecue</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Live search
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-md-0">
+                    <select class="selectpicker" data-live-search="true">
+                      <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                      <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                      <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-0">
+                    <select class="selectpicker" data-live-search="true" multiple>
+                      <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                      <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                      <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              With icons
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-md-0">
+                    <select class="selectpicker">
+                      <option data-icon="icofont-facebook">Facebook</option>
+                      <option data-icon="icofont-instagram" selected>Instagram</option>
+                      <option data-icon="icofont-linkedin">Linkedin</option>
+                      <option data-icon="icofont-twitter">Twitter</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-0">
+                    <select class="selectpicker" multiple>
+                      <option data-icon="icofont-facebook">Facebook</option>
+                      <option data-icon="icofont-instagram">Instagram</option>
+                      <option data-icon="icofont-linkedin" selected>Linkedin</option>
+                      <option data-icon="icofont-twitter" selected>Twitter</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              With custom content
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-md-0">
+                    <div class="form-group mb-md-0">
+                      <select class="selectpicker">
+                        <option data-content="<span class='badge badge-success badge-sm'>Top</span>" selected>Top</option>
+                        <option data-content="<span class='badge badge-info badge-sm'>New</span>">New</option>
+                        <option data-content="<span class='badge badge-danger badge-sm'>Sale</span>">Sale</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-0">
+                    <select class="selectpicker" multiple>
+                      <option data-content="<span class='badge badge-success badge-sm'>Top</span>">Top</option>
+                      <option data-content="<span class='badge badge-info badge-sm'>New</span>" selected>New</option>
+                      <option data-content="<span class='badge badge-danger badge-sm'>Sale</span>" selected>Sale</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              With subtext
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-md-0">
+                    <select class="selectpicker">
+                      <option data-subtext="French's" selected>Mustard</option>
+                      <option data-subtext="Heinz">Ketchup</option>
+                      <option data-subtext="Sweet">Relish</option>
+                      <option data-subtext="Miracle Whip">Mayonnaise</option>
+                      <option data-divider="true">-</option>
+                      <option data-subtext="Honey">Barbecue Sauce</option>
+                      <option data-subtext="Ranch">Salad Dressing</option>
+                      <option data-subtext="Sweet &amp; Spicy">Tabasco</option>
+                      <option data-subtext="Chunky">Salsa</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-0">
+                    <select class="selectpicker" multiple>
+                      <option data-subtext="French's">Mustard</option>
+                      <option data-subtext="Heinz">Ketchup</option>
+                      <option data-subtext="Sweet" selected>Relish</option>
+                      <option data-subtext="Miracle Whip" selected>Mayonnaise</option>
+                      <option data-divider="true">-</option>
+                      <option data-subtext="Honey">Barbecue Sauce</option>
+                      <option data-subtext="Ranch">Salad Dressing</option>
+                      <option data-subtext="Sweet &amp; Spicy">Tabasco</option>
+                      <option data-subtext="Chunky">Salsa</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Disabled
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-md-0">
+                    <select class="selectpicker" disabled>
+                      <option selected>Mustard</option>
+                      <option>Ketchup</option>
+                      <option>Barbecue</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group mb-0">
+                    <select class="selectpicker" multiple disabled>
+                      <option>Mustard</option>
+                      <option selected>Ketchup</option>
+                      <option selected>Barbecue</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert alert-secondary mb-0" role="alert">
+            More information can be found in <a href="https://developer.snapappointments.com/bootstrap-select/" target="_blank">official page</a>.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Selects", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

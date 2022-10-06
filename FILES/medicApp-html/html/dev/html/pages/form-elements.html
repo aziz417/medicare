@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Form elements</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="card">
+            <div class="card-header">
+              Inputs
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Placeholder" value="Value">
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group with-prefix-icon">
+                    <div class="prefix-icon icofont-pills"></div>
+                    <input type="text" class="form-control rounded" placeholder="Placeholder">
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="inputs.html">this page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Textareas
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Placeholder">Value</textarea>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <textarea class="form-control rounded" placeholder="Placeholder"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="textareas.html">this page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Selects
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <select class="selectpicker">
+                      <option>Mustard</option>
+                      <option>Ketchup</option>
+                      <option>Barbecue</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <select class="selectpicker rounded" multiple>
+                      <option>Mustard</option>
+                      <option selected>Ketchup</option>
+                      <option selected>Barbecue</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="selects.html">this page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Autocompletes
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group typeahead__container">
+                    <div class="typeahead__field">
+                      <div class="typeahead__query">
+                        <input
+                          class="form-control autocomplete-control"
+                          type="search"
+                          placeholder="Placeholder"
+                          autocomplete="off"
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group typeahead__container cancel">
+                    <div class="typeahead__field">
+                      <div class="typeahead__query">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Prefix</span>
+                          </div>
+                          <input
+                            class="form-control autocomplete-control"
+                            type="search"
+                            placeholder="Placeholder"
+                            autocomplete="off"
+                            value="Ukraine"
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="autocompletes.html">this page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Checkboxes
+            </div>
+            <div class="card-body">
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Checkbox 1</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
+                <label class="custom-control-label" for="customCheck2">Checkbox 1</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                <label class="custom-control-label" for="customCheck3">Checkbox 1</label>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="checkboxes.html">this page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Radio buttons
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="custom-control custom-radio mb-3">
+                  <input type="radio" class="custom-control-input" name="radio1" id="radio1">
+                  <label class="custom-control-label" for="radio1">Radio 1</label>
+                </div>
+                <div class="custom-control custom-radio mb-3">
+                  <input type="radio" class="custom-control-input" name="radio1" id="radio2" checked>
+                  <label class="custom-control-label" for="radio2">Radio 2</label>
+                </div>
+                <div class="custom-control custom-radio mb-3">
+                  <input type="radio" class="custom-control-input" name="radio1" id="radio3">
+                  <label class="custom-control-label" for="radio3">Radio 3</label>
+                </div>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="radio-buttons.html">this page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Switchers
+            </div>
+            <div class="card-body">
+              <div class="custom-control custom-switch mb-3">
+                <input type="checkbox" class="custom-control-input" id="control1">
+                <label class="custom-control-label" for="control1">Control 1</label>
+              </div>
+              <div class="custom-control custom-switch mb-3">
+                <input type="checkbox" class="custom-control-input" id="control2" checked>
+                <label class="custom-control-label" for="control2">Control 2</label>
+              </div>
+              <div class="custom-control custom-switch mb-3">
+                <input type="checkbox" class="custom-control-input" id="control3">
+                <label class="custom-control-label" for="control3">Control 3</label>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="switchers.html">this page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Buttons
+            </div>
+            <div class="card-body">
+              <div class="elements-list mb-3">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-link">Link</button>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="buttons.html">this page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Badges
+            </div>
+            <div class="card-body">
+              <div class="elements-list mb-3">
+                <span class="badge badge-primary">Primary</span>
+                <span class="badge badge-secondary">Secondary</span>
+                <span class="badge badge-success">Success</span>
+                <span class="badge badge-danger">Danger</span>
+                <span class="badge badge-warning">Warning</span>
+                <span class="badge badge-info">Info</span>
+                <span class="badge badge-light">Light</span>
+                <span class="badge badge-dark">Dark</span>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="badges.html">this page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-0">
+            <div class="card-header">
+              Ratings
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <select class="rating">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4" selected>4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+
+              <div class="alert alert-warning mb-0">
+                You can find more information about this component on <a href="ratings.html">this page</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Forms", "link": "#" },
+        { "title": "Elements", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

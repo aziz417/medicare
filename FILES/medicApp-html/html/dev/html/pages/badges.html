@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Badges</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Shape
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <span class="badge badge-secondary">Default</span>
+                    <span class="badge badge-secondary rounded-0">Square</span>
+                    <span class="badge badge-secondary rounded">Rounded</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Size
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <span class="badge badge-secondary badge-xs">Ultra small</span>
+                    <span class="badge badge-secondary badge-sm">Small</span>
+                    <span class="badge badge-secondary">Default</span>
+                    <span class="badge badge-secondary badge-lg">Large</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Style
+            </div>
+            <div class="card-body">
+              <div class="elements-list">
+                <span class="badge badge-primary">Primary</span>
+                <span class="badge badge-secondary">Secondary</span>
+                <span class="badge badge-success">Success</span>
+                <span class="badge badge-danger">Danger</span>
+                <span class="badge badge-warning">Warning</span>
+                <span class="badge badge-info">Info</span>
+                <span class="badge badge-light">Light</span>
+                <span class="badge badge-dark">Dark</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Pill
+            </div>
+            <div class="card-body">
+              <div class="elements-list">
+                <span class="badge badge-pill badge-primary">Primary</span>
+                <span class="badge badge-pill badge-secondary">Secondary</span>
+                <span class="badge badge-pill badge-success">Success</span>
+                <span class="badge badge-pill badge-danger">Danger</span>
+                <span class="badge badge-pill badge-warning">Warning</span>
+                <span class="badge badge-pill badge-info">Info</span>
+                <span class="badge badge-pill badge-light">Light</span>
+                <span class="badge badge-pill badge-dark">Dark</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Links
+            </div>
+            <div class="card-body">
+              <div class="elements-list">
+                <a href="#" class="badge badge-primary">Primary</a>
+                <a href="#" class="badge badge-secondary">Secondary</a>
+                <a href="#" class="badge badge-success">Success</a>
+                <a href="#" class="badge badge-danger">Danger</a>
+                <a href="#" class="badge badge-warning">Warning</a>
+                <a href="#" class="badge badge-info">Info</a>
+                <a href="#" class="badge badge-light">Light</a>
+                <a href="#" class="badge badge-dark">Dark</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Text & icons
+            </div>
+            <div class="card-body">
+              <div class="elements-list">
+                <span class="badge badge-danger"><span class="icofont-bug mr-2"></span>Bugs</span>
+                <span class="badge badge-secondary"><span class="icofont-cart mr-2"></span>Cart</span>
+                <span class="badge badge-success"><span class="icofont-clip mr-2"></span>Files</span>
+                <span class="badge badge-primary"><span class="icofont-label mr-2"></span>Label</span>
+                <span class="badge badge-warning">Notification<span class="icofont-notification ml-2"></span></span>
+                <span class="badge badge-info badge-pill">Style<span class="icofont-bucket2 ml-2"></span></span>
+                <span class="badge badge-light">Settings<span class="icofont-gear-alt ml-2"></span></span>
+                <span class="badge badge-dark badge-pill">Wi Fi<span class="icofont-wifi-alt ml-2"></span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-0">
+            <div class="card-header">
+              Inside parent element
+            </div>
+            <div class="card-body">
+              <h1>Example heading <span class="badge badge-secondary badge-inside">New</span></h1>
+              <h2>Example heading <span class="badge badge-secondary badge-inside">New</span></h2>
+              <h3>Example heading <span class="badge badge-secondary badge-inside">New</span></h3>
+              <h4>Example heading <span class="badge badge-secondary badge-inside">New</span></h4>
+              <h5>Example heading <span class="badge badge-secondary badge-inside">New</span></h5>
+              <h6>Example heading <span class="badge badge-secondary badge-inside">New</span></h6>
+
+              <button type="button" class="btn btn-primary">
+                Notifications <span class="badge badge-light badge-inside ml-2">4</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Badges", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

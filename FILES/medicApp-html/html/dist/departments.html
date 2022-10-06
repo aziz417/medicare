@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MedicApp - Medical & Hospital HTML5/Bootstrap admin template</title>
+  <meta name="keywords" content="MedicApp">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../assets/img/favicon.ico">
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/icofont.min.css">
+  <link rel="stylesheet" href="../assets/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../assets/css/jquery.typeahead.css">
+  <link rel="stylesheet" href="../assets/css/datatables.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="../assets/css/Chart.min.css">
+  <link rel="stylesheet" href="../assets/css/morris.css">
+  <link rel="stylesheet" href="../assets/css/leaflet.css">
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    <div id="navbar1" class="app-navbar horizontal">
+      <div class="navbar-wrap">
+        
+          <button class="no-style navbar-toggle navbar-open d-lg-none">
+            <span></span><span></span><span></span>
+          </button>
+
+        
+          <form class="app-search d-none d-md-block">
+            <div class="form-group typeahead__container with-suffix-icon mb-0">
+              <div class="typeahead__field">
+                <div class="typeahead__query">
+                  <input
+                    class="form-control autocomplete-control topbar-search"
+                    type="search"
+                    placeholder="Type page's title"
+                    autocomplete="off"
+                    data-source="../assets/data/search-menu.json"
+                  >
+                  <div class="suffix-icon icofont-search"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        
+          <div class="app-actions">
+            <div class="dropdown item">
+              <button
+                class="no-style dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-offset="0, 12"
+              >
+                <span class="icon icofont-notification"></span>
+                <span class="badge badge-danger badge-sm">5</span>
+              </button>
+
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-w-280">
+                <div class="menu-header">
+                  <h4 class="h5 menu-title mt-0 mb-0">Notifications</h4>
+
+                  <a href="#" class="text-danger">Clear All</a>
+                </div>
+
+                <ul class="list">
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-heart"></span>
+
+                      <div class="content">
+                        <span class="desc">Sara Crouch liked your photo</span>
+                        <span class="date">17 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-users-alt-6"></span>
+
+                      <div class="content">
+                        <span class="desc">New user registered</span>
+                        <span class="date">23 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-share"></span>
+
+                      <div class="content">
+                        <span class="desc">Amanda Lie shared your post</span>
+                        <span class="date">25 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-users-alt-6"></span>
+
+                      <div class="content">
+                        <span class="desc">New user registered</span>
+                        <span class="date">32 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon icofont-ui-message"></span>
+
+                      <div class="content">
+                        <span class="desc">You have a new message</span>
+                        <span class="date">58 minutes ago</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="menu-footer">
+                  <button class="btn btn-primary btn-block">
+                    View all notifications
+                    <span class="btn-icon ml-2 icofont-tasks-alt"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown item">
+              <button
+                class="no-style dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-offset="0, 10"
+              >
+                <span class="d-flex align-items-center">
+                  <img src="../assets/content/user-400-1.jpg" alt="" width="40" height="40" class="rounded-500 mr-1">
+                  <i class="icofont-simple-down"></i>
+                </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-w-180">
+                <ul class="list">
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-ui-home"></span>
+                      Edit account
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-ui-user"></span>
+                      User profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-ui-calendar"></span>
+                      Calendar
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-ui-settings"></span>
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="align-items-center">
+                      <span class="icon icofont-logout"></span>
+                      Log Out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        
+
+        
+        <div class="navbar-skeleton horizontal">
+          <div class="left-part d-flex align-items-center">
+            <span class="navbar-button bg animated-bg d-lg-none"></span>
+            <span class="sk-logo bg animated-bg d-none d-lg-block"></span>
+            <span class="search d-none d-md-block bg animated-bg"></span>
+          </div>
+
+          <div class="right-part d-flex align-items-center">
+            <div class="icon-box">
+              <span class="icon bg animated-bg"></span>
+              <span class="badge"></span>
+            </div>
+            <span class="avatar bg animated-bg"></span>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </div>
+
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    <div id="navbar2" class="app-navbar vertical">
+      <div class="navbar-wrap">
+        
+          <button class="no-style navbar-toggle navbar-close icofont-close-line d-lg-none"></button>
+
+        
+          <div class="app-logo">
+            <div class="logo-wrap">
+              <img src="../assets/img/logo.svg" alt="" width="147" height="33" class="logo-img">
+            </div>
+          </div>
+
+        
+          <div class="main-menu">
+            <nav class="main-menu-wrap">
+              <ul class="menu-ul">
+                <li class="menu-item">
+                  <span class="group-title">Medicine</span>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="index.html">
+                    <span class="link-icon icofont-thermometer-alt"></span>
+                    <span class="link-text">Dashboard</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="appointments.html">
+                    <span class="link-icon icofont-stethoscope-alt"></span>
+                    <span class="link-text">Appointments</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="doctors.html">
+                    <span class="link-icon icofont-doctor"></span>
+                    <span class="link-text">Doctors</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="departments.html">
+                    <span class="link-icon icofont-nurse"></span>
+                    <span class="link-text">Departments</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="patients.html">
+                    <span class="link-icon icofont-paralysis-disability"></span>
+                    <span class="link-text">Patients</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="payments.html">
+                    <span class="link-icon icofont-pay"></span>
+                    <span class="link-text">Payments</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <span class="group-title">UI Kit</span>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Components</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="alerts.html"><span class="link-text">Alerts</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="autocompletes.html"><span class="link-text">Autocompletes</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="badges.html"><span class="link-text">Badges</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="buttons.html"><span class="link-text">Buttons</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="cards.html"><span class="link-text">Cards</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="checkboxes.html"><span class="link-text">Checkboxes</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="contacts.html"><span class="link-text">Contacts</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="inputs.html"><span class="link-text">Inputs</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="modal-windows.html"><span class="link-text">Modal windows</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="radio-buttons.html"><span class="link-text">Radio buttons</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="ratings.html"><span class="link-text">Ratings</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="selects.html"><span class="link-text">Selects</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="switchers.html"><span class="link-text">Switchers</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="textareas.html"><span class="link-text">Textareas</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="v-timelines.html"><span class="link-text">Vertical timeline</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Icons</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="icons-sli.html"><span class="link-text">Simple line icons</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="icons-if.html"><span class="link-text">Icofont icons</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="typography.html">
+                    <span class="link-text">Typography</span>
+                  </a>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Tables</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="bootstrap-tables.html"><span class="link-text">Bootstrap tables</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="data-tables.html"><span class="link-text">Data tables</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Forms</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="form-elements.html"><span class="link-text">Elements</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="form-layout.html"><span class="link-text">Layout</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="form-validation.html"><span class="link-text">Validation</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Charts</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="charts-chart-js.html"><span class="link-text">Chart.js</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="charts-morris-js.html"><span class="link-text">Morris.js</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="charts-echarts.html"><span class="link-text">Echarts</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Maps</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="google-map.html"><span class="link-text">Google map</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="leaflet-map.html"><span class="link-text">Leaflet map</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="echarts-map.html"><span class="link-text">Echarts map</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <span class="group-title">Apps</span>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Service pages</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="invoices.html"><span class="link-text">Invoices</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="pricing.html"><span class="link-text">Pricing</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="edit-account.html"><span class="link-text">Edit account</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="user-profile.html"><span class="link-text">User profile</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="events-timeline.html"><span class="link-text">Events timeline</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item has-sub">
+                  <a class="item-link" href="#">
+                    <span class="link-text">Sessions</span>
+                    <span class="link-caret icofont-thin-right"></span>
+                  </a>
+                  <ul class="sub">
+                    <li class="menu-item">
+                      <a class="item-link" href="sign-in.html"><span class="link-text">Sign in</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="sign-up.html"><span class="link-text">Sign up</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="page-404.html"><span class="link-text">404</span></a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="item-link" href="page-500.html"><span class="link-text">500</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+        
+          <div class="add-patient">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#add-patient">
+              <span class="btn-icon icofont-plus mr-2"></span>
+              Add Patient
+            </button>
+          </div>
+
+        
+          <div class="assistant-menu">
+            <a class="link" href="#">
+              <span class="link-icon icofont-ui-settings"></span>Settings
+            </a>
+            <a class="link" href="#">
+              <span class="link-icon icofont-question-square"></span>FAQ &amp; Support
+            </a>
+          </div>
+
+        
+
+        
+
+        
+        <div class="navbar-skeleton vertical">
+          <div class="top-part">
+            <div class="sk-logo bg animated-bg"></div>
+            <div class="sk-menu">
+              <span class="sk-menu-item menu-header bg-1 animated-bg"></span>
+              <span class="sk-menu-item bg animated-bg w-75"></span>
+              <span class="sk-menu-item bg animated-bg w-80"></span>
+              <span class="sk-menu-item bg animated-bg w-50"></span>
+              <span class="sk-menu-item bg animated-bg w-75"></span>
+              <span class="sk-menu-item bg animated-bg w-50"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+            </div>
+            <div class="sk-menu">
+              <span class="sk-menu-item menu-header bg-1 animated-bg"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+            </div>
+            <div class="sk-menu">
+              <span class="sk-menu-item menu-header bg-1 animated-bg"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+              <span class="sk-menu-item bg animated-bg w-50"></span>
+            </div>
+            <div class="sk-button animated-bg w-90"></div>
+          </div>
+
+          <div class="bottom-part">
+            <div class="sk-menu">
+              <span class="sk-menu-item bg-1 animated-bg w-60"></span>
+              <span class="sk-menu-item bg-1 animated-bg w-80"></span>
+            </div>
+          </div>
+
+          <div class="horizontal-menu">
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Departments</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <div class="card department bg-light bg-gradient">
+                <img src="../assets/content/department-1.jpg" class="card-img-top" width="400" height="250" alt="">
+
+                <div class="card-body">
+                  <h3 class="h4 mt-0">Cardiology</h3>
+
+                  <div class="team d-flex align-items-center mb-4">
+                    <strong class="mr-3">Team:</strong>
+
+                    <img src="../assets/content/doctor-400-1.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-2.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-3.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <button class="btn btn-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>
+
+                  <div class="button-box pb-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      More<span class="btn-icon icofont-prescription ml-2"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card department bg-light bg-gradient">
+                <img src="../assets/content/department-2.jpg" class="card-img-top" width="400" height="250" alt="">
+
+                <div class="card-body">
+                  <h3 class="h4 mt-0">Dentistry</h3>
+
+                  <div class="team d-flex align-items-center mb-4">
+                    <strong class="mr-3">Team:</strong>
+
+                    <img src="../assets/content/doctor-400-4.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-2.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-3.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-5.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <button class="btn btn-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>
+
+                  <div class="button-box pb-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      More<span class="btn-icon icofont-prescription ml-2"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card department bg-light bg-gradient">
+                <img src="../assets/content/department-3.jpg" class="card-img-top" width="400" height="250" alt="">
+
+                <div class="card-body">
+                  <h3 class="h4 mt-0">Laboratory</h3>
+
+                  <div class="team d-flex align-items-center mb-4">
+                    <strong class="mr-3">Team:</strong>
+
+                    <img src="../assets/content/doctor-400-6.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-7.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <button class="btn btn-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>
+
+                  <div class="button-box pb-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      More<span class="btn-icon icofont-prescription ml-2"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card department bg-light bg-gradient">
+                <img src="../assets/content/department-4.jpg" class="card-img-top" width="400" height="250" alt="">
+
+                <div class="card-body">
+                  <h3 class="h4 mt-0">Pulmonology</h3>
+
+                  <div class="team d-flex align-items-center mb-4">
+                    <strong class="mr-3">Team:</strong>
+
+                    <img src="../assets/content/doctor-400-5.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-6.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-7.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-9.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-8.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <button class="btn btn-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>
+
+                  <div class="button-box pb-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      More<span class="btn-icon icofont-prescription ml-2"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card department bg-light bg-gradient">
+                <img src="../assets/content/department-5.jpg" class="card-img-top" width="400" height="250" alt="">
+
+                <div class="card-body">
+                  <h3 class="h4 mt-0">Gynecology</h3>
+
+                  <div class="team d-flex align-items-center mb-4">
+                    <strong class="mr-3">Team:</strong>
+
+                    <img src="../assets/content/doctor-400-5.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-6.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-7.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <button class="btn btn-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>
+
+                  <div class="button-box pb-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      More<span class="btn-icon icofont-prescription ml-2"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card department bg-light bg-gradient">
+                <img src="../assets/content/department-6.jpg" class="card-img-top" width="400" height="250" alt="">
+
+                <div class="card-body">
+                  <h3 class="h4 mt-0">Gastrology</h3>
+
+                  <div class="team d-flex align-items-center mb-4">
+                    <strong class="mr-3">Team:</strong>
+
+                    <img src="../assets/content/doctor-400-8.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-7.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <button class="btn btn-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>
+
+                  <div class="button-box pb-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      More<span class="btn-icon icofont-prescription ml-2"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card department bg-light bg-gradient mb-md-0">
+                <img src="../assets/content/department-7.jpg" class="card-img-top" width="400" height="250" alt="">
+
+                <div class="card-body">
+                  <h3 class="h4 mt-0">Neurology</h3>
+
+                  <div class="team d-flex align-items-center mb-4">
+                    <strong class="mr-3">Team:</strong>
+
+                    <img src="../assets/content/doctor-400-5.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-7.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-9.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <button class="btn btn-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>
+
+                  <div class="button-box pb-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      More<span class="btn-icon icofont-prescription ml-2"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card department bg-light bg-gradient mb-md-0">
+                <img src="../assets/content/department-8.jpg" class="card-img-top" width="400" height="250" alt="">
+
+                <div class="card-body">
+                  <h3 class="h4 mt-0">Physical rehabilitation</h3>
+
+                  <div class="team d-flex align-items-center mb-4">
+                    <strong class="mr-3">Team:</strong>
+
+                    <img src="../assets/content/doctor-400-10.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-8.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-6.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <button class="btn btn-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>
+
+                  <div class="button-box pb-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      More<span class="btn-icon icofont-prescription ml-2"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="card department bg-light bg-gradient mb-0">
+                <img src="../assets/content/department-9.jpg" class="card-img-top" width="400" height="250" alt="">
+
+                <div class="card-body">
+                  <h3 class="h4 mt-0">Pediatrician</h3>
+
+                  <div class="team d-flex align-items-center mb-4">
+                    <strong class="mr-3">Team:</strong>
+
+                    <img src="../assets/content/doctor-400-5.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <img src="../assets/content/doctor-400-3.jpg" width="40" height="40" alt="" class="team-img rounded-500">
+                    <button class="btn btn-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>
+
+                  <div class="button-box pb-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      More<span class="btn-icon icofont-prescription ml-2"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-action-box">
+            <button class="btn btn-primary btn-lg btn-square rounded-pill" data-toggle="modal" data-target="#add-department">
+              <span class="btn-icon icofont-plus"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="app-footer">
+      <div class="footer-wrap">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 col-md-6 d-none d-md-block">
+            <ul class="page-breadcrumbs">
+              
+                <li class="item">
+                  <a href=# class="link">Medicine</a>
+
+                  <i class="separator icofont-thin-right"></i>
+                </li>
+              
+                <li class="item">
+                  <a href=# class="link">Departments</a>
+
+                  <i class="separator icofont-thin-right"></i>
+                </li>
+              
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 text-right">
+            <div class="d-flex align-items-center justify-content-center justify-content-md-end">
+              <span>Version 1.0.0</span>
+              <button class="no-style ml-2 settings-btn" data-toggle="modal" data-target="#settings">
+                <span class="icon icofont-ui-settings text-primary"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-skeleton">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 d-none d-md-block">
+              <ul class="page-breadcrumbs">
+                <li class="item bg-1 animated-bg"></li>
+                <li class="item bg animated-bg"></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="info justify-content-center justify-content-md-end">
+                <div class="version bg animated-bg"></div>
+                <div class="settings animated-bg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+<!-- Add patients modals -->
+<div class="modal fade" id="add-patient" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add new patient</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group avatar-box d-flex">
+            <img src="../assets/content/anonymous-400.jpg" width="40" height="40" alt="" class="rounded-500 mr-4">
+
+            <button class="btn btn-outline-primary" type="button">
+              Select image<span class="btn-icon icofont-ui-user ml-2"></span>
+            </button>
+          </div>
+
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Name">
+          </div>
+
+          <div class="form-group">
+            <input class="form-control" type="number" placeholder="Number">
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="form-group">
+                <input class="form-control" type="number" placeholder="Age">
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="form-group">
+                <select class="selectpicker" title="Gender">
+                  <option class="d-none">Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mb-0">
+            <textarea class="form-control" placeholder="Address" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-block">
+        <div class="actions justify-content-between">
+          <button type="button" class="btn btn-error" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-info">Add patient</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Add patients modals -->
+
+<!-- Add patients modals -->
+<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Application's settings</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>Layout</label>
+            <select class="selectpicker" title="Layout" id="layout">
+              <option value="horizontal-layout">Horizontal</option>
+              <option value="vertical-layout">Vertical</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Light/dark topbar</label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="topbar">
+              <label class="custom-control-label" for="topbar"></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Light/dark sidebar</label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="sidebar">
+              <label class="custom-control-label" for="sidebar"></label>
+            </div>
+          </div>
+
+          <div class="form-group mb-0">
+            <label>Boxed/fullwidth mode</label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="boxed" checked>
+              <label class="custom-control-label" for="boxed"></label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-block">
+        <div class="actions justify-content-between">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button id="reset-to-default" type="button" class="btn btn-error">Reset to default</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Add patients modals -->
+
+<!-- Add appointment modals -->
+<div class="modal fade" id="add-department" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add department</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group avatar-box d-flex">
+            <img src="../assets/content/anonymous-400.jpg" width="40" height="40" alt="" class="rounded-500 mr-4">
+
+            <button class="btn btn-outline-primary" type="button">
+              Select image
+            </button>
+          </div>
+
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Title">
+          </div>
+
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Descriptions" rows="3"></textarea>
+          </div>
+
+          <div>
+            <label>Employees</label>
+
+            <div class="social-list">
+              <div class="social-item">
+                <div class="row">
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                          <div class="prefix-icon"></div>
+                          <input class="form-control" type="text" placeholder="Icon class" value="Dr. Sophie" readonly>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                          <input class="form-control" type="text" placeholder="Link" value="assets/content/doctor-1.jpg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col col-auto">
+                    <button class="btn btn-outline-danger btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-ui-delete"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-item">
+                <div class="row">
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                          <input class="form-control" type="text" placeholder="Icon class" value="Dr. Liam" readonly>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                          <input class="form-control" type="text" placeholder="Link" value="assets/content/doctor-2.jpg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col col-auto">
+                    <button class="btn btn-outline-danger btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-ui-delete"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="mt-0">
+
+            <label>Add employee</label>
+
+            <div class="social-list">
+              <div class="social-item">
+                <div class="row">
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group mb-sm-0">
+                          <input class="form-control" type="text" placeholder="Doctor name">
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group mb-0">
+                          <input class="form-control" type="text" placeholder="Doctor image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col col-auto">
+                    <button class="btn btn-outline-primary btn-square rounded-pill" type="button">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-block">
+        <div class="actions justify-content-between">
+          <button type="button" class="btn btn-error" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-info">Add department</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Add appointment modals -->
+
+
+<script src="../assets/js/jquery-3.3.1.min.js"></script>
+<script src="../assets/js/jquery-migrate-1.4.1.min.js"></script>
+<script src="../assets/js/popper.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery.typeahead.min.js"></script>
+<script src="../assets/js/datatables.min.js"></script>
+<script src="../assets/js/bootstrap-select.min.js"></script>
+<script src="../assets/js/jquery.barrating.min.js"></script>
+<script src="../assets/js/Chart.min.js"></script>
+<script src="../assets/js/raphael-min.js"></script>
+<script src="../assets/js/morris.min.js"></script>
+<script src="../assets/js/echarts.min.js"></script>
+<script src="../assets/js/echarts-gl.min.js"></script>
+
+<script src="../assets/js/main.js"></script>
+
+
+</body>
+</html>

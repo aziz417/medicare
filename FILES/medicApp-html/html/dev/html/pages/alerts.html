@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Alerts</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Basic
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-secondary mb-0" role="alert">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, nam.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Removable
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-primary alert-dismissible fade show mb-0" role="alert">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, impedit mollitia.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span class="icofont-close-line"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Shape
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-success" role="alert">
+                    Default alert!
+                  </div>
+                  <div class="alert alert-info rounded-500" role="alert">
+                    Rounded alert!
+                  </div>
+                  <div class="alert alert-danger rounded-0" role="alert">
+                    Square alert!
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  With icons
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-secondary with-before-icon" role="alert">
+                    <div class="alert-icon"><i class="icofont-info-circle"></i></div>
+                    <div class="alert-content">Icon before!</div>
+                  </div>
+                  <div class="alert alert-warning with-after-icon" role="alert">
+                    <div class="alert-content">Icon after!</div>
+                    <div class="alert-icon"><i class="icofont-alarm"></i></div>
+                  </div>
+                  <div class="alert alert-primary with-before-icon with-after-icon" role="alert">
+                    <div class="alert-icon"><i class="icofont-alarm"></i></div>
+                    <div class="alert-content">Icons before & after!</div>
+                    <div class="alert-icon"><i class="icofont-check-circled"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card mb-md-0">
+                <div class="card-header">
+                  Style
+                </div>
+                <div class="card-body">
+                  <div class="card-body">
+                    <div class="alert alert-primary" role="alert">
+                      A simple primary alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                      A simple secondary alert—check it out!
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                      A simple success alert—check it out!
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                      A simple danger alert—check it out!
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                      A simple warning alert—check it out!
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                      A simple info alert—check it out!
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                      A simple light alert—check it out!
+                    </div>
+                    <div class="alert alert-dark mb-0" role="alert">
+                      A simple dark alert—check it out!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card mb-0">
+                <div class="card-header">
+                  Outline
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-primary outline" role="alert">
+                    A simple primary alert—check it out!
+                  </div>
+                  <div class="alert alert-secondary outline text-dark" role="alert">
+                    A simple secondary alert—check it out!
+                  </div>
+                  <div class="alert alert-success outline" role="alert">
+                    A simple success alert—check it out!
+                  </div>
+                  <div class="alert alert-danger outline" role="alert">
+                    A simple danger alert—check it out!
+                  </div>
+                  <div class="alert alert-warning outline" role="alert">
+                    A simple warning alert—check it out!
+                  </div>
+                  <div class="alert alert-info outline" role="alert">
+                    A simple info alert—check it out!
+                  </div>
+                  <div class="alert alert-light outline text-dark" role="alert">
+                    A simple light alert—check it out!
+                  </div>
+                  <div class="alert alert-dark outline mb-0" role="alert">
+                    A simple dark alert—check it out!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Alerts", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

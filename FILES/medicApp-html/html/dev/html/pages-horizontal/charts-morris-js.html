@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="horizontal-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/logo.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Horizontal navbar 2 -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal horizontal-vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu-horizontal.html"
+      ]
+    })
+    <!-- endHorizontal navbar 2 -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Morris.js</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Area
+                </div>
+                <div class="card-body">
+                  <div id="areaMorrisjs"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Donut
+                </div>
+                <div class="card-body">
+                  <div id="donutMorrisjs"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Bar
+                </div>
+                <div class="card-body">
+                  <div id="barMorrisjs"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Stacked Bars
+                </div>
+                <div class="card-body">
+                  <div id="stackedBarMorrisjs"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Line
+                </div>
+                <div class="card-body">
+                  <div id="lineMorrisjs"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Double line
+                </div>
+                <div class="card-body">
+                  <div id="doubleLineMorrisjs"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert alert-secondary mb-0">
+            More information can be found in <a href="https://morrisjs.github.io/morris.js/index.html" target="_blank">official page</a>.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Charts", "link": "#" },
+        { "title": "Morris.js", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MedicApp - Documentation</title>
+  <meta name="keywords" content="MedicApp">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/img/favicon.ico">
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="./assets/css/icofont.min.css">
+  <link rel="stylesheet" href="./assets/css/simple-line-icons.css">
+  <link rel="stylesheet" href="./assets/css/jquery.typeahead.css">
+  <link rel="stylesheet" href="./assets/css/datatables.min.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap-select.min.css">
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    <div id="navbar1" class="app-navbar horizontal">
+      <div class="navbar-wrap">
+        
+          <button class="no-style navbar-toggle navbar-open d-lg-none">
+            <span></span><span></span><span></span>
+          </button>
+
+        
+          <form class="app-search d-none d-md-block">
+            <div class="form-group typeahead__container with-suffix-icon mb-0">
+              <div class="typeahead__field">
+                <div class="typeahead__query">
+                  <input
+                    class="form-control autocomplete-control topbar-search"
+                    type="search"
+                    placeholder="Type page's title"
+                    autocomplete="off"
+                    data-source="./assets/data/search-menu.json"
+                  >
+                  <div class="suffix-icon icofont-search"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        
+          <div class="app-actions">
+            <a href="http://medic-app-html.type-code.pro" class="item btn btn-primary" target="_blank">
+              <span class="btn-icon icofont-external-link mr-2"></span>
+              View preview
+            </a>
+          </div>
+
+        
+
+        
+        <div class="navbar-skeleton horizontal">
+          <div class="left-part d-flex align-items-center">
+            <span class="navbar-button bg animated-bg d-lg-none"></span>
+            <span class="sk-logo bg animated-bg d-none d-lg-block"></span>
+            <span class="search d-none d-md-block bg animated-bg"></span>
+          </div>
+
+          <div class="right-part d-flex align-items-center">
+            <div class="icon-box">
+              <span class="icon bg animated-bg"></span>
+              <span class="badge"></span>
+            </div>
+            <span class="avatar bg animated-bg"></span>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </div>
+
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    <div id="navbar2" class="app-navbar vertical">
+      <div class="navbar-wrap">
+        
+          <button class="no-style navbar-toggle navbar-close icofont-close-line d-lg-none"></button>
+
+        
+          <div class="app-logo">
+            <div class="logo-wrap">
+              <img src="./assets/img/logo.svg" alt="" width="147" height="33" class="logo-img">
+            </div>
+          </div>
+
+        
+          <div class="main-menu">
+            <nav class="main-menu-wrap">
+              <ul class="menu-ul">
+                <li class="menu-item">
+                  <a class="item-link" href="#introduction">
+                    <span class="link-icon icofont-info"></span>
+                    <span class="link-text">Introduction</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="#started">
+                    <span class="link-icon icofont-code"></span>
+                    <span class="link-text">Getting started</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="#customization">
+                    <span class="link-icon icofont-gear-alt"></span>
+                    <span class="link-text">Customization</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a class="item-link" href="#components">
+                    <span class="link-icon icofont-spreadsheet"></span>
+                    <span class="link-text">Components</span>
+                  </a>
+                </li>
+                <!--<li class="menu-item has-sub">-->
+                  <!--<a class="item-link" href="#">-->
+                    <!--<span class="link-text">Components</span>-->
+                    <!--<span class="link-caret icofont-thin-right"></span>-->
+                  <!--</a>-->
+                  <!--<ul class="sub">-->
+                    <!--<li class="menu-item">-->
+                      <!--<a class="item-link" href="#sub-1"><span class="link-text">Sub-1</span></a>-->
+                    <!--</li>-->
+                    <!--<li class="menu-item">-->
+                      <!--<a class="item-link" href="sub-2"><span class="link-text">Sub-2</span></a>-->
+                    <!--</li>-->
+                  <!--</ul>-->
+                <!--</li>-->
+              </ul>
+            </nav>
+          </div>
+
+        
+          <div class="assistant-menu">
+            <a class="link" href="mailto:type0code@gmail.com">
+              <span class="link-icon icofont-question-square"></span>FAQ &amp; Support
+            </a>
+          </div>
+
+        
+
+        
+
+        
+        <div class="navbar-skeleton vertical">
+          <div class="top-part">
+            <div class="sk-logo bg animated-bg"></div>
+            <div class="sk-menu">
+              <span class="sk-menu-item menu-header bg-1 animated-bg"></span>
+              <span class="sk-menu-item bg animated-bg w-75"></span>
+              <span class="sk-menu-item bg animated-bg w-80"></span>
+              <span class="sk-menu-item bg animated-bg w-50"></span>
+              <span class="sk-menu-item bg animated-bg w-75"></span>
+              <span class="sk-menu-item bg animated-bg w-50"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+            </div>
+            <div class="sk-menu">
+              <span class="sk-menu-item menu-header bg-1 animated-bg"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+              <span class="sk-menu-item bg animated-bg w-40"></span>
+            </div>
+            <div class="sk-menu">
+              <span class="sk-menu-item menu-header bg-1 animated-bg"></span>
+              <span class="sk-menu-item bg animated-bg w-60"></span>
+              <span class="sk-menu-item bg animated-bg w-50"></span>
+            </div>
+          </div>
+
+          <div class="bottom-part">
+            <div class="sk-menu">
+              <span class="sk-menu-item bg-1 animated-bg w-60"></span>
+              <span class="sk-menu-item bg-1 animated-bg w-80"></span>
+            </div>
+          </div>
+
+          <div class="horizontal-menu">
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+            <span class="sk-menu-item bg animated-bg"></span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <div class="page-content">
+          <section id="introduction" class="section">
+            <h2 class="section-title mt-0">Introduction</h2>
+
+            <p><strong>MedicApp</strong> is a Medical & Hospital HTML admin template, which is based on the jQuery and Bootstrap 4+.</p>
+            <p>It is really appropriate template for Doctors, Dentists, Hospitals, Health clinics, Surgeons and medical
+              organization. It is purpose oriented design, responsive layout with special features such as wonderful
+              clinic dashboards, appointment manager and appointment forms, doctors list and doctor profile, departments
+              management, patients list and patient profile, payments manager and many more. But this template can be used
+              for all type of web applications like custom admin panel, project management system, admin dashboard,
+              application backend, CMS or CRM.</p>
+
+            <h5>Technologies</h5>
+            <ul>
+              <li>Bootstrap 4+</li>
+              <li>Sass</li>
+              <li>CSS3 animations</li>
+              <li>Npm</li>
+              <li>Gulp</li>
+              <li>Google fonts</li>
+            </ul>
+
+            <h5>Core features</h5>
+            <ul>
+              <li>Light/dark navbar colors</li>
+              <li>Vertical/horizontal navbar</li>
+              <li>5 different layouts</li>
+              <li>Data tables</li>
+              <li>Fully Responsive layout</li>
+              <li>Light/dark sidebar</li>
+              <li>Light/dark topbar</li>
+              <li>Easy to customize</li>
+              <li>And many more…</li>
+            </ul>
+
+            <h5>Medicine features</h5>
+            <ul>
+              <li>Clinic dashboards</li>
+              <li>Appointments management</li>
+              <li>Add/edit appointment</li>
+              <li>Doctors management</li>
+              <li>Add/edit doctor</li>
+              <li>Doctor profile</li>
+              <li>Departments management</li>
+              <li>Patients management</li>
+              <li>Add/edit patient</li>
+              <li>Payments management</li>
+              <li>Add/edit payment</li>
+              <li>Authorization process</li>
+              <li>Invoices management</li>
+              <li>Events timeline</li>
+            </ul>
+          </section><!-- .section -->
+
+          <hr>
+
+          <section id="started" class="section">
+            <h2 class="section-title">Getting started</h2>
+
+            <p><strong>MedicApp</strong> uses Gulp for its CSS and HTML build system, it's optional, you can use this theme without Gulp tools, we included all the dependencies in this project.</p>
+
+            <h5>First way:</h5>
+            <p>Use html files from <code>/dist</code> or <code>/dist-horizontal</code> and css files from <code>/assets/css</code>, but this files generated automatically by Gulp.</p>
+
+            <h5>Second way<span class="font-weight-normal">(recommended)</span>:</h5>
+            <p>Use html files from <code>/dev/html</code> and scss files from <code>/dev/sass</code></p>
+            <ol>
+              <li>Install <a href="https://nodejs.org/en" target="_blank">Node.js</a> and <a href="https://www.npmjs.com/get-npm" target="_blank">npm</a>, which we use to manage our dependencies.</li>
+              <li>Run <code>npm install</code> to install dependencies</li>
+              <li>Run <code>gulp watch</code> start watching changes in scss/html files</li>
+              <li>Open <code>index.html</code> or any other <code>.html</code> file in <code>/dist</code> or <code>/dist-horizontal</code> to see the result.</li>
+            </ol>
+
+            <div class="alert alert-light">
+              Note: any commands we tell you to run must be ran from the project's root folder.
+            </div>
+            <p>First you must have <a href="https://nodejs.org/en" target="_blank">Node.js</a> and <a href="https://www.npmjs.com/get-npm" target="_blank">npm</a> installed in your computer.</p>
+          </section>
+
+          <hr>
+
+          <section id="customization" class="section">
+            <h2 class="section-title">Customization</h2>
+
+            <h5>SCSS variables:</h5>
+            <p><strong>MedicApp</strong> uses <em>main</em> and <em>accent</em> color palettes, you can generate own
+              palette on <a href="http://mcg.mbitson.com/" target="_blank">this service</a>.
+              File with palette variable and other <code>.scss</code> variables you can find
+              <code>/dev/sass/_variables.scss</code>.</p>
+            <p class="mb-0">Styles for UI components (button, input, badge, icon...) located <code>/dev/sass/components</code>.</p>
+            <p class="mb-0">Styles for layout (navbar, menu, logo...) located <code>/dev/sass/layout</code>.</p>
+            <p class="mb-0">Styles for pages (Sign in, Sign up...) located <code>/dev/sass/pages</code>.</p>
+            <p class="mb-0">Typography styles located <code>/dev/sass/_typography.scss</code>.</p>
+            <p>Addition styles located <code>/dev/sass/_helpers.scss</code>.</p>
+
+            <h5>Layout:</h5>
+            <p>You can use Vertical or Horizontal, Fullwidth or Boxed and Public (Sign in, Sign up, Page 404...) layouts.</p>
+            <p class="mb-0">Add class <code>.vertical-layout</code> to <code>body</code> if you need Vertical layout or
+              add class <code>.horizontal-layout</code> if you need Horizontal layout.</p>
+            <p>Add class <code>.boxed</code> to <code>body</code> if you need Boxed layout, in default, layout will be
+              Fullwidth.</p>
+
+            <h5>Navbar style:</h5>
+            <p>Every navbar (topnavbar or leftnavbar) can be light or dark, in default it's light if add class
+              <code>.dark</code>, it will be dark.</p>
+          </section>
+
+          <hr>
+
+          <section id="components" class="section">
+            <h2 class="section-title">Components</h2>
+
+            <p><strong>MedicApp</strong> uses Bootstrap and its components.</p>
+
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Info</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>
+                    Alert
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/alerts/" target="_blank">https://getbootstrap.com/docs/4.3/components/alerts/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Autocomplete
+                  </td>
+                  <td>
+                    <a href="http://www.runningcoder.org/jquerytypeahead/overview/" target="_blank">http://www.runningcoder.org/jquerytypeahead/overview/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Badge
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/badge/" target="_blank">https://getbootstrap.com/docs/4.3/components/badge/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Button
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/buttons/" target="_blank">https://getbootstrap.com/docs/4.3/components/buttons/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Card
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank">https://getbootstrap.com/docs/4.3/components/card/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Checkbox
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/forms/#checkboxes" target="_blank">https://getbootstrap.com/docs/4.3/components/forms/#checkboxes</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Contact
+                  </td>
+                  <td>
+                    Own
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Input
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/forms/" target="_blank">https://getbootstrap.com/docs/4.3/components/forms/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Modal window
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/modal/" target="_blank">https://getbootstrap.com/docs/4.3/components/modal/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Radio button
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/forms/#radios" target="_blank">https://getbootstrap.com/docs/4.3/components/forms/#radios</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Rating
+                  </td>
+                  <td>
+                    <a href="https://antennaio.github.io/jquery-bar-rating/" target="_blank">https://antennaio.github.io/jquery-bar-rating/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Select
+                  </td>
+                  <td>
+                    <a href="https://developer.snapappointments.com/bootstrap-select/" target="_blank">https://developer.snapappointments.com/bootstrap-select/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Switcher
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/forms/#switches" target="_blank">https://getbootstrap.com/docs/4.3/components/forms/#switches</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Textarea
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/components/forms/" target="_blank">https://getbootstrap.com/docs/4.3/components/forms/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Vertical timelines
+                  </td>
+                  <td>
+                    Own
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Icon
+                  </td>
+                  <td>
+                    Own
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Bootstrap table
+                  </td>
+                  <td>
+                    <a href="https://getbootstrap.com/docs/4.3/content/tables/" target="_blank">https://getbootstrap.com/docs/4.3/content/tables/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Data table
+                  </td>
+                  <td>
+                    <a href="https://datatables.net" target="_blank">https://datatables.net</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Chart.js
+                  </td>
+                  <td>
+                    <a href="https://www.chartjs.org/" target="_blank">https://www.chartjs.org/</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Morris.js
+                  </td>
+                  <td>
+                    <a href="https://morrisjs.github.io/morris.js/index.html" target="_blank">https://morrisjs.github.io/morris.js/index.html</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Echarts
+                  </td>
+                  <td>
+                    <a href="https://echarts.apache.org/en/index.html" target="_blank">https://echarts.apache.org/en/index.html</a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+<script src="./assets/js/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/jquery-migrate-1.4.1.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/jquery.typeahead.min.js"></script>
+<script src="./assets/js/datatables.min.js"></script>
+<script src="./assets/js/bootstrap-select.min.js"></script>
+<script src="./assets/js/jquery.barrating.min.js"></script>
+
+<script src="./assets/js/main.js"></script>
+
+
+</body>
+</html>

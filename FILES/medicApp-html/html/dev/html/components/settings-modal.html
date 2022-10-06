@@ -1,0 +1,52 @@
+<!-- Add patients modals -->
+<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Application's settings</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>Layout</label>
+            <select class="selectpicker" title="Layout" id="layout">
+              <option value="horizontal-layout">Horizontal</option>
+              <option value="vertical-layout">Vertical</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Light/dark topbar</label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="topbar">
+              <label class="custom-control-label" for="topbar"></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Light/dark sidebar</label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="sidebar">
+              <label class="custom-control-label" for="sidebar"></label>
+            </div>
+          </div>
+
+          <div class="form-group mb-0">
+            <label>Boxed/fullwidth mode</label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="boxed" checked>
+              <label class="custom-control-label" for="boxed"></label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-block">
+        <div class="actions justify-content-between">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button id="reset-to-default" type="button" class="btn btn-error">Reset to default</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Add patients modals -->

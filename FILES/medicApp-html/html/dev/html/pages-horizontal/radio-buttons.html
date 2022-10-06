@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="horizontal-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/logo.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Horizontal navbar 2 -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal horizontal-vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu-horizontal.html"
+      ]
+    })
+    <!-- endHorizontal navbar 2 -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Radio buttons</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card mb-md-0">
+                <div class="card-header">
+                  Default controls
+                </div>
+                <div class="card-body">
+                  <div class="form-check mb-3">
+                    <input class="form-check-input position-static" type="radio" value="" name="exampleRadios">
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" value="" name="exampleRadios" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      Checkbox label
+                    </label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" value="" name="exampleRadios" id="defaultCheck2" checked>
+                    <label class="form-check-label" for="defaultCheck2">
+                      Checked
+                    </label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" value="" id="defaultCheck3" disabled>
+                    <label class="form-check-label" for="defaultCheck3">
+                      Disabled
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="" id="defaultCheck4" disabled checked>
+                    <label class="form-check-label" for="defaultCheck4">
+                      Checked disabled
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card mb-0">
+                <div class="card-header">
+                  Custom controls
+                </div>
+                <div class="card-body">
+                  <div class="custom-control custom-radio mb-3">
+                    <input type="radio" class="custom-control-input" name="exampleRadios2" id="customRadio1">
+                    <label class="custom-control-label" for="customRadio1"></label>
+                  </div>
+                  <div class="custom-control custom-radio mb-3">
+                    <input type="radio" class="custom-control-input" name="exampleRadios2" id="customRadio2">
+                    <label class="custom-control-label" for="customRadio2">Checkbox label</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-3">
+                    <input type="radio" class="custom-control-input" name="exampleRadios2" id="customRadio3" checked>
+                    <label class="custom-control-label" for="customRadio3">Checked</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-3">
+                    <input type="radio" class="custom-control-input" id="customRadio4" disabled>
+                    <label class="custom-control-label" for="customRadio4">Disabled</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="customRadio5" disabled checked>
+                    <label class="custom-control-label" for="customRadio5">Checked disabled</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Radio buttons", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

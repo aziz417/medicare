@@ -1,0 +1,5 @@
+{
+    "name": "MedicsBD echo server",
+    "script": "laravel-echo-server",
+    "args": "start"
+}

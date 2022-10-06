@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Buttons</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Size
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <button class="btn btn-primary btn-sm">Small button</button>
+                    <button class="btn btn-primary">Default button</button>
+                    <button class="btn btn-primary btn-lg">Large button</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Shape
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <button class="btn btn-dark">Default</button>
+                    <button class="btn btn-dark rounded-0">Square</button>
+                    <button class="btn btn-dark rounded-pill">Rounded</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Style
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-info">Info</button>
+                    <button type="button" class="btn btn-light">Light</button>
+                    <button type="button" class="btn btn-dark">Dark</button>
+                    <button type="button" class="btn btn-link">Link</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Outline
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                    <button type="button" class="btn btn-outline-success">Success</button>
+                    <button type="button" class="btn btn-outline-danger">Danger</button>
+                    <button type="button" class="btn btn-outline-warning">Warning</button>
+                    <button type="button" class="btn btn-outline-info">Info</button>
+                    <button type="button" class="btn btn-outline-light">Light</button>
+                    <button type="button" class="btn btn-outline-dark">Dark</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Width
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <button class="btn btn-dark w-50">50% width button</button>
+                    <button class="btn btn-dark btn-block">Block button</button>
+                    <button class="btn btn-dark">Default button</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Align
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <button class="btn btn-dark btn-block text-left">Left</button>
+                    <button class="btn btn-dark btn-block">Center</button>
+                    <button class="btn btn-dark btn-block text-right">Right</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Disabled
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <button type="button" class="btn btn-primary" disabled>Primary</button>
+                    <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+                    <button type="button" class="btn btn-success" disabled>Success</button>
+                    <button type="button" class="btn btn-danger" disabled>Danger</button>
+                    <button type="button" class="btn btn-warning" disabled>Warning</button>
+                    <button type="button" class="btn btn-info" disabled>Info</button>
+                    <button type="button" class="btn btn-light" disabled>Light</button>
+                    <button type="button" class="btn btn-dark" disabled>Dark</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  Loader
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <button type="button" class="btn btn-primary btn-load">
+                      Primary
+                      <span class="btn-loader icofont-spinner"></span>
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-load">
+                      Secondary
+                      <span class="btn-loader icofont-spinner"></span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-load">
+                      Success
+                      <span class="btn-loader icofont-spinner"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-load">
+                      Danger
+                      <span class="btn-loader icofont-spinner"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-load">
+                      Warning
+                      <span class="btn-loader icofont-spinner"></span>
+                    </button>
+                    <button type="button" class="btn btn-info btn-load">
+                      Info
+                      <span class="btn-loader icofont-spinner"></span>
+                    </button>
+                    <button type="button" class="btn btn-light btn-load">
+                      Light
+                      <span class="btn-loader icofont-spinner"></span>
+                    </button>
+                    <button type="button" class="btn btn-dark btn-load">
+                      Dark
+                      <span class="btn-loader icofont-spinner"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="card mb-0">
+                <div class="card-header">
+                  With icons
+                </div>
+                <div class="card-body">
+                  <div class="elements-list">
+                    <button class="btn btn-dark">
+                      <span class="btn-icon icofont-bell-alt mr-2"></span>Default
+                    </button>
+                    <button class="btn btn-primary">
+                      <span class="btn-icon icofont-audio mr-2"></span>Accent
+                    </button>
+                    <button class="btn btn-success">
+                      <span class="btn-icon icofont-basket mr-2"></span>Success
+                    </button>
+                    <button class="btn btn-info">
+                      <span class="btn-icon icofont-bucket2 mr-2"></span>Info
+                    </button>
+                    <button class="btn btn-warning">
+                      <span class="btn-icon icofont-clip mr-2"></span>Warning
+                    </button>
+                    <button class="btn btn-error">
+                      <span class="btn-icon icofont-earth mr-2"></span>Error
+                    </button>
+                    <button class="btn btn-outline-secondary">
+                      Chart<span class="btn-icon icofont-pie-chart ml-2"></span>
+                    </button>
+                    <button class="btn btn-outline-info">
+                      Gear<span class="btn-icon icofont-gear ml-2"></span>
+                    </button>
+                    <button class="btn btn-outline-dark">
+                      Home<span class="btn-icon icofont-home ml-2"></span>
+                    </button>
+                    <button class="btn btn-outline-danger">
+                      Key<span class="btn-icon icofont-key ml-2"></span>
+                    </button>
+                    <button class="btn btn-outline-success">
+                      Leaf<span class="btn-icon icofont-leaf ml-2"></span>
+                    </button>
+                    <button class="btn btn-outline-primary">
+                      Dropbox<span class="btn-icon icofont-dropbox ml-2"></span>
+                    </button>
+                    <button class="btn btn-error btn-icon-animation">
+                      Remove
+                      <span class="btn-icon icofont-trash"></span>
+                    </button>
+                    <button class="btn btn-dark btn-square rounded-0">
+                      <span class="btn-icon icofont-envato"></span>
+                    </button>
+                    <button class="btn btn-primary btn-square rounded-0">
+                      <span class="btn-icon icofont-facebook"></span>
+                    </button>
+                    <button class="btn btn-error btn-square rounded-0">
+                      <span class="btn-icon icofont-google-plus"></span>
+                    </button>
+                    <button class="btn btn-info btn-square rounded-0">
+                      <span class="btn-icon icofont-linkedin"></span>
+                    </button>
+                    <button class="btn btn-light btn-square">
+                      <span class="btn-icon icofont-cursor-drag"></span>
+                    </button>
+                    <button class="btn btn-outline-light btn-square">
+                      <span class="btn-icon icofont-woodpecker"></span>
+                    </button>
+                    <button class="btn btn-outline-warning btn-square">
+                      <span class="btn-icon icofont-cheese"></span>
+                    </button>
+                    <button class="btn btn-outline-danger btn-square">
+                      <span class="btn-icon icofont-first-aid"></span>
+                    </button>
+                    <button class="btn btn-outline-dark btn-square">
+                      <span class="btn-icon icofont-visa"></span>
+                    </button>
+                    <button class="btn btn-outline-primary btn-square rounded-pill">
+                      <span class="btn-icon icofont-pencil-alt-1"></span>
+                    </button>
+                    <button class="btn btn-outline-success btn-square rounded-pill">
+                      <span class="btn-icon icofont-save"></span>
+                    </button>
+                    <button class="btn btn-warning btn-square rounded-pill">
+                      <span class="btn-icon icofont-play-alt-1"></span>
+                    </button>
+                    <button class="btn btn-success btn-square rounded-pill">
+                      <span class="btn-icon icofont-search"></span>
+                    </button>
+                    <button class="btn btn-error btn-square">
+                      <span class="btn-icon icofont-bin"></span>
+                    </button>
+                    <button class="btn btn-primary btn-square">
+                      <span class="btn-icon icofont-clip"></span>
+                    </button>
+                    <button class="btn btn-info btn-square">
+                      <span class="btn-icon icofont-plus"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Buttons", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

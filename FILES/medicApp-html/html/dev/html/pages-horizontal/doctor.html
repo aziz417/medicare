@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="horizontal-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/logo.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Horizontal navbar 2 -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal horizontal-vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu-horizontal.html"
+      ]
+    })
+    <!-- endHorizontal navbar 2 -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Doctor profile page</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col col-12 col-md-6 mb-4">
+              <form>
+                <label>Photo</label>
+                <div class="form-group avatar-box d-flex align-items-center">
+                  <img src="../assets/content/doctor-400-1.jpg" width="100" height="100" alt="" class="rounded-500 mr-4">
+
+                  <button class="btn btn-outline-primary" type="button">
+                    Change photo<span class="btn-icon icofont-ui-user ml-2"></span>
+                  </button>
+                </div>
+
+                <div class="form-group">
+                  <label>First name</label>
+                  <input class="form-control" type="text" placeholder="First name" value="Sophia">
+                </div>
+
+                <div class="form-group">
+                  <label>Last name</label>
+                  <input class="form-control" type="text" placeholder="Last name" value="Mackins">
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>Speciality</label>
+                      <input class="form-control" type="text" placeholder="Speciality" value="Gynecologist">
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="form-group">
+                      <label>Gender</label>
+                      <select class="selectpicker" title="Gender">
+                        <option>Male</option>
+                        <option selected>Female</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Address</label>
+                  <textarea class="form-control" placeholder="Address" rows="3">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Social networks</label>
+
+                  <div class="social-list">
+                    <div class="social-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="row">
+                            <div class="col-12 col-sm-6">
+                              <div class="form-group with-prefix-icon">
+                                <div class="prefix-icon icofont-instagram"></div>
+                                <input class="form-control" type="text" placeholder="Icon class" value="icofont-instagram" readonly>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Link" value="#">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col col-auto">
+                          <button class="btn btn-outline-danger btn-square rounded-pill" type="button">
+                            <span class="btn-icon icofont-ui-delete"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="social-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="row">
+                            <div class="col-12 col-sm-6">
+                              <div class="form-group with-prefix-icon">
+                                <div class="prefix-icon icofont-facebook"></div>
+                                <input class="form-control" type="text" placeholder="Icon class" value="icofont-facebook" readonly>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Link" value="#">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col col-auto">
+                          <button class="btn btn-outline-danger btn-square rounded-pill" type="button">
+                            <span class="btn-icon icofont-ui-delete"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="social-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="row">
+                            <div class="col-12 col-sm-6">
+                              <div class="form-group with-prefix-icon">
+                                <div class="prefix-icon icofont-twitter"></div>
+                                <input class="form-control" type="text" placeholder="Icon class" value="icofont-twitter" readonly>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Link" value="#">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col col-auto">
+                          <button class="btn btn-outline-danger btn-square rounded-pill" type="button">
+                            <span class="btn-icon icofont-ui-delete"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="mt-0">
+
+                  <label>Add social network</label>
+
+                  <div class="social-list">
+                    <div class="social-item">
+                      <div class="row">
+                        <div class="col">
+                          <div class="row">
+                            <div class="col-12 col-sm-6">
+                              <div class="form-group with-prefix-icon mb-sm-0">
+                                <div class="prefix-icon icofont-instagram"></div>
+                                <input class="form-control" type="text" placeholder="Icon class">
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <div class="form-group mb-0">
+                                <input class="form-control" type="text" placeholder="Link">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col col-auto">
+                          <button class="btn btn-outline-primary btn-square rounded-pill" type="button">
+                            <span class="btn-icon icofont-plus"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-success btn-block">Save changes</button>
+              </form>
+            </div>
+
+            <div class="col col-12 col-md-6 mb-4">
+              <div class="v-timeline align-right">
+                <div class="line"></div>
+
+                <div class="timeline-box">
+                  <div class="box-label">
+                    <span class="badge badge-primary">Today</span>
+                  </div>
+
+                  <div class="box-items">
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-doctor-alt bg-info"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">New prescription</h3>
+
+                          <div class="item-date"><span>Now</span></div>
+                        </div>
+
+                        <div class="item-desc">Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-drug bg-danger"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Appointment</h3>
+
+                          <div class="item-date"><span>2m ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-warning"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Medication</h3>
+
+                          <div class="item-date"><span>2h ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-primary"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Operation</h3>
+
+                          <div class="item-date"><span>15h ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-box">
+                  <div class="box-label">
+                    <span class="badge badge-success">Yesterday</span>
+                  </div>
+
+                  <div class="box-items">
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-dark"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">New patient</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-stethoscope-alt"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Examination</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-0 mt-4">
+            <div class="card-header">
+              Patients 2019
+            </div>
+            <div class="card-body">
+              <div id="patientsEcharts" class="chat-container container-h-400"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "Medicine", "link": "#" },
+        { "title": "Doctors", "link": "#" },
+        { "title": "Dr. Sophie", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

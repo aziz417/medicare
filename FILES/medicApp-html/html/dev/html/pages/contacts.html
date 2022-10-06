@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Contacts</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <div class="contact">
+                <div class="img-box">
+                  <img src="../assets/content/user-400-1.jpg" width="400" height="400" alt="">
+                </div>
+
+                <div class="info-box">
+                  <h4 class="name">Mayank Jani</h4>
+
+                  <p class="role">Director</p>
+
+                  <div class="social">
+                    <a href="#" class="link icofont-instagram"></a>
+                    <a href="#" class="link icofont-facebook"></a>
+                    <a href="#" class="link icofont-twitter"></a>
+                  </div>
+
+                  <p class="address">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="contact">
+                <div class="img-box">
+                  <img src="../assets/content/user-400-2.jpg" width="400" height="400" alt="">
+                </div>
+
+                <div class="info-box">
+                  <h4 class="name">Sara Jani</h4>
+
+                  <p class="role">Designer</p>
+
+                  <div class="social">
+                    <a href="#" class="link icofont-instagram"></a>
+                    <a href="#" class="link icofont-facebook"></a>
+                    <a href="#" class="link icofont-twitter"></a>
+                  </div>
+
+                  <p class="address">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="contact">
+                <div class="img-box">
+                  <img src="../assets/content/user-400-3.jpg" width="400" height="400" alt="">
+                </div>
+
+                <div class="info-box">
+                  <h4 class="name">Jenish Shah</h4>
+
+                  <p class="role">Manager</p>
+
+                  <div class="social">
+                    <a href="#" class="link icofont-instagram"></a>
+                    <a href="#" class="link icofont-facebook"></a>
+                    <a href="#" class="link icofont-twitter"></a>
+                  </div>
+
+                  <p class="address">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="contact">
+                <div class="img-box">
+                  <img src="../assets/content/user-400-4.jpg" width="400" height="400" alt="">
+                </div>
+
+                <div class="info-box">
+                  <h4 class="name">Jayna Sharma</h4>
+
+                  <p class="role">Marketer</p>
+
+                  <div class="social">
+                    <a href="#" class="link icofont-instagram"></a>
+                    <a href="#" class="link icofont-facebook"></a>
+                    <a href="#" class="link icofont-twitter"></a>
+                  </div>
+
+                  <p class="address">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="contact">
+                <div class="img-box">
+                  <img src="../assets/content/user-400-5.jpg" width="400" height="400" alt="">
+                </div>
+
+                <div class="info-box">
+                  <h4 class="name">Jacob Ryan</h4>
+
+                  <p class="role">Marketer</p>
+
+                  <div class="social">
+                    <a href="#" class="link icofont-instagram"></a>
+                    <a href="#" class="link icofont-facebook"></a>
+                    <a href="#" class="link icofont-twitter"></a>
+                  </div>
+
+                  <p class="address">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="contact">
+                <div class="img-box">
+                  <img src="../assets/content/user-400-6.jpg" width="400" height="400" alt="">
+                </div>
+
+                <div class="info-box">
+                  <h4 class="name">Sofia Malik</h4>
+
+                  <p class="role">Developer</p>
+
+                  <div class="social">
+                    <a href="#" class="link icofont-instagram"></a>
+                    <a href="#" class="link icofont-facebook"></a>
+                    <a href="#" class="link icofont-twitter"></a>
+                  </div>
+
+                  <p class="address">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="contact mb-md-0">
+                <div class="img-box">
+                  <img src="../assets/content/user-400-7.jpg" width="400" height="400" alt="">
+                </div>
+
+                <div class="info-box">
+                  <h4 class="name">Sofia Dynna</h4>
+
+                  <p class="role">Seller</p>
+
+                  <div class="social">
+                    <a href="#" class="link icofont-instagram"></a>
+                    <a href="#" class="link icofont-facebook"></a>
+                    <a href="#" class="link icofont-twitter"></a>
+                  </div>
+
+                  <p class="address">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="contact mb-md-0">
+                <div class="img-box">
+                  <img src="../assets/content/user-400-8.jpg" width="400" height="400" alt="">
+                </div>
+
+                <div class="info-box">
+                  <h4 class="name">Helen Rybi</h4>
+
+                  <p class="role">Seller</p>
+
+                  <div class="social">
+                    <a href="#" class="link icofont-instagram"></a>
+                    <a href="#" class="link icofont-facebook"></a>
+                    <a href="#" class="link icofont-twitter"></a>
+                  </div>
+
+                  <p class="address">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="contact mb-0">
+                <div class="img-box">
+                  <img src="../assets/content/user-400-9.jpg" width="400" height="400" alt="">
+                </div>
+
+                <div class="info-box">
+                  <h4 class="name">Tom Callahan</h4>
+
+                  <p class="role">Designer</p>
+
+                  <div class="social">
+                    <a href="#" class="link icofont-instagram"></a>
+                    <a href="#" class="link icofont-facebook"></a>
+                    <a href="#" class="link icofont-twitter"></a>
+                  </div>
+
+                  <p class="address">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Contacts", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

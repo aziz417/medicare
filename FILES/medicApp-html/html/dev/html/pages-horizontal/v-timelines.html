@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="horizontal-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/logo.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Horizontal navbar 2 -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal horizontal-vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu-horizontal.html"
+      ]
+    })
+    <!-- endHorizontal navbar 2 -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Vertical timelines</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="card">
+            <div class="card-header">
+              Default
+            </div>
+            <div class="card-body">
+              <div class="v-timeline">
+                <div class="line"></div>
+
+                <div class="timeline-box">
+                  <div class="box-items">
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-doctor-alt bg-info"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Appointment</h3>
+
+                          <div class="item-date"><span>2m ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-drug bg-danger"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Medication</h3>
+
+                          <div class="item-date"><span>2h ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-warning"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">New patient</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-stethoscope-alt"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Examination</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Dots
+            </div>
+            <div class="card-body">
+              <div class="v-timeline dots">
+                <div class="line"></div>
+
+                <div class="timeline-box">
+                  <div class="box-items">
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-doctor-alt bg-info"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Appointment</h3>
+
+                          <div class="item-date"><span>2m ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-drug bg-danger"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Medication</h3>
+
+                          <div class="item-date"><span>2h ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-warning"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">New patient</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-stethoscope-alt"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Examination</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              With labels
+            </div>
+            <div class="card-body">
+              <div class="v-timeline">
+                <div class="line"></div>
+
+                <div class="timeline-box">
+                  <div class="box-label">
+                    <span class="badge badge-error">Events</span>
+                  </div>
+
+                  <div class="box-items">
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-doctor-alt bg-info"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Appointment</h3>
+
+                          <div class="item-date"><span>2m ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-drug bg-danger"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Medication</h3>
+
+                          <div class="item-date"><span>2h ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-warning"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">New patient</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-box">
+                  <div class="box-label">
+                    <span class="badge badge-success">Meetings</span>
+                  </div>
+
+                  <div class="box-items">
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-warning"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">New patient</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-stethoscope-alt"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Examination</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Right align
+            </div>
+            <div class="card-body">
+              <div class="v-timeline align-right">
+                <div class="line"></div>
+
+                <div class="timeline-box">
+                  <div class="box-items">
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-doctor-alt bg-info"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Appointment</h3>
+
+                          <div class="item-date"><span>2m ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-drug bg-danger"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Medication</h3>
+
+                          <div class="item-date"><span>2h ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-warning"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">New patient</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-stethoscope-alt"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Examination</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Center align
+            </div>
+            <div class="card-body">
+              <div class="v-timeline align-center">
+                <div class="line"></div>
+
+                <div class="timeline-box">
+                  <div class="box-items">
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-doctor-alt bg-info"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Appointment</h3>
+
+                          <div class="item-date"><span>2m ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-drug bg-danger"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Medication</h3>
+
+                          <div class="item-date"><span>2h ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-warning"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">New patient</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-stethoscope-alt"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Examination</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-0">
+            <div class="card-header">
+              Between align
+            </div>
+            <div class="card-body">
+              <div class="v-timeline align-between">
+                <div class="line"></div>
+
+                <div class="timeline-box">
+                  <div class="box-items">
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-doctor-alt bg-info"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Appointment</h3>
+
+                          <div class="item-date"><span>2m ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-drug bg-danger"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Medication</h3>
+
+                          <div class="item-date"><span>2h ago</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-paralysis-disability bg-warning"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">New patient</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit.</div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="icon-block">
+                        <div class="item-icon icofont-stethoscope-alt"></div>
+                      </div>
+
+                      <div class="content-block">
+                        <div class="item-header">
+                          <h3 class="h5 item-title">Examination</h3>
+
+                          <div class="item-date"><span>Jul 10</span></div>
+                        </div>
+
+                        <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "UI Kit", "link": "#" },
+        { "title": "Components", "link": "#" },
+        { "title": "Vertical timelines", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

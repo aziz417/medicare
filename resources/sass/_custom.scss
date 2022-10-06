@@ -1,0 +1,198 @@
+// Schedule Page Design
+@import "extra/schedule-widget";
+// Call Dialog
+@import "extra/call-dialog";
+// Toaster
+@import "extra/toaster";
+
+.flash-btn {
+    position: relative;
+    overflow: hidden;
+    &:after {
+        content: "";
+        background-color: #2759fa;
+        color: #fff;
+        display: block;
+        position: absolute;
+        border-radius: 20px;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.6s;
+    }
+    &:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s;
+    }
+}
+
+img.image-preview {
+    cursor: pointer;
+}
+.image-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    .image-view-box {
+        position: relative;
+        background-color: #fff;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        // overflow: hidden;
+        img {
+            max-width: 90vh;
+            max-height: 90vh;
+        }
+    }
+    .close-image {
+        cursor: pointer;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        border-radius: 50%;
+        border: 1px solid red;
+        color: #ff0404;
+        background-color: white;
+        z-index: 99999999;
+        width: 30px;
+        height: 30px;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 25px;
+        text-align: center;
+    }
+}
+.img-circle {
+    max-width: 50px;
+    max-height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #ebebeb;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.doctor-card {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 5px -2px rgb(0 0 0 / 35%);
+    h3,
+    h6,
+    p {
+        margin: 5px 0;
+    }
+    .profile-img {
+        max-width: 100%;
+        img {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    }
+}
+.doctor-info {
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    li {
+        display: block;
+        line-height: 30px;
+        color: #4e4852;
+        i {
+            font-size: 20px;
+            min-width: 30px;
+        }
+    }
+}
+
+.review-listing {
+    border-bottom: 1px solid #f5f7fc;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    & > ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li + li {
+            margin-top: 20px;
+            border-top: 1px dashed #f0f0f0;
+            padding-top: 20px;
+        }
+        li .comment {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .avatar {
+                width: 2.5rem;
+                height: 2.5rem;
+                position: relative;
+                display: inline-block;
+                border-radius: 50% !important;
+            }
+            .comment-body {
+                margin-left: 16px;
+                .meta-data {
+                    position: relative;
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    span {
+                        display: block;
+                        font-size: 16px;
+                        color: #757575;
+                        &.comment-author {
+                            font-weight: 600;
+                            color: #272b41;
+                            text-transform: capitalize;
+                        }
+                        &.comment-date {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .table-user {
+        .icon-responsive,
+        img {
+            display: none;
+        }
+    }
+    .image-view {
+        .image-view-box {
+            margin: 15px;
+            img {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+    }
+    .medicines-table thead tr,
+    .medicines-table tbody tr {
+        display: flex;
+        flex-direction: column;
+    }
+}

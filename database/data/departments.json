@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Microbiology",
+        "description": null
+    },
+    {
+        "name": "Neonatal",
+        "description": null
+    },
+    {
+        "name": "Nephrology",
+        "description": null
+    },
+    {
+        "name": "Neurology",
+        "description": null
+    },
+    {
+        "name": "Oncology",
+        "description": null
+    },
+    {
+        "name": "Orthopedics",
+        "description": null
+    },
+    {
+        "name": "Pharmacy",
+        "description": null
+    },
+    {
+        "name": "Radiotherapy",
+        "description": null
+    },
+    {
+        "name": "Hematology",
+        "description": null
+    },
+    {
+        "name": "Gynecology",
+        "description": null
+    },
+    {
+        "name": "Obstetrics",
+        "description": null
+    },
+    {
+        "name": "General Surgery",
+        "description": "General Surgery"
+    },
+    {
+        "name": "Medicine",
+        "description": "Internal Medicine"
+    },
+    {
+        "name": "General Physician",
+        "description": ""
+    },
+    {
+        "name": "Chest Disease /Respiratory Medicine ",
+        "description": "Disease of Chest"
+    },
+    {
+        "name": "Herpetology",
+        "description": "Liver disease specialist"
+    },
+    {
+        "name": "Cardiology",
+        "description": "Heart disease"
+    },
+    {
+        "name": "Dermatology (Skin)",
+        "description": "Dermatology and Neurology"
+    },
+    {
+        "name": "Pediatrics",
+        "description": "Child health"
+    },
+    {
+        "name": "ENT",
+        "description": "ENT"
+    },
+    {
+        "name": "Dental",
+        "description": "Axiomatically Surgery"
+    }
+]

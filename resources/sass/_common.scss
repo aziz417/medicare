@@ -1,0 +1,52 @@
+body.vertical-layout #navbar1 .app-logo {
+    display: none;
+}
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.read-more-box {
+    // white-space: pre-line;
+}
+
+.tooltip.show {
+    z-index: 99999;
+}
+
+.alert + header.page-header {
+    margin-top: 15px;
+}
+.form-group span.invalid-feedback[role=alert] {
+    display: block;
+}
+
+.page-box .app-container .content-overlay,
+.modal-backdrop {
+    background: rgb(0 0 0 / 50%);
+}
+
+.main-content .page-content {
+    margin-bottom: 2rem;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.hidden-input {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.list-table tr>td:first-child {
+    width: 25%;
+}
+
+@media (min-width: 992px){
+    .modal-md {
+        max-width: 650px;
+    }
+}

@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+@@include("../components/head.html")
+
+<body class="vertical-layout boxed">
+<div class="app-loader main-loader">
+  <div class="loader-box">
+    <div class="bounceball"></div>
+    <div class="text">Medic<span>app</span></div>
+  </div>
+</div>
+<!-- .main-loader -->
+
+<div class="page-box">
+  <div class="app-container">
+    <!-- Horizontal navbar -->
+    @@include("../components/navbar.html", {
+      "class": "horizontal", "id": "navbar1",
+      "components": [
+        "../components/sidebar-button.html",
+        "../components/search.html",
+        "../components/actions.html"
+      ]
+    })
+    <!-- end Horizontal navbar -->
+
+    <!-- Vertical navbar -->
+    @@include("../components/navbar.html", {
+      "class": "vertical", "id": "navbar2",
+      "components": [
+        "../components/sidebar-close.html",
+        "../components/logo.html",
+        "../components/main-menu.html",
+        "../components/add-patient-button.html",
+        "../components/assistant-menu.html"
+      ]
+    })
+    <!-- end Vertical navbar -->
+
+    <main class="main-content">
+      <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
+
+      <div class="main-content-wrap">
+        <header class="page-header">
+          <h1 class="page-title">Events timeline</h1>
+        </header>
+
+        <div class="page-content">
+          <div class="card bg-light bg-gradient">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                  <img src="../assets/img/logo.png" alt="" width="169" height="40">
+                  <h3 class="">Medicine Clinic</h3>
+                  <p class="text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus id perferendis unde voluptas voluptatem? Ad alias deleniti eum nulla tempore.
+                  </p>
+                </div>
+
+                <div class="col-12 col-md-6 text-right">
+                  <h4 class="text-primary mt-0 mb-1">$25038</h4>
+                  <p class="mb-0 text-muted">Income in current month</p>
+
+                  <div id="incomeEcharts" class="chat-container container-h-100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <div class="card bg-primary text-white">
+                <div class="card-header">
+                  Introduction
+                </div>
+                <div class="card-body">
+                  <h6 class="mt-0 mb-0">Address</h6>
+                  <p>795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                  <h6 class="mt-0 mb-0">Email</h6>
+                  <p>denta@gmail.com</p>
+                  <h6 class="mt-0 mb-0">Phone</h6>
+                  <p>0126596452</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  Last patients
+                </div>
+                <div class="card-body">
+                  <table class="table table-hover">
+                    <thead>
+                    <tr>
+                      <th scope="col">Patient</th>
+                      <th scope="col" class="text-right">Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="../assets/content/user-40-1.jpg" alt="" width="40" height="40" class="rounded-500 mr-3">
+                          <strong>Liam</strong>
+                        </div>
+                      </td>
+                      <td class="text-right text-muted">18 Feb 2019</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="../assets/content/user-40-2.jpg" alt="" width="40" height="40" class="rounded-500 mr-3">
+                          <strong>Emma</strong>
+                        </div>
+                      </td>
+                      <td class="text-right text-muted">17 Feb 2019</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="../assets/content/user-40-3.jpg" alt="" width="40" height="40" class="rounded-500 mr-3">
+                          <strong>Olivia</strong>
+                        </div>
+                      </td>
+                      <td class="text-right text-muted">17 Feb 2019</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <img src="../assets/content/user-40-4.jpg" alt="" width="40" height="40" class="rounded-500 mr-3">
+                          <strong>Ava</strong>
+                        </div>
+                      </td>
+                      <td class="text-right text-muted">16 Feb 2019</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="card mb-md-0">
+                <div class="card-header">
+                  Last payments
+                </div>
+                <div class="card-body">
+                  <table class="table table-hover">
+                    <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col" class="text-right">Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="text-muted">18 Feb 2019</td>
+                      <td class="text-right"><span class="badge badge-success rounded-0">$155</span></td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">17 Feb 2019</td>
+                      <td class="text-right"><span class="badge badge-success rounded-0">$365</span></td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">17 Feb 2019</td>
+                      <td class="text-right"><span class="badge badge-success rounded-0">$234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">16 Feb 2019</td>
+                      <td class="text-right"><span class="badge badge-success rounded-0">$190</span></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <div class="card mb-0">
+                <div class="card-header">
+                  Our timeline
+                </div>
+                <div class="card-body">
+                  <div class="v-timeline">
+                    <div class="line"></div>
+
+                    <div class="timeline-box">
+                      <div class="box-label">
+                        <span class="badge badge-danger">Events</span>
+                      </div>
+
+                      <div class="box-items">
+                        <div class="item">
+                          <div class="icon-block">
+                            <div class="item-icon icofont-doctor-alt bg-info"></div>
+                          </div>
+
+                          <div class="content-block">
+                            <div class="item-header">
+                              <h3 class="h5 item-title">New prescription</h3>
+
+                              <div class="item-date"><span>Now</span></div>
+                            </div>
+
+                            <div class="item-desc">Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="icon-block">
+                            <div class="item-icon icofont-drug bg-danger"></div>
+                          </div>
+
+                          <div class="content-block">
+                            <div class="item-header">
+                              <h3 class="h5 item-title">Appointment</h3>
+
+                              <div class="item-date"><span>2m ago</span></div>
+                            </div>
+
+                            <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.</div>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="icon-block">
+                            <div class="item-icon icofont-paralysis-disability bg-warning"></div>
+                          </div>
+
+                          <div class="content-block">
+                            <div class="item-header">
+                              <h3 class="h5 item-title">Medication</h3>
+
+                              <div class="item-date"><span>2h ago</span></div>
+                            </div>
+
+                            <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="icon-block">
+                            <div class="item-icon icofont-paralysis-disability bg-primary"></div>
+                          </div>
+
+                          <div class="content-block">
+                            <div class="item-header">
+                              <h3 class="h5 item-title">Operation</h3>
+
+                              <div class="item-date"><span>15h ago</span></div>
+                            </div>
+
+                            <div class="item-desc">Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="timeline-box">
+                      <div class="box-label">
+                        <span class="badge badge-success">Meetings</span>
+                      </div>
+
+                      <div class="box-items">
+                        <div class="item">
+                          <div class="icon-block">
+                            <div class="item-icon icofont-paralysis-disability bg-dark"></div>
+                          </div>
+
+                          <div class="content-block">
+                            <div class="item-header">
+                              <h3 class="h5 item-title">New patient</h3>
+
+                              <div class="item-date"><span>Jul 10</span></div>
+                            </div>
+
+                            <div class="item-desc">Lorem ipsum dolor sit.</div>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="icon-block">
+                            <div class="item-icon icofont-stethoscope-alt"></div>
+                          </div>
+
+                          <div class="content-block">
+                            <div class="item-header">
+                              <h3 class="h5 item-title">Examination</h3>
+
+                              <div class="item-date"><span>Jul 10</span></div>
+                            </div>
+
+                            <div class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.</div>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="icon-block">
+                            <div class="item-icon bg-success icofont-xray"></div>
+                          </div>
+
+                          <div class="content-block">
+                            <div class="item-header">
+                              <h3 class="h5 item-title">New patient</h3>
+
+                              <div class="item-date"><span>Jul 9</span></div>
+                            </div>
+
+                            <div class="item-desc">Lorem ipsum dolor sit.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../components/footer.html", {
+      "crumbs": [
+        { "title": "Apps", "link": "#" },
+        { "title": "Service pages", "link": "#" },
+        { "title": "Events timeline", "link": "#" }
+      ]
+    })
+
+    <div class="content-overlay"></div>
+  </div>
+</div>
+
+@@include("../components/add-patient-modal.html")
+@@include("../components/settings-modal.html")
+
+@@include("../components/scripts.html")
+
+</body>
+</html>

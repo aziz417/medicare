@@ -1,0 +1,13 @@
+body .app-toast {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 99999;
+    min-width: 200px;
+    min-width: 300px;
+    .bg-danger .close:hover {
+        color: #fff;
+    }
+}
