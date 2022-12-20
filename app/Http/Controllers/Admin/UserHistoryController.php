@@ -27,6 +27,7 @@ class UserHistoryController extends Controller
                     'id' => $item->id,
                     'title' => $item->title,
                     'details' => $item->details,
+//                    'report' => $item->report,
                     'created_at' => $item->created_at->format('d M, Y'),
                 ];
             });
@@ -48,6 +49,7 @@ class UserHistoryController extends Controller
             'user_id' => 'required',
             'title' => 'required|string',
             'details' => 'required|string',
+//            'report' => 'required|string',
         ]);
         $history = PatientHistory::create($validated);
         if( $history ){
@@ -90,15 +92,16 @@ class UserHistoryController extends Controller
     }
     public function update(Request $request)
     {
-        info($request->all());
         $history = PatientHistory::where('id', $request->user_id)->first();
         $request->validate([
             'title' => 'required|string',
             'details' => 'required|string',
+//            'report' => 'required|string',
         ]);
         $history->update([
             'title' => $request->title,
             'details' => $request->details,
+//            'report' => $request->report,
         ]);
 
             return response()->json([

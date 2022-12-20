@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\PatientInvestigation;
 
 class UserInvestigationsController extends Controller
-{   
+{
     /**
      * Display a listing of the resource.
      *
@@ -97,7 +97,7 @@ class UserInvestigationsController extends Controller
             'date' => _date($validated['date'], 'd M, Y'),
             'details' => $validated['details']
         ]);
-        
+
         $investigation->update([
             'data' => $data
         ]);
@@ -124,5 +124,39 @@ class UserInvestigationsController extends Controller
         return response()->json([
             'status' => false,
         ]);
+    }
+
+    public function customEdit(Request $request)
+    {
+        $investigation = PatientInvestigation::where('id', $request->id)->first();
+        return view('admin.prescriptions.extras.investigration-update', compact('investigation'));
+    }
+    public function customUpdate(Request $request)
+    {
+        $data = [];
+        foreach ($request->oldDate as $key => $value) {
+            if ($request->data_date[$key] == null){
+                $data[] = [
+                    'date' => $value,
+                    'details' => $request->update_details[$key],
+                ];
+            }else{
+                $data[] = [
+                    'date' => _date($request->data_date[$key], 'd M, Y'),
+                    'details' => $request->update_details[$key],
+                ];
+            }
+        }
+
+        $investigation = PatientInvestigation::where('id', $request->id)->first();
+
+        $investigation->update([
+            'user_id' => $request->user_id,
+            'title' => $request->title,
+            'details' => $request->details,
+            'data' => $data
+        ]);
+
+        return redirect()->route('admin.prescriptions.index');
     }
 }

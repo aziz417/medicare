@@ -27,6 +27,18 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
+                                    <label class="control-label">Investigation Title</label>
+                                    <input name="investigation_title" value="{{ $prescription->investigation_title ?? old('investigation_title') }}" id="title-update" placeholder="Title" type="text"
+                                           class="form-control form-control-sm w-100" list="investigations-list"
+                                           autocomplete="off" required>
+                                    <datalist id="investigations-list">
+                                        @foreach(config('system.investigations', []) as $iName)
+                                            <option>{{ $iName }}</option>
+                                        @endforeach
+                                    </datalist>
+                                </div>
+
+                                <div class="form-group">
                                     <label class="control-label" for="advice">Advice</label>
                                     <textarea class="form-control" name="advice" id="advice" cols="30" rows="4" placeholder="Write Something...">{{ $prescription->advice ?? old('advice') }}</textarea>
                                     <br/>
@@ -39,6 +51,7 @@
                                         @endforelse
                                     </select>
                                 </div>
+                                <br/>
                                 {{-- <div class="form-group">
                                     <label class="control-label" for="investigations">Investigations</label>
                                     <textarea class="form-control" name="investigations" id="investigations" cols="30" rows="4" placeholder="Write Something...">{{ $prescription->investigations ?? old('investigations') }}</textarea>
@@ -199,6 +212,65 @@
                             </table>
                         </div>
 
+                        <h5>ICD 10</h5>
+                        <div class="table-responsive" id="icd10">
+                            <table class="table table-sm">
+                                <thead>
+                                <tr>
+                                    <th>Group Description</th>
+                                    <th>ICD10 Code</th>
+                                    <th>Who Full Description</th>
+                                    {{--                                        <th>--}}
+                                    {{--                                            <a id="diagnosis-clone-btn" href="javascript:void(0);"--}}
+                                    {{--                                               class="btn btn-sm btn-outline-primary rounded-pill p-1"><span--}}
+                                    {{--                                                        class="btn-icon icofont-plus"></span></a>--}}
+                                    {{--                                        </th>--}}
+                                </tr>
+                                </thead>
+                                <tbody id="icd10-items">
+                                <tr>
+                                    <td>
+                                        <input class="form-control form-control-sm" type="text"
+                                               name="group_desc" value=" {{ $prescription->group_desc ?? old('group_desc') }}" placeholder="Group Description" list="groupDesc"
+                                               autocomplete="on">
+                                        <datalist id="groupDesc">
+                                            @forelse($icd10Advice as $item)
+                                                <option value="{{ $item->title }}">{{ $item->title }}</option>
+                                            @empty
+
+                                            @endforelse
+                                        </datalist>
+                                    </td>
+                                    <td>
+                                        <input class="form-control form-control-sm" type="text"
+                                               name="icd_code" value="{{ $prescription->icd_code ?? old('icd_code') }}" list="code" placeholder="ICD10 Code"
+                                               autocomplete="on">
+                                        <datalist id="code">
+                                            @forelse($icd10Advice as $item)
+                                                <option value="{{ $item->title }}">{{ $item->title }}</option>
+                                            @empty
+
+                                            @endforelse
+                                        </datalist>
+                                    </td>
+                                    <td>
+                                        <input class="form-control form-control-sm" type="text"
+                                               name="who_full_desc" value="{{ $prescription->who_full_desc ?? old('who_full_desc') }}" placeholder="Who Full Description" list="whoFullDesc"
+                                               autocomplete="on">
+                                        <datalist id="whoFullDesc">
+                                            @forelse($icd10Advice as $item)
+                                                <option value="{{ $item->title }}">{{ $item->title }}</option>
+                                            @empty
+
+                                            @endforelse
+                                        </datalist>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
                         <div class="form-button float-right mt-5">
                             <button class="btn btn-primary" type="submit">Submit</button>
                         </div>
@@ -224,6 +296,7 @@
     function adviceSet() {
         var advice = "#"+$("#advices option:selected").text()+" ";
         if (flag === 0){
+            flag === 1;
             oldAdvice = $("#advice").val();
         }
 
