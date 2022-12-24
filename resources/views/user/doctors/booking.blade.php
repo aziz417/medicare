@@ -72,6 +72,10 @@
             </div>
         </div>
     </header>
+    @php
+        use App\Models\DoctorScheduleOnOff;$preSchedule = DoctorScheduleOnOff::where('doctor_id', $doctor->id)->first();
+    @endphp
+    @if($preSchedule->on_off == 1)
     <div class="page-content">
         <div class="row">
             <div class="col-md-12">
@@ -250,6 +254,9 @@
             </div>
         </div>
     </div>
+    @else
+        <h2 class="text-center">The doctor's schedule is temporarily closed</h2>
+    @endif
 </form>
 @endsection
 

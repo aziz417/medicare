@@ -114,7 +114,7 @@
                 </div>
                 <div class="form-group col-4">
                     <label>Report Showing</label>
-                    <input class="form-control" type="number" placeholder="Report show" name="charge_report" value="{{ $doctor->getCharge('report')->amount }}" required>
+                    <input class="form-control" type="number" accept="00" placeholder="Report show" name="charge_report" value="{{ $doctor->getCharge('report')->amount }}" >
                     @error('charge_report')
                     <span class="invalid-feedback" role="alert">{{ $message }}</span>
                     @enderror

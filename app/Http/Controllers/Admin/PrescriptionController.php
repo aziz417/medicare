@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Advice;
+use App\Models\Icd;
 use App\Models\User;
 use App\Models\Appointment;
 use App\Models\Prescription;
@@ -40,9 +41,10 @@ class PrescriptionController extends Controller
         $appointments = Appointment::whereDate('scheduled_at', '>', now()->subDays(30))->get(['id', 'appointment_code', 'user_id', 'status']);
         $patients = User::whereRole(['user', 'patient'])->get(['id', 'name']);
         $template = PrescriptionTemplate::find($request->template);
+        $icd10Advice = Icd::all();
         $appointment = Appointment::find($request->appointment);
         $doctors = User::whereRole(['doctor'])->get(['id', 'name']);
-        return view('admin.prescriptions.create', compact( 'advices','appointments', 'appointment', 'patients', 'template','doctors'));
+        return view('admin.prescriptions.create', compact( 'icd10Advice','advices','appointments', 'appointment', 'patients', 'template','doctors'));
     }
 
     /**
@@ -54,6 +56,10 @@ class PrescriptionController extends Controller
     public function store(PrescriptionRequest $request)
     {
         $prescription = Prescription::create([
+            'group_desc' => $request->group_desc,
+            'investigation_title' => $request->investigation_title,
+            'icd_code' => $request->icd_code,
+            'who_full_desc' => $request->who_full_desc,
             'appointment_id' => $request->appointment_id,
             'patient_id' => $request->patient_id,
             'doctor_id' => $request->doctor_id ?? auth()->id(),
@@ -108,10 +114,11 @@ class PrescriptionController extends Controller
     public function edit(Prescription $prescription)
     {
         $advices = Advice::all();
+        $icd10Advice = Icd::all();
         $appointments = Appointment::whereDate('scheduled_at', '>', now()->subDays(30))->get(['id', 'appointment_code', 'user_id', 'status']);
         $patients = User::whereRole(['user', 'patient'])->get(['id', 'name']);
 
-        return view('admin.prescriptions.edit', compact('advices','prescription', 'patients', 'appointments'));
+        return view('admin.prescriptions.edit', compact('icd10Advice','advices','prescription', 'patients', 'appointments'));
     }
 
     /**
@@ -124,6 +131,10 @@ class PrescriptionController extends Controller
     public function update(PrescriptionRequest $request, Prescription $prescription)
     {
         $prescription->fill([
+            'group_desc' => $request->group_desc,
+            'investigation_title' => $request->investigation_title,
+            'icd_code' => $request->icd_code,
+            'who_full_desc' => $request->who_full_desc,
             'chief_complain' => $request->chief_complain,
             'advice' => $request->advice,
             'investigations' => $request->investigations,

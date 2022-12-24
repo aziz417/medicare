@@ -37,12 +37,17 @@ Route::resource('history', 'UserHistoryController')->only('index', 'store', 'des
 Route::get('history/edit', 'UserHistoryController@edit')->name('history.edit');
 Route::put('history/item/update', 'UserHistoryController@update')->name('history.update');
 Route::resource('advices', 'AdviceController')->only('index', 'store', 'update', 'destroy', 'edit');
+Route::resource('icds', 'IcdController')->only('index', 'store', 'update', 'destroy', 'edit');
 Route::resource('investigations', 'UserInvestigationsController')->only('index', 'store', 'update', 'destroy');
+Route::get('investigation/edit/', 'UserInvestigationsController@customEdit')->name('investigation.edit');
+Route::put('investigation/item/update', 'UserInvestigationsController@customUpdate')->name('investigation.customUpdate');
 Route::get('appointments/{appointment}/{action}', 'AppointmentController@showAction')->name('appointments.action');
 Route::patch('appointments/{appointment}/force', 'AppointmentController@forceUpdate')->name('appointments.update.force');
 Route::resource('prescriptions', 'PrescriptionController');
 Route::resource('prescriptions-templates', 'PrescriptionTemplateController')->except('show');
 Route::resource('transactions', 'TransactionController')->except('edit');
+Route::get('admin/doctor/transactions/index', 'TransactionController@doctorTransactions')->name('doctor.transactions.index');
+
 Route::resource('discounts', 'DiscountController')->middleware('role:master|admin|doctor')->except('create', 'edit', 'show');
 Route::resource('badges', 'BadgeController')->except('create', 'edit', 'show');
 Route::resource('templates', 'TemplateController')->middleware('role:master|admin');
@@ -55,3 +60,5 @@ Route::prefix('sender')->name('sender.')->group(function() {
     Route::get('email', 'EmailController@index')->name('email');
     Route::post('email', 'EmailController@send')->name('email.send');
 });
+
+Route::post('doctor/schedule/manage', 'ScheduleController@scheduleOnOff')->name('doctor.schedule.onoff');

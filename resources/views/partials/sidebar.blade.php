@@ -17,6 +17,7 @@
                     <li class="menu-item"><a class="item-link" href="{{ route('admin.patients.index') }}"><span class="link-icon icofont-paralysis-disability"></span> <span class="link-text">Patients</span></a></li>
                     <li class="menu-item"><a class="item-link" href="{{ route('admin.schedules.index') }}"><span class="link-icon icofont-clock-time"></span> <span class="link-text">Schedules</span></a></li>
                     <li class="menu-item"><a class="item-link" href="{{ route('admin.advices.index') }}"><span class="link-icon icofont-plus"></span> <span class="link-text">Advice</span></a></li>
+                    <li class="menu-item"><a class="item-link" href="{{ route('admin.icds.index') }}"><span class="link-icon icofont-plus"></span> <span class="link-text">ICD-10 Advice</span></a></li>
                     @if($auth->isRole('doctor'))
                     <li class="menu-item"><a class="item-link" href="{{ route('admin.video.settings') }}"><span class="link-icon icofont-ui-video-chat"></span> <span class="link-text">Video Setting</span></a></li>
                     @endif
@@ -31,6 +32,7 @@
                     <li class="menu-item has-sub"><a class="item-link" href="index.html#"><span class="link-text">Payments</span> <span class="link-caret icofont-thin-right"></span></a>
                         <ul class="sub">
                             <li class="menu-item"><a class="item-link" href="{{ route('admin.transactions.index') }}"> <span class="link-text">Transactions</span></a></li>
+                            <li class="menu-item"><a class="item-link" href="{{ route('admin.doctor.transactions.index') }}"> <span class="link-text">Doctor Transactions</span></a></li>
                             <li class="menu-item"><a class="item-link" href="{{ route('admin.accounts') }}"> <span class="link-text">Account Balance</span></a></li>
                         </ul>
                     </li>

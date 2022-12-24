@@ -9,7 +9,7 @@
                     <thead>
                     <tr>
                         <th width="25%">Title</th>
-                        <th>Report</th>
+                        <th>Details</th>
                         <th width="20%">Created at</th>
                         <th width="5%"></th>
                     </tr>
@@ -141,7 +141,12 @@ Edit
                 success: function (response, status) {
                     if (response.status && status === 'success') {
                         let {title, details, id, created_at} = response.data;
-                        $('#history-table').prepend(`<tr><td width="25%">${title}</td><td>${details}</td><td>${moment(created_at).format('DD MMM, YYYY')}</td><td class="text-right"><button type="button" data-id="${id}" class="btn btn-danger btn-sm p-1 rounded-pill history-remove-btn"><span class="btn-icon icofont-trash"></span></button></td></tr>`)
+                        $('#history-table').prepend(`<tr><td width="25%">${title}</td><td>${details}</td><td>${moment(created_at).format('DD MMM, YYYY')}</td><td class="text-right">
+<button type="button" data-id="${id}" class="btn btn-info btn-sm  px-1 mb-1 rounded-pill edit-btn">
+Edit
+</button>
+<button type="button" data-id="${id}" class="btn btn-danger btn-sm p-1 rounded-pill history-remove-btn"><span class="btn-icon icofont-trash"></span></button>
+</td></tr>`)
                     }
                     $('#history-submit .loader').addClass('d-none');
                 },
@@ -207,7 +212,6 @@ Edit
                             $("#report-update").val(response.data.details)
                             $("#history-update-user-id").val(response.data.id)
                             $("#update-title-set").val(response.data.title)
-                            console.log(response.data.title)
                         }
                     }
                 })

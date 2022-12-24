@@ -8,6 +8,7 @@ use App\Models\Department;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\DB;
 
 class DoctorController extends Controller
 {
@@ -120,20 +121,21 @@ class DoctorController extends Controller
     public function update(Request $request, User $doctor)
     {
         $request->validate([
-            "name" => 'required|string|max:255',
-            "email" => "required|string|unique:users,email,{$doctor->id}",
+            "name" => 'nullable|string|max:255',
+            "email" => "nullable|string|unique:users,email,{$doctor->id}",
             "mobile" => "nullable|string|unique:users,mobile,{$doctor->id}",
-            "designation" => 'required|string|required',
-            "department_id" => 'required|array',
+            "designation" => 'nullable|string|required',
+            "department_id" => 'nullable|array',
             "address" => 'nullable|string',
-            "charge_booking" => 'required|string|integer',
-            "charge_reappoint" => 'required|string|integer',
-            "charge_report" => 'required|string|integer',
+            "charge_booking" => 'nullable|string|integer',
+            "charge_reappoint" => 'nullable|string|integer',
+            "charge_report" => 'nullable',
             "avatar" => 'nullable|image|max:512',
             "status" => 'nullable|string',
             "badges" => 'nullable|array',
             "is_desk_doctor" => 'nullable'
         ]);
+
         $doctor->fill([
             'name' => $request->name,
             'email' => $request->email,
@@ -149,6 +151,7 @@ class DoctorController extends Controller
         $doctor->charges()->updateOrCreate( ['type'=>'booking'], ['amount'=>$request->charge_booking] );
         $doctor->charges()->updateOrCreate( ['type'=>'report'], ['amount'=>$request->charge_report] );
         $doctor->charges()->updateOrCreate( ['type'=>'reappoint'], ['amount'=>$request->charge_reappoint] );
+
 
         if( $request->badges && is_array($request->badges) ){
             $doctor->badges()->sync($request->badges);

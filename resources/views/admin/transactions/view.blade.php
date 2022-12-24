@@ -91,7 +91,7 @@
                     <table class="table">
                         <tbody>
                             @foreach( $transaction->response['data'] ?? [] as $key => $value )
-                            <tr>    
+                            <tr>
                                 <td>{{ slug2title($key) }}</td>
                                 <td>{{ $value }}</td>
                             </tr>

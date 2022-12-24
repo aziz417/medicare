@@ -45,6 +45,24 @@
                     @endforeach
                 </div>
             </div>
+            <div class="ml-4">
+                <h3>Schedule On/Off</h3>
+                @php
+                    use App\Models\DoctorScheduleOnOff;$preSchedule = DoctorScheduleOnOff::where('doctor_id', auth()->id())->first();
+                @endphp
+                <form class="form" method="post" action="{{ route('admin.doctor.schedule.onoff') }}">
+                    @csrf
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="on_off_true">Schedule</label>
+                                <input name="on_off" {{ $preSchedule->on_off == 1 ? 'checked' : '' }} type="checkbox" class="" value="true" id="on_off_true">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
@@ -59,7 +77,7 @@
                 <h5 class="modal-title">Add Slot <span id="mdo"></span> </h5>
             </div>
             <div class="modal-body">
-                @csrf 
+                @csrf
                 <input type="hidden" id="day" name="day">
                 <div id="slot-list">
                     <div class="row align-items-center slot-item">
@@ -69,19 +87,19 @@
                                     <div class="form-group">
                                         <label>Start Time</label>
                                         <input name="start_time[]" class="form-control" type="time" placeholder="Start Time">
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="form-group">
                                         <label>End Time</label>
                                         <input name="end_time[]" class="form-control" type="time" placeholder="Start Time">
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="form-group">
                                         <label>Duration</label>
                                         <input name="duration[]" class="form-control" type="number" step="15" min="15" max="60" placeholder="Minutes">
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>

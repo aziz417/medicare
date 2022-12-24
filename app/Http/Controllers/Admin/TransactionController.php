@@ -26,6 +26,12 @@ class TransactionController extends Controller
         return view('admin.transactions.list', compact('transactions'));
     }
 
+    public function doctorTransactions(Request $request)
+    {
+        $transactions = Transaction::whereIn('type', ['withdraw'])->latest()->with('user')->paginate(20);
+        return view('admin.transactions.doctorList', compact('transactions'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

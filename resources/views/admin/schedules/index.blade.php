@@ -137,25 +137,25 @@
                                             <option value="{{ ucfirst($day) }}">{{ ucfirst($day) }}</option>
                                             @endforeach
                                         </select>
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>Duration</label>
                                         <input name="duration[]" class="form-control" type="number" step="15" min="15" max="60" placeholder="Minutes">
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>Start Time</label>
                                         <input name="start_time[]" class="form-control" type="time" placeholder="Start Time">
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label>End Time</label>
                                         <input name="end_time[]" class="form-control" type="time" placeholder="Start Time">
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>

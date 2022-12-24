@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\DoctorScheduleOnOff;
 use App\Models\User;
 use App\Models\Schedule;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ScheduleController extends Controller
-{   
+{
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +17,7 @@ class ScheduleController extends Controller
      */
     public function index(Request $request)
     {
+
         if( auth()->user()->isRole('doctor') ){
             $schedules = Schedule::where('doctor_id', auth()->id())->get()->groupBy('day');
             return view('admin.schedules.list', compact('schedules'));
@@ -30,6 +32,22 @@ class ScheduleController extends Controller
                 })
                 ->paginate(20);
         return view('admin.schedules.index', compact('schedules', 'doctors'));
+    }
+
+    public function scheduleOnOff(Request $request){
+
+        $preSchedule = DoctorScheduleOnOff::where('doctor_id', auth()->id())->first();
+        if ($preSchedule){
+            $preSchedule->update([
+                'on_off' => $preSchedule->on_off == 1 ? 0 : 1,
+            ]);
+        }else{
+            DoctorScheduleOnOff::create([
+                'doctor_id' => auth()->user()->id,
+                'on_off' => $request->on_off == true ? 1 : 0,
+            ]);
+        }
+     return redirect()->back();
     }
 
     /**
@@ -48,8 +66,8 @@ class ScheduleController extends Controller
             'start_time.*' => 'required|distinct|date_format:H:i',
             'end_time' => 'required|array',
             'end_time.*' => 'required|date_format:H:i',
-        ]); 
-        
+        ]);
+
         $schedules = [];
         foreach ($validated['duration'] as $key => $value) {
             $schedules[] = Schedule::create([

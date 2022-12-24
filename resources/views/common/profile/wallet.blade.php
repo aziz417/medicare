@@ -80,6 +80,7 @@
                             <th scope="col">Gateway</th>
                             <th scope="col">Type</th>
                             <th scope="col">Description</th>
+                            <th scope="col">Message</th>
                             <th scope="col">Date</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Status</th>
@@ -97,6 +98,10 @@
                             <td>
                                 {{ $item->description }}
                             </td>
+                            <td>
+                                {{ @$item->approved_by['admin-comment'] }}
+                            </td>
+
                             <td>
                                 <div class="text-nowrap text-muted">{{ $item->created_at->format('d M Y') }}</div>
                             </td>

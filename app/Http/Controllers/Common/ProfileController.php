@@ -46,7 +46,7 @@ class ProfileController extends Controller
         if( !($wallet->amount >= $request->amount)){
             return back()->withInput()->withWarning("Insufficient Balance!");
         }
-        $bank = $request->only([ 
+        $bank = $request->only([
             'bank_account_name', 'bank_account_number', 'bank_name',
             'bank_branch_name', 'bank_routing_number',
         ]);
@@ -56,16 +56,16 @@ class ProfileController extends Controller
             'data' => $request->method == 'bank' ? $bank : $mobile
         ];
         $transaction = Transaction::create([
-            'user_id' => $user->id, 
-            'gateway' => $request->method, 
-            'amount' => $request->amount, 
-            'discount' => 0, 
+            'user_id' => $user->id,
+            'gateway' => $request->method,
+            'amount' => $request->amount,
+            'discount' => 0,
             'final_amount' => $request->amount,
             'received_amount' => $request->amount,
             'tax' => 0,
             'response' => $response,
             'description' => "Balance Withdrawals",
-            'type' => 'withdraw', 
+            'type' => 'withdraw',
         ]);
 
         if( $transaction ){
@@ -85,7 +85,7 @@ class ProfileController extends Controller
             }
             if( str()->startsWith($key, 'charge_') ){
                 $user->charges()->updateOrCreate(
-                    ['type' => substr($key, strlen('charge_'))], 
+                    ['type' => substr($key, strlen('charge_'))],
                     ['amount' => $value]
                 );
             }
@@ -94,7 +94,6 @@ class ProfileController extends Controller
                 $user->setMeta($saveKey, $value);
             }
         }
-        
         $user->fill($userData)->save();
 
         if( $request->hasFile('avatar') && $image = save_file($request->avatar, 'uploads/user') ){

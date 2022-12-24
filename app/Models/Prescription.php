@@ -11,8 +11,8 @@ class Prescription extends Model
      *
      * @var array
      */
-    protected $fillable = ['appointment_id', 'patient_id', 'doctor_id', 'chief_complain', 'advice', 'investigations', 'status'];
-    
+    protected $fillable = ['investigation_title', 'group_desc', 'icd_code', 'who_full_desc', 'appointment_id', 'patient_id', 'doctor_id', 'chief_complain', 'advice', 'investigations', 'status'];
+
     /**
      * The attributes that should be autoload when a user called.
      *
